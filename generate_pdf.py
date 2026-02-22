@@ -155,7 +155,7 @@ abstract: |
         if line.startswith("**JEL Codes:**"):
             jel_codes = line.replace("**JEL Codes:**", "").strip()
 
-    thanks_parts = ["Working Paper."]
+    thanks_parts = ["Working Paper. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038."]
     if jel_codes:
         thanks_parts.append(f"JEL: {jel_codes}.")
     thanks_parts.append("Replication package: https://github.com/andsalazar/FederalBudgetAnalysis.")

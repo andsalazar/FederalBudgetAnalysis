@@ -159,7 +159,10 @@ If you use this code or data, please cite:
   year={2026},
   month={February},
   type={Working Paper},
-  url={https://github.com/andsalazar/FederalBudgetAnalysis}
+  institution={SSRN},
+  number={6285038},
+  url={https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038},
+  note={Replication package: \url{https://github.com/andsalazar/FederalBudgetAnalysis}}
 }
 ```
 

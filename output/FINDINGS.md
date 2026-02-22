@@ -3,6 +3,7 @@
 **Authors:** Andy Salazar  
 **Date:** February 2026  
 **Working Paper — Draft for SSRN / Brookings Papers / QJE Submission**  
+**SSRN:** [papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038)  
 **Replication package:** [github.com/andsalazar/FederalBudgetAnalysis](https://github.com/andsalazar/FederalBudgetAnalysis)  
 **Pre-registration:** `docs/hypothesis_preregistration.md` (registered before data collection)
 
