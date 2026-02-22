@@ -39,7 +39,7 @@ The paper provides a unified distributional analysis of U.S. federal fiscal poli
 
 ```bash
 # 1. Clone and set up environment
-git clone https://github.com/andysalazar/FederalBudgetAnalysis.git
+git clone https://github.com/andsalazar/FederalBudgetAnalysis.git
 cd FederalBudgetAnalysis
 python -m venv venv
 venv\Scripts\activate       # Windows
@@ -159,7 +159,7 @@ If you use this code or data, please cite:
   year={2026},
   month={February},
   type={Working Paper},
-  url={https://github.com/andysalazar/FederalBudgetAnalysis}
+  url={https://github.com/andsalazar/FederalBudgetAnalysis}
 }
 ```
 
