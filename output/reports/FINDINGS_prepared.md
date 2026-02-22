@@ -15,7 +15,7 @@ abstract: |
   Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), we extend the framework to model the combined effects of judicial tariff revocation and the announced 15% universal legislative replacement. Under empirically grounded price stickiness assumptions (Peltzman, 2000; Cavallo, 2018), revocation provides zero consumer relief to B50—the tariff wedge shifts from Treasury to corporate margins while $133B+ in refunds flows to importers—and the replacement tariff nearly doubles the B50 combined burden to $2,341 per person (18.7% of pretax income) under central estimates.
 
 keywords: "Fiscal incidence, tariff pass-through, distributional analysis, income inequality, federal budget, bottom 50%, structural break, CPS ASEC, consumer expenditure"
-thanks: "Working Paper. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
+thanks: "Working Paper. JEL: H22, H23, H53, D31, F13, E62, K34. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
 geometry: margin=1in
 fontsize: 11pt
 linestretch: 1.5

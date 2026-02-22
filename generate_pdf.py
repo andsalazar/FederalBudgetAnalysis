@@ -148,13 +148,23 @@ abstract: |
     yaml_block += "\n".join(abstract_lines).rstrip() + "\n"
 
     keywords = ""
+    jel_codes = ""
     for line in lines:
         if line.startswith("**Keywords:**"):
             keywords = line.replace("**Keywords:**", "").strip()
+        if line.startswith("**JEL Codes:**"):
+            jel_codes = line.replace("**JEL Codes:**", "").strip()
+
+    thanks_parts = ["Working Paper."]
+    if jel_codes:
+        thanks_parts.append(f"JEL: {jel_codes}.")
+    thanks_parts.append("Replication package: https://github.com/andsalazar/FederalBudgetAnalysis.")
+    thanks_parts.append("Pre-registration: docs/hypothesis_preregistration.md")
+    thanks_text = " ".join(thanks_parts)
 
     yaml_block += f"""
 keywords: "{keywords}"
-thanks: "Working Paper. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
+thanks: "{thanks_text}"
 geometry: margin=1in
 fontsize: 11pt
 linestretch: 1.5
