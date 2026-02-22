@@ -148,7 +148,7 @@ abstract: |
 
     yaml_block += f"""
 keywords: "{keywords}"
-thanks: "Working Paper. Pre-registration: docs/hypothesis_preregistration.md"
+thanks: "Working Paper. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
 geometry: margin=1in
 fontsize: 11pt
 linestretch: 1.5
