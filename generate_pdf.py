@@ -117,10 +117,16 @@ def prepare_pandoc_markdown():
     text = FINDINGS_MD.read_text(encoding="utf-8")
     lines = text.split("\n")
 
-    yaml_block = """---
+    # Extract title from the first H1 line in FINDINGS.md
+    doc_title = "Working Paper"
+    for line in lines:
+        if line.startswith("# "):
+            doc_title = line.lstrip("# ").strip()
+            break
+
+    yaml_block = f"""---
 title: |
-  The Distributional Consequences of Federal Fiscal Policy in 2025:
-  Spending Cuts, Tariff Escalation, and the Bottom 50 Percent
+  {doc_title}
 author:
   - Andy Salazar
 date: February 2026

@@ -1,7 +1,6 @@
 ---
 title: |
-  The Distributional Consequences of Federal Fiscal Policy in 2025:
-  Spending Cuts, Tariff Escalation, and the Bottom 50 Percent
+  The Distributional Consequences of Federal Fiscal Policy, FY2000–FY2025: A Quarter-Century of Structural Shift and the 2025 Inflection Point
 author:
   - Andy Salazar
 date: February 2026
