@@ -1,0 +1,7 @@
+PSZ B50 mean pretax: 12525
+PSZ B50 mean posttax: 12066
+HH B50 mean pretax: 25963
+HH B50 mean posttax: 24383
+HH B50 pretax income share: 23.0%
+PSZ B50 count: 1365599
+HH B50 count: 1365457

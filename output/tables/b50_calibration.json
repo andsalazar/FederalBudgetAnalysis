@@ -1,0 +1,17 @@
+{
+  "p50_hh_income": 96000.0,
+  "frac_q4_below_p50": 0.4136629407408493,
+  "formula_cex": "Q1 + Q2 + Q3 + 0.414 * Q4",
+  "formula_cex_note": "Applies to CEX quintile bands (unequal person shares). For CPS person-income quintiles (equal 20% shares), B50 = Q1 + Q2 + 0.5*Q3.",
+  "person_shares": {
+    "Q1": 10.09903417383427,
+    "Q2": 12.701742804627214,
+    "Q3": 17.79473656643083,
+    "Q4": 22.709609603353815,
+    "Q5": 36.69487685175389
+  },
+  "old_b50_person_share": 27.2,
+  "calibrated_b50_person_share": 50.0,
+  "old_b50_tariff_share": 28.8,
+  "calibrated_b50_tariff_share": 51.7
+}

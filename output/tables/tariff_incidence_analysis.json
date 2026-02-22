@@ -1,0 +1,529 @@
+{
+  "price_changes": {
+    "New Vehicles": {
+      "pre_tariff_yoy_pct": -0.3399442915594353,
+      "post_tariff_yoy_pct": 0.37078941177788316,
+      "acceleration_pct": 0.7107337033373184,
+      "cumulative_since_jan25_pct": 0.37078941177788316,
+      "tariff_period_bump_pct": 0.3002911889019577,
+      "latest_date": "2026-01",
+      "latest_index": 179.2
+    },
+    "Used Vehicles": {
+      "pre_tariff_yoy_pct": 0.9290950875871395,
+      "post_tariff_yoy_pct": -1.958992054778208,
+      "acceleration_pct": -2.8880871423653476,
+      "cumulative_since_jan25_pct": -1.958992054778208,
+      "tariff_period_bump_pct": 1.8188596503339927,
+      "latest_date": "2026-01",
+      "latest_index": 181.269
+    },
+    "Apparel": {
+      "pre_tariff_yoy_pct": 1.3235155587653535,
+      "post_tariff_yoy_pct": 0.6043045074918263,
+      "acceleration_pct": -0.7192110512735272,
+      "cumulative_since_jan25_pct": 0.6043045074918263,
+      "tariff_period_bump_pct": 0.25558670055001453,
+      "latest_date": "2026-01",
+      "latest_index": 129.854
+    },
+    "Footwear": {
+      "pre_tariff_yoy_pct": 1.0288065843621519,
+      "post_tariff_yoy_pct": 1.9540925854571345,
+      "acceleration_pct": 0.9252860010949826,
+      "cumulative_since_jan25_pct": 1.9540925854571345,
+      "tariff_period_bump_pct": 0.1463469548576013,
+      "latest_date": "2026-01",
+      "latest_index": 148.176
+    },
+    "Household Furnishings": {
+      "pre_tariff_yoy_pct": 0.47568138143827543,
+      "post_tariff_yoy_pct": 3.930877965667956,
+      "acceleration_pct": 3.4551965842296806,
+      "cumulative_since_jan25_pct": 3.930877965667956,
+      "tariff_period_bump_pct": 3.1908520460457,
+      "latest_date": "2026-01",
+      "latest_index": 154.328
+    },
+    "Consumer Electronics": {
+      "pre_tariff_yoy_pct": -6.04813259789797,
+      "post_tariff_yoy_pct": 1.5655577299412915,
+      "acceleration_pct": 7.613690327839262,
+      "cumulative_since_jan25_pct": 1.5655577299412915,
+      "tariff_period_bump_pct": 1.6061243963375826,
+      "latest_date": "2026-01",
+      "latest_index": 34.773
+    },
+    "Toys and Games": {
+      "pre_tariff_yoy_pct": 3.705483609874549,
+      "post_tariff_yoy_pct": 5.543767225189633,
+      "acceleration_pct": 1.8382836153150839,
+      "cumulative_since_jan25_pct": 5.543767225189633,
+      "tariff_period_bump_pct": 3.6455917110261193,
+      "latest_date": "2026-01",
+      "latest_index": 129.822
+    },
+    "Food at Home": {
+      "pre_tariff_yoy_pct": 1.8447705832817185,
+      "post_tariff_yoy_pct": 2.1787740052828575,
+      "acceleration_pct": 0.33400342200113897,
+      "cumulative_since_jan25_pct": 2.1787740052828575,
+      "tariff_period_bump_pct": 1.6174329514299535,
+      "latest_date": "2026-01",
+      "latest_index": 317.589
+    },
+    "Food Away from Home": {
+      "pre_tariff_yoy_pct": 3.381427065181164,
+      "post_tariff_yoy_pct": 3.978089750007996,
+      "acceleration_pct": 0.5966626848268319,
+      "cumulative_since_jan25_pct": 3.978089750007996,
+      "tariff_period_bump_pct": 2.950156129694581,
+      "latest_date": "2026-01",
+      "latest_index": 390.471
+    },
+    "Alcoholic Beverages": {
+      "pre_tariff_yoy_pct": 1.3897450460247152,
+      "post_tariff_yoy_pct": 1.998831851515348,
+      "acceleration_pct": 0.6090868054906329,
+      "cumulative_since_jan25_pct": 1.998831851515348,
+      "tariff_period_bump_pct": 1.3543952692294248,
+      "latest_date": "2026-01",
+      "latest_index": 298.623
+    },
+    "Gasoline": {
+      "pre_tariff_yoy_pct": -0.12586066484046032,
+      "post_tariff_yoy_pct": -7.4914077768043486,
+      "acceleration_pct": -7.365547111963888,
+      "cumulative_since_jan25_pct": -7.4914077768043486,
+      "tariff_period_bump_pct": -4.540522357910359,
+      "latest_date": "2026-01",
+      "latest_index": 274.547
+    }
+  },
+  "headline_comparison": {
+    "pre_tariff_yoy_pct": 2.9909783078999608,
+    "post_tariff_yoy_pct": 2.391201432150014,
+    "acceleration_pct": -0.5997768757499466
+  },
+  "tariff_burden_by_quintile": {
+    "category_detail": [
+      {
+        "category": "New Vehicles",
+        "price_change_pct": 0.3002911889019577,
+        "Q1_cost": 3.282182694698398,
+        "Q2_cost": 5.309148219786612,
+        "Q3_cost": 7.972731065346977,
+        "Q4_cost": 12.080714529525759,
+        "Q5_cost": 17.66312773121315,
+        "Q1_spend": 1093,
+        "Q2_spend": 1768,
+        "Q3_spend": 2655,
+        "Q4_spend": 4023,
+        "Q5_spend": 5882
+      },
+      {
+        "category": "Used Vehicles",
+        "price_change_pct": 1.8188596503339927,
+        "Q1_cost": 22.66299124316155,
+        "Q2_cost": 30.556842125611077,
+        "Q3_cost": 39.050916692670825,
+        "Q4_cost": 44.47111845066612,
+        "Q5_cost": 45.52605704785984,
+        "Q1_spend": 1246,
+        "Q2_spend": 1680,
+        "Q3_spend": 2147,
+        "Q4_spend": 2445,
+        "Q5_spend": 2503
+      },
+      {
+        "category": "Apparel",
+        "price_change_pct": 0.25558670055001453,
+        "Q1_cost": 2.4459647242636393,
+        "Q2_cost": 3.021034800501172,
+        "Q3_cost": 3.923255853442723,
+        "Q4_cost": 4.886817714516278,
+        "Q5_cost": 8.286120831831472,
+        "Q1_spend": 957,
+        "Q2_spend": 1182,
+        "Q3_spend": 1535,
+        "Q4_spend": 1912,
+        "Q5_spend": 3242
+      },
+      {
+        "category": "Footwear",
+        "price_change_pct": 0.1463469548576013,
+        "Q1_cost": 0.33220758752675494,
+        "Q2_cost": 0.41416188224701167,
+        "Q3_cost": 0.5195316897444846,
+        "Q4_cost": 0.6044129235618934,
+        "Q5_cost": 0.8166160081054152,
+        "Q1_spend": 227,
+        "Q2_spend": 283,
+        "Q3_spend": 355,
+        "Q4_spend": 413,
+        "Q5_spend": 558
+      },
+      {
+        "category": "Household Furnishings",
+        "price_change_pct": 3.1908520460457,
+        "Q1_cost": 21.31489166758528,
+        "Q2_cost": 31.52561821493152,
+        "Q3_cost": 41.38535103721273,
+        "Q4_cost": 61.23245076361699,
+        "Q5_cost": 121.57146295434117,
+        "Q1_spend": 668,
+        "Q2_spend": 988,
+        "Q3_spend": 1297,
+        "Q4_spend": 1919,
+        "Q5_spend": 3810
+      },
+      {
+        "category": "Consumer Electronics",
+        "price_change_pct": 1.6061243963375826,
+        "Q1_cost": 8.865806667783456,
+        "Q2_cost": 11.901381776861488,
+        "Q3_cost": 13.844792296429961,
+        "Q4_cost": 16.992796113251625,
+        "Q5_cost": 23.385171210675203,
+        "Q1_spend": 552,
+        "Q2_spend": 741,
+        "Q3_spend": 862,
+        "Q4_spend": 1058,
+        "Q5_spend": 1456
+      },
+      {
+        "category": "Toys and Games",
+        "price_change_pct": 3.6455917110261193,
+        "Q1_cost": 12.504379568819589,
+        "Q2_cost": 17.754031632697203,
+        "Q3_cost": 27.48776150113694,
+        "Q4_cost": 39.299478644861566,
+        "Q5_cost": 76.44805818021773,
+        "Q1_spend": 343,
+        "Q2_spend": 487,
+        "Q3_spend": 754,
+        "Q4_spend": 1078,
+        "Q5_spend": 2097
+      },
+      {
+        "category": "Food at Home",
+        "price_change_pct": 1.6174329514299535,
+        "Q1_cost": 70.85973760214627,
+        "Q2_cost": 82.55377784098482,
+        "Q3_cost": 90.4791993029916,
+        "Q4_cost": 99.50447517197074,
+        "Q5_cost": 124.73642921427802,
+        "Q1_spend": 4381,
+        "Q2_spend": 5104,
+        "Q3_spend": 5594,
+        "Q4_spend": 6152,
+        "Q5_spend": 7712
+      },
+      {
+        "category": "Food Away from Home",
+        "price_change_pct": 2.950156129694581,
+        "Q1_cost": 65.8179832534861,
+        "Q2_cost": 88.44568076824353,
+        "Q3_cost": 109.06727211480866,
+        "Q4_cost": 137.0937553469072,
+        "Q5_cost": 222.6187815467531,
+        "Q1_spend": 2231,
+        "Q2_spend": 2998,
+        "Q3_spend": 3697,
+        "Q4_spend": 4647,
+        "Q5_spend": 7546
+      },
+      {
+        "category": "Alcoholic Beverages",
+        "price_change_pct": 1.3543952692294248,
+        "Q1_cost": 3.453707936535033,
+        "Q2_cost": 4.753927394995281,
+        "Q3_cost": 6.108322664224706,
+        "Q4_cost": 8.437882527299315,
+        "Q5_cost": 14.803540292677614,
+        "Q1_spend": 255,
+        "Q2_spend": 351,
+        "Q3_spend": 451,
+        "Q4_spend": 623,
+        "Q5_spend": 1093
+      },
+      {
+        "category": "Gasoline",
+        "price_change_pct": -4.540522357910359,
+        "Q1_cost": -56.211666790930245,
+        "Q2_cost": -83.27318004407599,
+        "Q3_cost": -102.61580528877413,
+        "Q4_cost": -124.13788126526923,
+        "Q5_cost": -143.57131695712556,
+        "Q1_spend": 1238,
+        "Q2_spend": 1834,
+        "Q3_spend": 2260,
+        "Q4_spend": 2734,
+        "Q5_spend": 3162
+      }
+    ],
+    "total_burden_per_cu": {
+      "Q1": 155.3281861550758,
+      "Q2": 192.96242461278374,
+      "Q3": 237.22332892923544,
+      "Q4": 300.46602092090825,
+      "Q5": 512.2840480608272
+    },
+    "pct_of_income": {
+      "Q1": 1.0456289879170366,
+      "Q2": 0.5745836423570966,
+      "Q3": 0.4265072436699666,
+      "Q4": 0.34554197104353773,
+      "Q5": 0.27541412760991757
+    }
+  },
+  "b50_tariff_share": {
+    "tariff_spending_per_cu": {
+      "Q1": 1728.44,
+      "Q2": 2318.5600000000004,
+      "Q3": 2959.8,
+      "Q4": 3844.0,
+      "Q5": 5772.589999999999
+    },
+    "tariff_tax_total_by_quintile": {
+      "Q1": 46.9617148,
+      "Q2": 62.995275200000016,
+      "Q3": 80.417766,
+      "Q4": 104.44148000000001,
+      "Q5": 156.84127029999996
+    },
+    "quintile_shares": {
+      "Q1": 10.397638508150262,
+      "Q2": 13.947576276559717,
+      "Q3": 17.805032547512873,
+      "Q4": 23.12404389237093,
+      "Q5": 34.72570877540621
+    },
+    "b50_share_pct": 51.72360150366442,
+    "b40_share_pct": 42.150247332222854,
+    "b50_tariff_paid_total_B": 100.86102293214562,
+    "b50_tariff_paid_above_baseline_B": 51.72360150366442,
+    "b50_per_person_total": 738.5216724780954,
+    "b50_per_person_above_baseline": 378.7290628092797,
+    "b50_pct_of_income_total": 3.0288384221715763,
+    "b50_pct_of_income_above_baseline": 1.5532504729085006,
+    "q1_tariff_pct_income": 11.635408953214405,
+    "q5_tariff_pct_income": 3.1034595844197734,
+    "regressivity_ratio": 3.7491736678729057
+  },
+  "validation": {
+    "mean_high_tariff_acceleration": 2.303996530090467,
+    "mean_low_tariff_acceleration": -1.456448549911321,
+    "differential": 3.760445080001788,
+    "spearman_rho": 0.6838312890698599,
+    "spearman_pval": 0.02032216762063887,
+    "n_categories": 11
+  },
+  "tariff_categories": {
+    "New Vehicles": {
+      "tariff_rate": [
+        25,
+        25
+      ],
+      "action": "Section 232 Auto Tariff (April 2025)",
+      "hts_chapters": [
+        "87"
+      ],
+      "import_value_B": 282,
+      "description": "Imported cars, trucks, SUVs and auto parts",
+      "consumer_facing": true
+    },
+    "Used Vehicles": {
+      "tariff_rate": [
+        0,
+        0
+      ],
+      "action": "Indirect (substitution from new vehicle tariffs)",
+      "hts_chapters": [],
+      "import_value_B": 0,
+      "description": "Used cars/trucks (price pressure from new vehicle tariffs)",
+      "consumer_facing": true
+    },
+    "Apparel": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "Liberation Day + China tariffs",
+      "hts_chapters": [
+        "61",
+        "62"
+      ],
+      "import_value_B": 82,
+      "description": "Clothing, shoes, textiles \u2014 heavily import-dependent",
+      "consumer_facing": true
+    },
+    "Footwear": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "Liberation Day + China tariffs",
+      "hts_chapters": [
+        "64"
+      ],
+      "import_value_B": 28,
+      "description": "Shoes, boots, sneakers \u2014 >95% imported",
+      "consumer_facing": true
+    },
+    "Household Furnishings": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "China tariffs (furniture #1 source) + 10% baseline",
+      "hts_chapters": [
+        "94",
+        "63"
+      ],
+      "import_value_B": 65,
+      "description": "Furniture, bedding, curtains, housewares",
+      "consumer_facing": true
+    },
+    "Major Appliances": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "China tariffs + 10% baseline on others",
+      "hts_chapters": [
+        "84",
+        "85"
+      ],
+      "import_value_B": 45,
+      "description": "Washers, dryers, refrigerators, dishwashers, ovens",
+      "consumer_facing": true
+    },
+    "Consumer Electronics": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "China tariffs (main source) + Liberation Day",
+      "hts_chapters": [
+        "85",
+        "84"
+      ],
+      "import_value_B": 170,
+      "description": "Smartphones, laptops, TVs, tablets, peripherals",
+      "consumer_facing": true
+    },
+    "Toys and Games": {
+      "tariff_rate": [
+        10,
+        145
+      ],
+      "action": "China tariffs (~80% of toy imports from China)",
+      "hts_chapters": [
+        "95"
+      ],
+      "import_value_B": 35,
+      "description": "Toys, games, sporting goods, bicycles \u2014 China-dominant",
+      "consumer_facing": true
+    },
+    "Food at Home": {
+      "tariff_rate": [
+        10,
+        25
+      ],
+      "action": "Canada/Mexico 25% + 10% baseline on others",
+      "hts_chapters": [
+        "02",
+        "03",
+        "04",
+        "07",
+        "08",
+        "09",
+        "20",
+        "21",
+        "22"
+      ],
+      "import_value_B": 95,
+      "description": "Groceries: produce, meat, dairy, beverages \u2014 Can/Mex supply chain",
+      "consumer_facing": true
+    },
+    "Food Away from Home": {
+      "tariff_rate": [
+        5,
+        15
+      ],
+      "action": "Indirect via food input costs",
+      "hts_chapters": [],
+      "import_value_B": 0,
+      "description": "Restaurants/fast food \u2014 ingredient cost pass-through",
+      "consumer_facing": true
+    },
+    "Alcoholic Beverages": {
+      "tariff_rate": [
+        10,
+        25
+      ],
+      "action": "Canada/Mexico/EU tariffs on beer, wine, spirits",
+      "hts_chapters": [
+        "22"
+      ],
+      "import_value_B": 22,
+      "description": "Beer (Mexico supply), wine (EU, Chile), spirits",
+      "consumer_facing": true
+    },
+    "Gasoline": {
+      "tariff_rate": [
+        10,
+        25
+      ],
+      "action": "Canada 25% (imports ~4M bbl/day) \u2014 later energy carve-outs",
+      "hts_chapters": [
+        "27"
+      ],
+      "import_value_B": 130,
+      "description": "Motor fuel \u2014 Canada is #1 crude source",
+      "consumer_facing": true
+    },
+    "Steel and Aluminum Products": {
+      "tariff_rate": [
+        25,
+        25
+      ],
+      "action": "Section 232 \u2014 25% universal (Mar 12, 2025)",
+      "hts_chapters": [
+        "72",
+        "73",
+        "76"
+      ],
+      "import_value_B": 42,
+      "description": "Steel/aluminum \u2014 feeds into construction, auto, appliances",
+      "consumer_facing": false
+    },
+    "Lumber and Building Materials": {
+      "tariff_rate": [
+        25,
+        25
+      ],
+      "action": "Canada 25% (softwood lumber, already had duties)",
+      "hts_chapters": [
+        "44"
+      ],
+      "import_value_B": 15,
+      "description": "Softwood lumber, plywood \u2014 housing cost driver",
+      "consumer_facing": false
+    }
+  },
+  "methodology_notes": {
+    "cex_year": 2023,
+    "cpi_source": "FRED (BLS CPI-U sub-indices)",
+    "pass_through_assumption": "60% retail pass-through (conservative)",
+    "b50_mapping": "CEX Q1 + Q2 + 0.25*Q3 \u2248 bottom 50% of persons",
+    "tariff_rates": "Effective blended rates by category",
+    "key_references": [
+      "Amiti, Redding & Weinstein (2019) \u2014 tariff pass-through",
+      "Fajgelbaum et al. (2020) \u2014 distributional effects",
+      "Cavallo et al. (2021) \u2014 border to store pass-through",
+      "CBO (2022) \u2014 excise tax distributional analysis"
+    ]
+  }
+}

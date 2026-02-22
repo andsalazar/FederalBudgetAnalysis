@@ -1,0 +1,167 @@
+{
+  "cbo_baseline": {
+    "Social Security": 1530,
+    "Medicare": 869,
+    "Medicaid": 616,
+    "Income Security": 403,
+    "Other Mandatory": 532,
+    "Defense Discretionary": 886,
+    "Nondefense Discretionary": 755,
+    "Net Interest": 952,
+    "Total Outlays": 7023,
+    "Total Revenues": 4994
+  },
+  "actual_estimates": {
+    "Social Security": 1530,
+    "Medicare": 869,
+    "Medicaid": 580,
+    "Income Security": 350,
+    "Other Mandatory": 500,
+    "Defense Discretionary": 886,
+    "Nondefense Discretionary": 660,
+    "Net Interest": 980,
+    "Total Outlays": 6835,
+    "Customs Duties (Actual)": 195,
+    "Total Revenues": 5094
+  },
+  "policy_gap": {
+    "Social Security": 0,
+    "Medicare": 0,
+    "Medicaid": -36,
+    "Income Security": -53,
+    "Other Mandatory": -32,
+    "Defense Discretionary": 0,
+    "Nondefense Discretionary": -95,
+    "Net Interest": 28,
+    "Total Outlays": -188
+  },
+  "tariff_gap_above_baseline": 100,
+  "total_impacts_by_quintile": {
+    "Q1 (Bottom 20%)": {
+      "spending_cut_B": -64.65,
+      "tariff_burden_B": -14.0,
+      "total_impact_B": -78.65,
+      "population": 54627029.04000001,
+      "per_person": -1439.7634537732129
+    },
+    "Q2": {
+      "spending_cut_B": -50.449999999999996,
+      "tariff_burden_B": -21.0,
+      "total_impact_B": -71.44999999999999,
+      "population": 54627275.42,
+      "per_person": -1307.9546700921658
+    },
+    "Q3": {
+      "spending_cut_B": -32.66,
+      "tariff_burden_B": -30.8,
+      "total_impact_B": -63.459999999999994,
+      "population": 54633874.67,
+      "per_person": -1161.5504187340111
+    },
+    "Q4": {
+      "spending_cut_B": -23.879999999999995,
+      "tariff_burden_B": -37.800000000000004,
+      "total_impact_B": -61.68,
+      "population": 54629132.34,
+      "per_person": -1129.0679049434084
+    },
+    "Q5 (Top 20%)": {
+      "spending_cut_B": -12.36,
+      "tariff_burden_B": -36.4,
+      "total_impact_B": -48.76,
+      "population": 54627400.18,
+      "per_person": -892.5923591335735
+    }
+  },
+  "welfare_results": [
+    {
+      "quintile": "Q1 (Bottom 20%)",
+      "mean_income": 1196.6331880391056,
+      "per_person_loss": 1439.7634537732129,
+      "income_pct_loss": 120.31786082521405,
+      "welfare_weight": 686.0551647482471,
+      "welfare_equivalent_loss": 987757.1534768868,
+      "welfare_pct_loss": 82544.68983059889
+    },
+    {
+      "quintile": "Q2",
+      "mean_income": 15447.728109214751,
+      "per_person_loss": 1307.9546700921658,
+      "income_pct_loss": 8.466971070729523,
+      "welfare_weight": 4.116725328545188,
+      "welfare_equivalent_loss": 5384.490118957384,
+      "welfare_pct_loss": 34.856194262931595
+    },
+    {
+      "quintile": "Q3",
+      "mean_income": 31343.19284907914,
+      "per_person_loss": 1161.5504187340111,
+      "income_pct_loss": 3.7059096829317997,
+      "welfare_weight": 0.9999876943943277,
+      "welfare_equivalent_loss": 1161.5361251525896,
+      "welfare_pct_loss": 3.7058640794685833
+    },
+    {
+      "quintile": "Q4",
+      "mean_income": 51971.719683531766,
+      "per_person_loss": 1129.0679049434084,
+      "income_pct_loss": 2.1724659330469973,
+      "welfare_weight": 0.3637030563692724,
+      "welfare_equivalent_loss": 410.6454478763688,
+      "welfare_pct_loss": 0.7901324997073161
+    },
+    {
+      "quintile": "Q5 (Top 20%)",
+      "mean_income": 129166.6320348191,
+      "per_person_loss": 892.5923591335735,
+      "income_pct_loss": 0.6910394310606162,
+      "welfare_weight": 0.05888171542708941,
+      "welfare_equivalent_loss": 52.55736928289746,
+      "welfare_pct_loss": 0.04068958712860897
+    }
+  ],
+  "spm_simulation": [
+    {
+      "scenario": "Baseline",
+      "poverty_rate": 12.699852397898889,
+      "poverty_count": 34689405.12,
+      "change_rate": 0.0,
+      "change_count": 0.0
+    },
+    {
+      "scenario": "10% SNAP cut",
+      "poverty_rate": 12.776548689200917,
+      "poverty_count": 34898899.58,
+      "change_rate": 0.07669629130202793,
+      "change_count": 209494.4600000009
+    },
+    {
+      "scenario": "25% SNAP cut",
+      "poverty_rate": 12.889189184820607,
+      "poverty_count": 35206574.95,
+      "change_rate": 0.18933678692171796,
+      "change_count": 517169.83000000566
+    },
+    {
+      "scenario": "50% SNAP cut",
+      "poverty_rate": 13.10912421898702,
+      "poverty_count": 35807323.31,
+      "change_rate": 0.4092718210881312,
+      "change_count": 1117918.190000005
+    },
+    {
+      "scenario": "15% all food programs",
+      "poverty_rate": 12.855340345642682,
+      "poverty_count": 35114117.489999995,
+      "change_rate": 0.1554879477437936,
+      "change_count": 424712.3699999973
+    },
+    {
+      "scenario": "30% all food programs",
+      "poverty_rate": 13.046677875042278,
+      "poverty_count": 35636752.31,
+      "change_rate": 0.34682547714338874,
+      "change_count": 947347.1900000051
+    }
+  ]
+}

@@ -1,0 +1,501 @@
+{
+  "budget_functions": {
+    "MTS_BF_Education_Training_Employment_and_Social_Services": {
+      "propensity": "HIGH",
+      "desc": "Title I, Head Start, Pell, job training",
+      "fy2020_real": 285.84153315911993,
+      "fy2024_real": 305.02619944740997,
+      "fy2025_real": 67.37340261775506,
+      "change_20_25": -218.46813054136487,
+      "pct_change": -76.42980644794885
+    },
+    "MTS_BF_Health": {
+      "propensity": "HIGH",
+      "desc": "Medicaid, CHIP, community health centers",
+      "fy2020_real": 903.5599034515755,
+      "fy2024_real": 911.68380434974,
+      "fy2025_real": 953.1195909064515,
+      "change_20_25": 49.5596874548761,
+      "pct_change": 5.484936556564692
+    },
+    "MTS_BF_Income_Security": {
+      "propensity": "HIGH",
+      "desc": "SNAP, EITC, SSI, housing assistance, TANF",
+      "fy2020_real": 1524.533152185528,
+      "fy2024_real": 671.07599754226,
+      "fy2025_real": 683.1225545540817,
+      "change_20_25": -841.4105976314463,
+      "pct_change": -55.191361134077255
+    },
+    "MTS_BF_Administration_of_Justice": {
+      "propensity": "MID",
+      "desc": "Federal courts, prisons, FBI",
+      "fy2020_real": 87.06325143364582,
+      "fy2024_real": 85.03401836719999,
+      "fy2025_real": 82.93907158074813,
+      "change_20_25": -4.124179852897683,
+      "pct_change": -4.736992686335492
+    },
+    "MTS_BF_Agriculture": {
+      "propensity": "MID",
+      "desc": "Farm subsidies (mixed), food safety, USDA",
+      "fy2020_real": 59.35163397112555,
+      "fy2024_real": 34.7466709479,
+      "fy2025_real": 48.03943965307955,
+      "change_20_25": -11.312194318046004,
+      "pct_change": -19.059617336819006
+    },
+    "MTS_BF_Community_and_Regional_Development": {
+      "propensity": "MID",
+      "desc": "CDBG, disaster relief, HUD programs",
+      "fy2020_real": 100.9697356252401,
+      "fy2024_real": 87.76619636841001,
+      "fy2025_real": 82.30560260270342,
+      "change_20_25": -18.66413302253669,
+      "pct_change": -18.484878569763318
+    },
+    "MTS_BF_Medicare": {
+      "propensity": "MID",
+      "desc": "Medicare (universal 65+, skews older low-income)",
+      "fy2020_real": 937.2868519943711,
+      "fy2024_real": 874.1343357929201,
+      "fy2025_real": 970.4921797912632,
+      "change_20_25": 33.20532779689211,
+      "pct_change": 3.5427070940168828
+    },
+    "MTS_BF_Natural_Resources_and_Environment": {
+      "propensity": "MID",
+      "desc": "EPA, clean water, public lands",
+      "fy2020_real": 49.13373273966755,
+      "fy2024_real": 56.89159071551,
+      "fy2025_real": 85.9884622081396,
+      "change_20_25": 36.854729468472044,
+      "pct_change": 75.00901603333264
+    },
+    "MTS_BF_Social_Security": {
+      "propensity": "MID",
+      "desc": "Social Security (universal but progressive benefit)",
+      "fy2020_real": 1323.193953874373,
+      "fy2024_real": 1460.91370575269,
+      "fy2025_real": 1539.0925798893554,
+      "change_20_25": 215.89862601498248,
+      "pct_change": 16.316476158526974
+    },
+    "MTS_BF_Transportation": {
+      "propensity": "MID",
+      "desc": "Highways, transit, FAA \u2014 public infrastructure",
+      "fy2020_real": 176.48295007774917,
+      "fy2024_real": 137.12224541169,
+      "fy2025_real": 141.96776222137947,
+      "change_20_25": -34.51518785636969,
+      "pct_change": -19.557236458912378
+    },
+    "MTS_BF_Veterans_Benefits_and_Services": {
+      "propensity": "MID",
+      "desc": "Veterans (disproportionately working class)",
+      "fy2020_real": 264.0478249538496,
+      "fy2024_real": 325.36272750566997,
+      "fy2025_real": 367.2374748625798,
+      "change_20_25": 103.18964990873019,
+      "pct_change": 39.07990907585235
+    },
+    "MTS_BF_Commerce_and_Housing_Credit": {
+      "propensity": "LOW",
+      "desc": "SBA, mortgage guarantees, FDIC",
+      "fy2020_real": 690.2728443436605,
+      "fy2024_real": 35.5675765434,
+      "fy2025_real": -27.867411144835245,
+      "change_20_25": -718.1402554884958,
+      "pct_change": -104.03715883844926
+    },
+    "MTS_BF_Energy": {
+      "propensity": "LOW",
+      "desc": "DOE, nuclear, R&D",
+      "fy2020_real": 8.655091966308328,
+      "fy2024_real": 13.78967014844,
+      "fy2025_real": 20.34227099195671,
+      "change_20_25": 11.687179025648382,
+      "pct_change": 135.03240717883827
+    },
+    "MTS_BF_General_Government": {
+      "propensity": "LOW",
+      "desc": "OPM, GSA, White House overhead",
+      "fy2020_real": 213.51513260092605,
+      "fy2024_real": 29.92828891959,
+      "fy2025_real": 35.323989172379186,
+      "change_20_25": -178.19114342854687,
+      "pct_change": -83.45597862686292
+    },
+    "MTS_BF_General_Science_Space_and_Technology": {
+      "propensity": "LOW",
+      "desc": "NASA, NSF \u2014 long-term public good",
+      "fy2020_real": 41.12555394292553,
+      "fy2024_real": 41.56242836818,
+      "fy2025_real": 40.97705327371574,
+      "change_20_25": -0.14850066920978833,
+      "pct_change": -0.36109098838128506
+    },
+    "MTS_BF_International_Affairs": {
+      "propensity": "LOW",
+      "desc": "State Dept, foreign aid, embassies",
+      "fy2020_real": 81.69954006590126,
+      "fy2024_real": 71.99237948496001,
+      "fy2025_real": 43.98131816916457,
+      "change_20_25": -37.718221896736694,
+      "pct_change": -46.166994167056586
+    },
+    "MTS_BF_National_Defense": {
+      "propensity": "LOW",
+      "desc": "DoD, military procurement, R&D",
+      "fy2020_real": 876.8244892343184,
+      "fy2024_real": 874.04058508573,
+      "fy2025_real": 892.5285415727459,
+      "change_20_25": 15.70405233842746,
+      "pct_change": 1.791014339955414
+    },
+    "MTS_BF_Net_Interest": {
+      "propensity": "LOW",
+      "desc": "Payments to bondholders \u2014 wealth-concentrating",
+      "fy2020_real": 416.22928792809773,
+      "fy2024_real": 881.6509950354599,
+      "fy2025_real": 944.825454136882,
+      "change_20_25": 528.5961662087842,
+      "pct_change": 126.99638913927112
+    }
+  },
+  "agencies": {
+    "MTS_AG_Administration_for_Children_and_Families": {
+      "propensity": "HIGH",
+      "desc": "TANF, Head Start, child care",
+      "fy2020_real": 73.43452336662581,
+      "fy2024_real": 82.2381284705,
+      "fy2025_real": 73.6849705924671,
+      "change_20_25": 0.25044722584128465
+    },
+    "MTS_AG_Community_Planning_and_Development": {
+      "propensity": "HIGH",
+      "desc": "CDBG, homeless assistance",
+      "fy2020_real": 10.65446376620947,
+      "fy2024_real": 15.0805385706,
+      "fy2025_real": 15.811530432377513,
+      "change_20_25": 5.157066666168042
+    },
+    "MTS_AG_Dept_Housing_and_Urban_Development": {
+      "propensity": "HIGH",
+      "desc": "HUD overall \u2014 housing vouchers",
+      "fy2020_real": 40.076900198026976,
+      "fy2024_real": 51.97638340832,
+      "fy2025_real": 49.2031857599609,
+      "change_20_25": 9.126285561933926
+    },
+    "MTS_AG_Employment_and_Training_Administration": {
+      "propensity": "HIGH",
+      "desc": "Workforce training, unemployment",
+      "fy2020_real": 683.6262223445184,
+      "fy2024_real": 46.413055664160005,
+      "fy2025_real": 46.23847876908983,
+      "change_20_25": -637.3877435754285
+    },
+    "MTS_AG_Food_and_Nutrition_Service": {
+      "propensity": "HIGH",
+      "desc": "SNAP/food stamps \u2014 most direct",
+      "fy2020_real": 137.93182685870164,
+      "fy2024_real": 147.44651040248002,
+      "fy2025_real": 144.41569670464497,
+      "change_20_25": 6.483869845943332
+    },
+    "MTS_AG_Office_of_Elementary_and_Secondary_Education": {
+      "propensity": "HIGH",
+      "desc": "Title I schools, special ed",
+      "fy2020_real": 40.49634101795771,
+      "fy2024_real": 82.9910501681,
+      "fy2025_real": 42.29375898003745,
+      "change_20_25": 1.7974179620797415
+    },
+    "MTS_AG_Public_and_Indian_Housing_Programs": {
+      "propensity": "HIGH",
+      "desc": "Section 8, public housing",
+      "fy2020_real": 39.10883595825551,
+      "fy2024_real": 44.084911185610004,
+      "fy2025_real": 48.05936715145511,
+      "change_20_25": 8.950531193199602
+    },
+    "MTS_AG_Centers_for_Medicare_and_Medicaid_Services": {
+      "propensity": "MID",
+      "desc": "CMS \u2014 Medicare+Medicaid admin",
+      "fy2020_real": 2167.2525291685083,
+      "fy2024_real": 2222.16137716161,
+      "fy2025_real": 2419.581179161039,
+      "change_20_25": 252.3286499925307
+    },
+    "MTS_AG_Dept_Agriculture": {
+      "propensity": "MID",
+      "desc": "USDA (includes food programs)",
+      "fy2020_real": 222.447976897629,
+      "fy2024_real": 203.40181475604,
+      "fy2025_real": 221.44737068582222,
+      "change_20_25": -1.000606211806769
+    },
+    "MTS_AG_Dept_Education": {
+      "propensity": "MID",
+      "desc": "Education dept overall",
+      "fy2020_real": 246.83000063329783,
+      "fy2024_real": 268.35337268489997,
+      "fy2025_real": 33.80425541191203,
+      "change_20_25": -213.0257452213858
+    },
+    "MTS_AG_Dept_Health_and_Human_Services": {
+      "propensity": "MID",
+      "desc": "HHS umbrella (includes Medicaid)",
+      "fy2020_real": 1816.0160983352775,
+      "fy2024_real": 1720.62115880069,
+      "fy2025_real": 1834.6954367972803,
+      "change_20_25": 18.67933846200276
+    },
+    "MTS_AG_Dept_Labor": {
+      "propensity": "MID",
+      "desc": "Labor standards, OSHA, UI",
+      "fy2020_real": 576.6150885091065,
+      "fy2024_real": 65.67162165618,
+      "fy2025_real": 49.05731555359707,
+      "change_20_25": -527.5577729555094
+    },
+    "MTS_AG_Dept_Transportation": {
+      "propensity": "MID",
+      "desc": "Roads, transit, aviation",
+      "fy2020_real": 121.16257143684923,
+      "fy2024_real": 117.38945614783,
+      "fy2025_real": 124.22564583733319,
+      "change_20_25": 3.0630744004839556
+    },
+    "MTS_AG_Dept_Veterans_Affairs": {
+      "propensity": "MID",
+      "desc": "VA healthcare and benefits",
+      "fy2020_real": 263.70937226289055,
+      "fy2024_real": 325.00395697646,
+      "fy2025_real": 366.68179599513746,
+      "change_20_25": 102.97242373224691
+    },
+    "MTS_AG_Environmental_Protection_Agency": {
+      "propensity": "MID",
+      "desc": "EPA \u2014 environmental justice",
+      "fy2020_real": 10.533058342224395,
+      "fy2024_real": 13.699163398549999,
+      "fy2025_real": 36.00331189088243,
+      "change_20_25": 25.470253548658036
+    },
+    "MTS_AG_Federal_Emergency_Management_Agency": {
+      "propensity": "MID",
+      "desc": "FEMA disaster relief",
+      "fy2020_real": 57.30330872329126,
+      "fy2024_real": 36.21479089351,
+      "fy2025_real": 60.96023356676628,
+      "change_20_25": 3.656924843475018
+    },
+    "MTS_AG_Federal_Highway_Administration": {
+      "propensity": "MID",
+      "desc": "Highway infrastructure",
+      "fy2020_real": 58.85624731234871,
+      "fy2024_real": 61.12312348041,
+      "fy2025_real": 63.32134965635039,
+      "change_20_25": 4.465102344001686
+    },
+    "MTS_AG_Federal_Transit_Administration": {
+      "propensity": "MID",
+      "desc": "Public transit \u2014 used by bottom 50%",
+      "fy2020_real": 30.63810683530844,
+      "fy2024_real": 23.41467458491,
+      "fy2025_real": 24.680364709892096,
+      "change_20_25": -5.957742125416345
+    },
+    "MTS_AG_Office_of_Federal_Student_Aid": {
+      "propensity": "MID",
+      "desc": "Federal student loans, Pell",
+      "fy2020_real": 194.30073922499705,
+      "fy2024_real": 160.69332264662,
+      "fy2025_real": 108.3003238720307,
+      "change_20_25": -86.00041535296634
+    },
+    "MTS_AG_Social_Security_Administration": {
+      "propensity": "MID",
+      "desc": "SSA \u2014 progressive benefits",
+      "fy2020_real": 1393.3456212751369,
+      "fy2024_real": 1519.73364541399,
+      "fy2025_real": 1603.189820609101,
+      "change_20_25": 209.84419933396407
+    },
+    "MTS_AG_Dept_Commerce": {
+      "propensity": "LOW",
+      "desc": "Commerce, Census, NOAA",
+      "fy2020_real": 19.22068319926078,
+      "fy2024_real": 14.831117302520001,
+      "fy2025_real": 28.929791299802183,
+      "change_20_25": 9.709108100541403
+    },
+    "MTS_AG_Dept_Defense__Military_Programs": {
+      "propensity": "LOW",
+      "desc": "DoD military",
+      "fy2020_real": 833.677927059985,
+      "fy2024_real": 826.27720276202,
+      "fy2025_real": 845.560782775635,
+      "change_20_25": 11.882855715649953
+    },
+    "MTS_AG_Dept_Energy": {
+      "propensity": "LOW",
+      "desc": "DOE, nuclear weapons, R&D",
+      "fy2020_real": 38.694992265685,
+      "fy2024_real": 49.31543898811,
+      "fy2025_real": 50.91624987826054,
+      "change_20_25": 12.221257612575535
+    },
+    "MTS_AG_Dept_Interior": {
+      "propensity": "LOW",
+      "desc": "Public lands, BLM",
+      "fy2020_real": 19.82177689483187,
+      "fy2024_real": 17.08840006455,
+      "fy2025_real": 21.8126321581018,
+      "change_20_25": 1.9908552632699283
+    },
+    "MTS_AG_Dept_Justice": {
+      "propensity": "LOW",
+      "desc": "DOJ, FBI, DEA, prisons",
+      "fy2020_real": 47.82475362078649,
+      "fy2024_real": 43.99538658496,
+      "fy2025_real": 43.764944082780254,
+      "change_20_25": -4.059809538006235
+    },
+    "MTS_AG_Dept_State": {
+      "propensity": "LOW",
+      "desc": "Diplomacy, embassies",
+      "fy2020_real": 39.67736622235447,
+      "fy2024_real": 37.01713597676,
+      "fy2025_real": 27.6160023332935,
+      "change_20_25": -12.06136388906097
+    },
+    "MTS_AG_Dept_Treasury": {
+      "propensity": "LOW",
+      "desc": "Treasury (includes IRS, interest)",
+      "fy2020_real": 1390.7008121177228,
+      "fy2024_real": 1316.8524171196102,
+      "fy2025_real": 1420.521330953573,
+      "change_20_25": 29.82051883585018
+    },
+    "MTS_AG_Interest_on_Public_Debt": {
+      "propensity": "LOW",
+      "desc": "Payments to bondholders",
+      "fy2020_real": 631.0994800514084,
+      "fy2024_real": 1133.03689014916,
+      "fy2025_real": 1183.6269076798683,
+      "change_20_25": 552.5274276284599
+    },
+    "MTS_AG_International_Assistance_Programs": {
+      "propensity": "LOW",
+      "desc": "Foreign aid",
+      "fy2020_real": 26.176047336978954,
+      "fy2024_real": 35.79414935223,
+      "fy2025_real": 16.839401068130467,
+      "change_20_25": -9.336646268848487
+    },
+    "MTS_AG_National_Aeronautics_and_Space_Administration": {
+      "propensity": "LOW",
+      "desc": "NASA",
+      "fy2020_real": 25.99003598809724,
+      "fy2024_real": 25.01480701748,
+      "fy2025_real": 23.929478923926453,
+      "change_20_25": -2.060557064170787
+    },
+    "MTS_AG_Small_Business_Administration": {
+      "propensity": "LOW",
+      "desc": "SBA loans (skews middle+)",
+      "fy2020_real": 697.2228482754891,
+      "fy2024_real": 33.1965280829,
+      "fy2025_real": 0.8146978198533283,
+      "change_20_25": -696.4081504556358
+    }
+  },
+  "cbo_mandatory": {
+    "CBO_MAND_Social_Security": {
+      "label": "Social Security",
+      "propensity": "MID",
+      "fy2019_real": 1272.1941056907904,
+      "fy2024_real": 1454.382,
+      "change": 182.1878943092097,
+      "pct": 14.320762334477507
+    },
+    "CBO_MAND_Medicaid": {
+      "label": "Medicaid",
+      "propensity": "HIGH",
+      "fy2019_real": 501.5584979196015,
+      "fy2024_real": 617.517,
+      "change": 115.95850208039855,
+      "pct": 23.119636604978105
+    },
+    "CBO_MAND_Income_security\u1d47": {
+      "label": "Income Security (SNAP/EITC/etc)",
+      "propensity": "HIGH",
+      "fy2019_real": 370.59645722897477,
+      "fy2024_real": 370.185,
+      "change": -0.41145722897476844,
+      "pct": -0.11102567791697686
+    },
+    "CBO_MAND_Veterans_programs": {
+      "label": "Veterans' Programs",
+      "propensity": "MID",
+      "fy2019_real": 140.90816813550435,
+      "fy2024_real": 191.799,
+      "change": 50.89083186449565,
+      "pct": 36.11631074187018
+    },
+    "CBO_MAND_Total": {
+      "label": "Total Mandatory",
+      "propensity": "",
+      "fy2019_real": 3349.017548733741,
+      "fy2024_real": 4060.781,
+      "change": 711.7634512662589,
+      "pct": 21.25290300540156
+    },
+    "CBO_OUT_Net_interest": {
+      "label": "Net Interest (to bondholders)",
+      "propensity": "LOW",
+      "fy2019_real": 459.58483556662185,
+      "fy2024_real": 879.879,
+      "change": 420.29416443337817,
+      "pct": 91.4508338629576
+    },
+    "CBO_OUT_Discretionary": {
+      "label": "Discretionary",
+      "propensity": "",
+      "fy2019_real": 1639.106857386233,
+      "fy2024_real": 1810.196,
+      "change": 171.08914261376685,
+      "pct": 10.437949291883905
+    }
+  },
+  "tariff_windfall": {
+    "tariff_revenue_25": 194.866,
+    "incremental": 117.83000000000001,
+    "incremental_real": 112.70241473862379,
+    "bondholder_annual": 5.302350000000001,
+    "market_cap_boost": 2356.6000000000004
+  },
+  "propensity": {
+    "HIGH": {
+      "2019": 1513.1284572367326,
+      "2020": 2713.9345887962236,
+      "2024": 1887.7860013394097,
+      "2025": 1703.6155480782884
+    },
+    "MID": {
+      "2019": 2649.5374144768725,
+      "2020": 2997.5299346700217,
+      "2024": 3061.9714908619903,
+      "2025": 3318.0625728092486
+    },
+    "LOW": {
+      "2019": 1404.8832914260752,
+      "2020": 2328.3219400821376,
+      "2024": 1948.53192358576,
+      "2025": 1950.1112161720087
+    }
+  }
+}

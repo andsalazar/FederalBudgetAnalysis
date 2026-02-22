@@ -1,0 +1,39 @@
+[
+  {
+    "test": "Propensity Classification",
+    "n_specs": 4,
+    "conclusion": "Loss range: $-134.7B to $-108.0B \u2014 all negative",
+    "robust": "YES"
+  },
+  {
+    "test": "Tariff Pass-Through",
+    "n_specs": 6,
+    "conclusion": "B50 per-person: $132-$527",
+    "robust": "YES"
+  },
+  {
+    "test": "CBO Baseline Uncertainty",
+    "n_specs": 5,
+    "conclusion": "All scenarios show spending below baseline",
+    "robust": "YES"
+  },
+  {
+    "test": "Alternative Deflators",
+    "n_specs": 5,
+    "conclusion": "All deflators show >70% real decline in Income Security",
+    "robust": "YES"
+  },
+  {
+    "test": "Bootstrap CI (n=500, clustered by HH)",
+    "n_specs": 500,
+    "conclusion": "B50 share: 11.12% [10.96, 11.29]",
+    "robust": "YES",
+    "note": "Bootstrap draws for confidence intervals, not independent specifications"
+  },
+  {
+    "test": "Placebo (FY2019)",
+    "n_specs": 1,
+    "conclusion": "FY2019 gap near $0B vs FY2025 gap $-404B",
+    "robust": "YES"
+  }
+]

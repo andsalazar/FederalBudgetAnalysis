@@ -1,0 +1,107 @@
+{
+  "traded_goods": [
+    {
+      "name": "Consumer Electronics",
+      "pre_yoy": -6.04813259789797,
+      "post_yoy": 1.5655577299412915,
+      "acceleration": 7.613690327839262,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Household Furnishings",
+      "pre_yoy": 0.47568138143827543,
+      "post_yoy": 3.930877965667956,
+      "acceleration": 3.4551965842296806,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Apparel",
+      "pre_yoy": 0.5790955006361509,
+      "post_yoy": 1.7533503020638497,
+      "acceleration": 1.1742548014276988,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Footwear",
+      "pre_yoy": 1.0288065843621519,
+      "post_yoy": 1.9540925854571345,
+      "acceleration": 0.9252860010949826,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "New Vehicles",
+      "pre_yoy": -0.3399442915594353,
+      "post_yoy": 0.37078941177788316,
+      "acceleration": 0.7107337033373184,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Used Vehicles",
+      "pre_yoy": 0.9290950875871395,
+      "post_yoy": -1.958992054778208,
+      "acceleration": -2.8880871423653476,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Toys/Recreation",
+      "pre_yoy": 1.9394043135912309,
+      "post_yoy": 3.904925024767869,
+      "acceleration": 1.9655207111766382,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Food at Home",
+      "pre_yoy": 1.8447705832817185,
+      "post_yoy": 2.1787740052828575,
+      "acceleration": 0.33400342200113897,
+      "latest_date": "2026-01-01"
+    }
+  ],
+  "services_control": [
+    {
+      "name": "Medical Care",
+      "pre_yoy": 2.6268947320208236,
+      "post_yoy": 3.1930496389354746,
+      "acceleration": 0.566154906914651,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Shelter (Rent/OER)",
+      "pre_yoy": 4.398682714708846,
+      "post_yoy": 3.024080824456332,
+      "acceleration": -1.3746018902525137,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Education",
+      "pre_yoy": 0.49316312212837055,
+      "post_yoy": 0.5482358577735269,
+      "acceleration": 0.05507273564515636,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Services less Energy",
+      "pre_yoy": 4.31373124903629,
+      "post_yoy": 2.9516381826543148,
+      "acceleration": -1.3620930663819752,
+      "latest_date": "2026-01-01"
+    },
+    {
+      "name": "Transportation Services",
+      "pre_yoy": 8.17753468940088,
+      "post_yoy": 1.394521522589831,
+      "acceleration": -6.783013166811048,
+      "latest_date": "2026-01-01"
+    }
+  ],
+  "mean_traded_acceleration": 1.6613248010926713,
+  "mean_services_acceleration": -1.7796960961771462,
+  "differential": 3.4410208972698175,
+  "welch_t_stat": 2.043684817422961,
+  "welch_p_value": 0.07203426028049088,
+  "mann_whitney_U": 35.0,
+  "mann_whitney_p": 0.014763014763014764,
+  "cohens_d": 1.2589143892349957,
+  "n_traded": 8,
+  "n_services": 5
+}

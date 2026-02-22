@@ -1,0 +1,68 @@
+{
+  "analysis_period": "FY2000-FY2025 (26 fiscal years)",
+  "data_sources": {
+    "CBO_Historical_Budget": "FY1962-2025 (outlays, revenue, deficit, debt)",
+    "Census_H2_Quintile_Shares": "2000-2023 (24 annual observations)",
+    "CPS_ASEC_Microdata": "8 benchmark years (CY2002-CY2023, 180K-216K records each)",
+    "FRED_Distributional": "10 series (wealth shares, Gini, poverty, benefits)",
+    "CPI_Deflator": "FY1963-2025 (real 2024 dollars)"
+  },
+  "aggregate_budget_25yr": {
+    "total_outlays_real": {
+      "fy2000": 3264.8,
+      "fy2025": 6825.5,
+      "change_pct": 109
+    },
+    "net_interest_real": {
+      "fy2000": 406.9,
+      "fy2025": 944.4,
+      "change_pct": 132
+    },
+    "customs_real": {
+      "fy2000": 36.3,
+      "fy2025": 189.7,
+      "change_pct": 422
+    },
+    "income_security_real": {
+      "fy2000": 244.4,
+      "fy2025": 387.0,
+      "change_pct": 58
+    }
+  },
+  "fiscal_composition_25yr": {
+    "safety_net_share_of_outlays": {
+      "fy2000": 14.1,
+      "fy2025": 15.2
+    },
+    "interest_crowding_ratio": {
+      "fy2000": 0.9,
+      "fy2025": 0.9
+    },
+    "regressive_revenue_share": {
+      "fy2000": 36.6,
+      "fy2025": 39.1
+    },
+    "customs_share_of_revenue": {
+      "fy2000": 1.0,
+      "fy2025": 3.7
+    }
+  },
+  "distributional_evolution": {
+    "b50_income_share": {
+      "cy2002": 5.125923586595825,
+      "cy2023": 6.095193636080212
+    },
+    "b50_transfer_dependency": {
+      "cy2002": 44.15725673878158,
+      "cy2023": 41.933795076318354
+    },
+    "top20_income_share_census": {
+      "cy2000": 49.8,
+      "cy2023": 52.4
+    },
+    "bottom20_income_share_census": {
+      "cy2000": 3.6,
+      "cy2023": 3.0
+    }
+  }
+}

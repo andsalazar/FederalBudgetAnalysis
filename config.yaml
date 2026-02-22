@@ -1,0 +1,239 @@
+# =============================================================================
+# Federal Budget Analysis - Project Configuration
+# =============================================================================
+
+project:
+  name: "Federal Budget & Policy Analysis"
+  version: "0.1.0"
+  description: "Research project analyzing federal budgets, tariffs, and taxpayer welfare impacts from policy changes"
+
+# Database configuration
+database:
+  url: "sqlite:///data/federal_budget.db"
+  echo: false
+
+# Data collection settings
+collectors:
+  fred:
+    # Set via FRED_API_KEY env variable (preferred) or here:
+    api_key: ""  # e.g. "your-fred-api-key-here"
+    # Key FRED series for federal budget / fiscal analysis
+    series:
+      # Federal budget
+      - FYFSD        # Federal Surplus or Deficit
+      - FYFSGDA188S  # Federal Surplus or Deficit as % of GDP
+      - FYONGDA188S  # Federal Net Outlays as % of GDP
+      - FGRECPT      # Federal Government Current Receipts
+      - FGEXPND      # Federal Government Current Expenditures
+      - GFDEBTN      # Federal Debt: Total Public Debt
+      - GFDEGDQ188S  # Federal Debt: Total Public Debt as % of GDP
+
+      # Tax revenue
+      - W006RC1Q027SBEA  # Federal Government Tax Receipts
+      - USINCTAX        # US Individual Income Tax Collections (Annual)
+      - FGRECPTQ027S    # Federal Government Current Receipts (Quarterly)
+
+      # Tariffs & trade
+      - IMPGS     # Imports of Goods and Services
+      - EXPGS     # Exports of Goods and Services
+      - BOPGSTB   # Trade Balance
+      - USRECQ    # US Recessions
+
+      # Income & welfare indicators
+      - MEHOINUSA672N  # Median Household Income
+      - DSPIC96        # Real Disposable Personal Income
+      - PCE            # Personal Consumption Expenditures
+      - CPIAUCSL       # CPI (All Urban Consumers)
+      - UNRATE         # Unemployment Rate
+      - GINIALLRF      # Gini Index
+
+      # ---- H1a: Social program spending ----
+      - W823RC1Q027SBEA  # Federal Social Benefits (total)
+      - TRP6001A027NBEA  # Government Social Benefits to Persons
+      - W729RC1Q027SBEA  # Federal Grants-in-Aid to State & Local Gov
+      - A091RC1Q027SBEA  # Federal Net Outlays
+
+      # ---- H1b: Tax burden distribution ----
+      - IITTRHB         # Individual Income Tax: Highest Bracket Rate
+      - FYFR            # Federal Receipts (Fiscal Year)
+      - B230RC0A052NBEA # Contributions for Government Social Insurance
+      - W007RC1Q027SBEA # Federal Excise Taxes
+
+      # ---- H1c: Tariffs & consumer prices (regressive tax) ----
+      - CUSR0000SAF11   # CPI: Food at Home
+      - CPIAPPSL        # CPI: Apparel (Seasonally Adjusted)
+      - CUSR0000SAH1    # CPI: Shelter
+      - CUSR0000SETB01  # CPI: Gasoline
+      - CPIMEDSL        # CPI: Medical Care (Seasonally Adjusted)
+      - CPIEDUSL        # CPI: Education & Communication (Seasonally Adjusted)
+      - IR              # Import Price Index (All Commodities)
+      - PCUOMFGOMFG     # PPI: Total Manufacturing
+
+      # ---- H1d: Deficit & debt service ----
+      - FYOINT         # Federal Net Interest Outlays
+      - FYOIGDA188S    # Federal Interest Outlays as % of GDP
+      - A091RC1Q027SBEA # Federal Net Outlays (already above, shared)
+      - DGS10          # 10-Year Treasury Yield
+      - DGS2           # 2-Year Treasury Yield
+      - DGS30          # 30-Year Treasury Yield
+
+      # ---- H1e: Corporate/shareholder benefits ----
+      - FCTAX          # Federal Corporate Tax Revenue
+      - CP             # Corporate Profits After Tax
+      - CPATAX         # Corporate Profits After Tax (with adjustments)
+      - SP500          # S&P 500 Index
+      - BOGZ1FL893064105Q  # Corporate Equity & Mutual Fund Holdings
+      - NCBCMDPMVCE    # Market Value of Corporate Equities
+
+    start_date: "1970-01-01"
+    frequency: null  # null = native frequency
+
+  bea:
+    datasets:
+      - NIPA  # National Income and Product Accounts
+      - GDPbyIndustry
+    tables:
+      - "T3.2"   # Federal Government Current Receipts and Expenditures
+      - "T3.15"  # Government Social Benefits
+
+  census:
+    datasets:
+      - acs/acs1  # American Community Survey 1-Year
+    variables:
+      - B19013_001E  # Median household income
+      - B17001_002E  # Population below poverty level
+
+# Analysis settings
+analysis:
+  # Time periods for policy impact studies
+  policy_periods:
+    reagan_era:
+      start: "1981-01-01"
+      end: "1989-01-01"
+      label: "Reagan Tax Cuts (ERTA 1981, TRA 1986)"
+
+    clinton_era:
+      start: "1993-01-01"
+      end: "2001-01-01"
+      label: "Clinton Era (OBRA 1993)"
+
+    bush_tax_cuts:
+      start: "2001-01-01"
+      end: "2009-01-01"
+      label: "Bush Tax Cuts (EGTRRA, JGTRRA)"
+
+    aca_era:
+      start: "2010-01-01"
+      end: "2017-01-01"
+      label: "ACA Implementation"
+
+    tcja:
+      start: "2017-12-22"
+      end: "2025-12-31"
+      label: "Tax Cuts and Jobs Act (2017)"
+
+    tariff_era_2018:
+      start: "2018-03-01"
+      end: "2020-01-01"
+      label: "2018-2019 Tariff Escalation"
+
+    tariff_era_2025:
+      start: "2025-01-20"
+      end: null
+      label: "2025 Tariff Policy"
+
+  # Specific 2025 policy event dates for event-study analysis
+  policy_events_2025:
+    inauguration:
+      date: "2025-01-20"
+      label: "Administration Change"
+      category: "general"
+
+    doge_executive_order:
+      date: "2025-01-20"
+      label: "DOGE / Spending Reduction EO"
+      category: "spending"
+
+    tariff_china_10:
+      date: "2025-02-04"
+      label: "10% Tariff on China"
+      category: "tariff"
+
+    tariff_canada_mexico_25:
+      date: "2025-03-04"
+      label: "25% Tariff on Canada & Mexico"
+      category: "tariff"
+
+    tariff_china_20:
+      date: "2025-03-04"
+      label: "China Tariff raised to 20%"
+      category: "tariff"
+
+    reciprocal_tariffs:
+      date: "2025-04-02"
+      label: "Reciprocal Tariffs Announced"
+      category: "tariff"
+
+    snap_cuts_proposed:
+      date: "2025-02-01"
+      label: "SNAP / Medicaid Cuts Proposed"
+      category: "spending"
+
+    tax_bill_2025:
+      date: "2025-01-20"
+      label: "2025 Tax Legislation (tracking)"
+      category: "tax"
+
+  # Hypothesis mapping — which sub-hypothesis each series tests
+  hypothesis_series_map:
+    H1a_social_programs:
+      - W823RC1Q027SBEA
+      - TRP6001A027NBEA
+      - W729RC1Q027SBEA
+    H1b_tax_burden:
+      - IITTRHB
+      - W007RC1Q027SBEA
+      - B230RC0A052NBEA
+      - GINIALLRF
+      - USINCTAX
+    H1c_tariffs_regressive:
+      - CPIAUCSL
+      - CUSR0000SAF11
+      - CPIAPPSL
+      - CUSR0000SAH1
+      - CUSR0000SETB01
+      - IR
+      - IMPGS
+      - EXPGS
+      - BOPGSTB
+    H1d_deficit_bondholders:
+      - FYFSD
+      - FYFSGDA188S
+      - FYOINT
+      - FYOIGDA188S
+      - DGS10
+      - DGS2
+      - GFDEBTN
+    H1e_shareholder_benefits:
+      - FCTAX
+      - CP
+      - CPATAX
+      - SP500
+      - NCBCMDPMVCE
+
+  # Regression / counterfactual settings
+  significance_level: 0.05
+  bootstrap_iterations: 1000
+
+# Visualization settings
+visualization:
+  style: "seaborn-v0_8-whitegrid"
+  figure_dpi: 150
+  default_figsize: [12, 7]
+  color_palette: "colorblind"
+  export_formats: ["png", "pdf"]
+
+# Logging
+logging:
+  level: "INFO"
+  file: "output/project.log"

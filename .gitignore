@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment variables (contains API keys)
+.env
+
+# Large binary data (>GitHub 100MB limit; see data/README.md for acquisition)
+data/federal_budget.db
+data/external/cps_asec_2024_microdata.csv
+
+# Ephemeral logs and scratch files
+*.log
+robustness_*.txt
+newfig_out.txt
+tariff_out.txt
+fred_collect.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store

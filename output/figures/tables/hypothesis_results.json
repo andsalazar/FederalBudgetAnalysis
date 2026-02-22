@@ -1,0 +1,252 @@
+{
+  "H1a": {
+    "cbo_CBO_MAND_Social_Security_yoy": {
+      "year_a": 2023,
+      "val_a": 1347.961,
+      "year_b": 2024,
+      "val_b": 1454.382,
+      "change": 106.42100000000005,
+      "pct_change": 7.894961352739438
+    },
+    "cbo_CBO_MAND_Medicaid_yoy": {
+      "year_a": 2023,
+      "val_a": 615.772,
+      "year_b": 2024,
+      "val_b": 617.517,
+      "change": 1.7450000000000045,
+      "pct_change": 0.2833841097029427
+    },
+    "cbo_CBO_MAND_Income_security\u1d47_yoy": {
+      "year_a": 2023,
+      "val_a": 448.1,
+      "year_b": 2024,
+      "val_b": 370.185,
+      "change": -77.91500000000002,
+      "pct_change": -17.38785985271145
+    },
+    "cbo_CBO_MAND_Veterans_programs_yoy": {
+      "year_a": 2023,
+      "val_a": 170.416,
+      "year_b": 2024,
+      "val_b": 191.799,
+      "change": 21.38300000000001,
+      "pct_change": 12.547530748286551
+    },
+    "cbo_CBO_MAND_Total_yoy": {
+      "year_a": 2023,
+      "val_a": 3758.276,
+      "year_b": 2024,
+      "val_b": 4060.781,
+      "change": 302.5050000000001,
+      "pct_change": 8.049036313458622
+    },
+    "its_social_benefits": {
+      "effect": 77.17150476190369,
+      "trend": -39.11489350649572,
+      "p_intervention": 0.02616852769314124,
+      "p_trend": 0.09516761551929168,
+      "r2": 0.9741433250475555
+    }
+  },
+  "H1b": {
+    "rev_CBO_REV_Individual_income_taxes": {
+      "year_a": 2023,
+      "val_a": 2176.481,
+      "year_b": 2024,
+      "val_b": 2426.067,
+      "change": 249.58599999999979,
+      "pct_change": 11.46741000725482
+    },
+    "rev_CBO_REV_Corporate_income_taxes": {
+      "year_a": 2023,
+      "val_a": 419.584,
+      "year_b": 2024,
+      "val_b": 529.867,
+      "change": 110.28299999999996,
+      "pct_change": 26.283890710799255
+    },
+    "rev_CBO_REV_Payroll_taxes": {
+      "year_a": 2023,
+      "val_a": 1614.456,
+      "year_b": 2024,
+      "val_b": 1708.926,
+      "change": 94.47000000000003,
+      "pct_change": 5.851506637529919
+    },
+    "rev_CBO_REV_Excise_taxes": {
+      "year_a": 2023,
+      "val_a": 75.802,
+      "year_b": 2024,
+      "val_b": 101.436,
+      "change": 25.634,
+      "pct_change": 33.81704968206643
+    },
+    "rev_CBO_REV_Customs_duties": {
+      "year_a": 2023,
+      "val_a": 80.338,
+      "year_b": 2024,
+      "val_b": 77.036,
+      "change": -3.3019999999999925,
+      "pct_change": -4.11013468097288
+    },
+    "rev_CBO_REV_Total": {
+      "year_a": 2023,
+      "val_a": 4440.948,
+      "year_b": 2024,
+      "val_b": 4919.883,
+      "change": 478.9349999999995,
+      "pct_change": 10.784521683208167
+    },
+    "regressive_share_2023": 39.869775552427086,
+    "regressive_share_2024": 38.36266025025392,
+    "gini_latest": 0.456
+  },
+  "H1c": {
+    "cpi_CPIAUCSL": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 315.1960833333333,
+      "post_mean": 322.9529,
+      "pct_change": 2.460949572924583,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "cpi_CUSR0000SAF11": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 307.48341666666664,
+      "post_mean": 314.1665,
+      "pct_change": 2.1734776482525784,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "cpi_CPIAPPSL": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 131.6025833333333,
+      "post_mean": 131.69670000000002,
+      "pct_change": 0.07151582004155739,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "cpi_CUSR0000SAH1": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 403.39775000000003,
+      "post_mean": 416.8112,
+      "pct_change": 3.325117703308943,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "cpi_CUSR0000SETB01": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 294.9060833333333,
+      "post_mean": 275.89554545454547,
+      "pct_change": -6.446302383426983,
+      "pre_n": 12,
+      "post_n": 11
+    },
+    "cpi_CPIMEDSL": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 566.4144999999999,
+      "post_mean": 582.6036999999999,
+      "pct_change": 2.8581895414047542,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "cpi_CPIEDUSL": {
+      "event_date": "2025-02-04",
+      "window_years": 1,
+      "pre_mean": 146.16191666666666,
+      "post_mean": 146.891,
+      "pct_change": 0.4988189467958779,
+      "pre_n": 12,
+      "post_n": 10
+    },
+    "its_cpi": {
+      "effect": -6.955991071428485,
+      "p_val": 0.008340257832324074,
+      "r2": 0.9755229945454384
+    }
+  },
+  "H1d": {
+    "CBO_REVENUES_yoy": {
+      "year_a": 2023,
+      "val_a": 4440.948,
+      "year_b": 2024,
+      "val_b": 4919.883,
+      "change": 478.9349999999995,
+      "pct_change": 10.784521683208167
+    },
+    "CBO_OUTLAYS_yoy": {
+      "year_a": 2023,
+      "val_a": 6134.673,
+      "year_b": 2024,
+      "val_b": 6750.856,
+      "change": 616.183,
+      "pct_change": 10.044268048190997
+    },
+    "CBO_DEBT_HELD_yoy": {
+      "year_a": 2023,
+      "val_a": 26235.592,
+      "year_b": 2024,
+      "val_b": 28195.575,
+      "change": 1959.9830000000002,
+      "pct_change": 7.470702395432892
+    },
+    "CBO_OUT_Net_interest_yoy": {
+      "year_a": 2023,
+      "val_a": 658.267,
+      "year_b": 2024,
+      "val_b": 879.879,
+      "change": 221.61199999999997,
+      "pct_change": 33.66597444502002
+    },
+    "interest_vs_safety_net": 0.890834482465359,
+    "its_deficit": {
+      "effect": 215029.1333333333,
+      "p_val": 0.7982598569609203
+    }
+  },
+  "H1e": {
+    "corp_indiv_ratio_2021": 18.18798587540361,
+    "corp_indiv_ratio_2022": 16.14139185288354,
+    "corp_indiv_ratio_2023": 19.27809156156199,
+    "corp_indiv_ratio_2024": 21.840575713696282,
+    "corp_indiv_ratio_2025": 17.02114121603407
+  },
+  "flow": {
+    "flow_CBO_OUT_Discretionary": {
+      "FY2020": 1627.882,
+      "FY2024": 1810.196,
+      "change": 182.31399999999985
+    },
+    "flow_CBO_MAND_Social_Security": {
+      "FY2020": 1089.889,
+      "FY2024": 1454.382,
+      "change": 364.49300000000017
+    },
+    "flow_CBO_MAND_Medicaid": {
+      "FY2020": 458.468,
+      "FY2024": 617.517,
+      "change": 159.04900000000004
+    },
+    "flow_CBO_MAND_Income_security\u1d47": {
+      "FY2020": 1050.897,
+      "FY2024": 370.185,
+      "change": -680.712
+    },
+    "flow_CBO_MAND_Veterans_programs": {
+      "FY2020": 121.788,
+      "FY2024": 191.799,
+      "change": 70.01100000000001
+    },
+    "flow_CBO_OUT_Net_interest": {
+      "FY2020": 345.47,
+      "FY2024": 879.879,
+      "change": 534.409
+    }
+  }
+}

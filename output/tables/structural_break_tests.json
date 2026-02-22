@@ -1,0 +1,35 @@
+{
+  "customs_share": {
+    "pre_2018_trend": "0.067 pp/decade",
+    "predicted_2025": 1.2,
+    "actual_2025": 3.72,
+    "deviation": 2.52,
+    "z_score": 25.8,
+    "is_outlier": 1,
+    "interpretation": "STRUCTURAL BREAK"
+  },
+  "interest_ratio": {
+    "trend": "-0.031/decade",
+    "predicted_2025": 0.45,
+    "actual_2025": 0.91,
+    "z_score": 2.42,
+    "is_outlier": 1,
+    "interpretation": "STRUCTURAL BREAK"
+  },
+  "regressive_share": {
+    "trend": "-1.681 pp/decade",
+    "predicted_2025": 37.43,
+    "actual_2025": 39.15,
+    "z_score": 0.47,
+    "is_outlier": 0,
+    "interpretation": "Within trend"
+  },
+  "safety_net_share": {
+    "trend": "0.841 pp/decade",
+    "predicted_2025": 17.7,
+    "actual_2025": 15.2,
+    "z_score": -1.49,
+    "is_outlier": 0,
+    "interpretation": "Within trend"
+  }
+}

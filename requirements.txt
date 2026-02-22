@@ -1,0 +1,41 @@
+# Core data science
+pandas>=2.1.0
+numpy>=1.25.0
+scipy>=1.11.0
+
+# Statistics & econometrics
+statsmodels>=0.14.0
+linearmodels>=5.3
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.18.0
+dash>=2.14.0
+
+# Data collection & APIs
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+fredapi>=0.5.1
+pandas-datareader>=0.10.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Notebooks
+jupyter>=1.0.0
+jupyterlab>=4.0.0
+ipywidgets>=8.1.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+pyyaml>=6.0.1
+loguru>=0.7.0
+
+# Data formats
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Testing
+pytest>=7.4.0

@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "date": "2026-02-21",
+    "description": "SCOTUS tariff revocation + 15% legislative tariff scenario analysis",
+    "assumptions": {
+      "total_goods_imports_B": 3100,
+      "legislative_tariff_rate": 0.15,
+      "import_demand_elasticity": -1.0,
+      "dwl_factor": 1.4,
+      "refund_amount_B": 133,
+      "new_debt_interest_rate": 0.045,
+      "b50_population": 136571242,
+      "b50_mean_pretax_income": 12526,
+      "b50_cps_tariff_share": 0.33248500000000003,
+      "trade_volume_reduction_central": 0.13043478260869565
+    }
+  },
+  "refund_scenario": {
+    "tariff_burden_removed_total_B": 140.0,
+    "b50_tariff_relief_B": 46.547900000000006,
+    "refund_amount_B": 133,
+    "annual_interest_on_refund_B": 5.984999999999999,
+    "interest_to_top_decile_B": 4.00995,
+    "revenue_gap_B": 100,
+    "b50_spending_cuts_B": 131.43,
+    "b50_combined_post_revocation_B": 131.43,
+    "b50_per_person_post": 962.354871166801,
+    "b50_pct_income_post": 7.682858623397741
+  },
+  "refund_quintile_relief_B": {
+    "Q1": 14.5572,
+    "Q2": 19.5272,
+    "Q3": 24.927000000000003,
+    "Q4": 32.3736,
+    "Q5": 48.6164
+  },
+  "legislative_scenarios": {
+    "Low": {
+      "label": "Low (FTA-exempt, high elasticity)",
+      "import_base_B": 1705.0000000000002,
+      "trade_reduction_pct": 0.15,
+      "tariff_revenue_B": 217.38750000000002,
+      "above_baseline_B": 122.38750000000002,
+      "consumer_burden_B": 304.34250000000003,
+      "b50_tariff_burden_B": 101.18931611250002
+    },
+    "Central": {
+      "label": "Central (full base, moderate elasticity)",
+      "import_base_B": 3100,
+      "trade_reduction_pct": 0.13043478260869565,
+      "tariff_revenue_B": 404.3478260869565,
+      "above_baseline_B": 309.3478260869565,
+      "consumer_burden_B": 566.086956521739,
+      "b50_tariff_burden_B": 188.21542173913042
+    },
+    "High": {
+      "label": "High (full base, low elasticity)",
+      "import_base_B": 3100,
+      "trade_reduction_pct": 0.05,
+      "tariff_revenue_B": 441.75,
+      "above_baseline_B": 346.75,
+      "consumer_burden_B": 618.4499999999999,
+      "b50_tariff_burden_B": 205.62534825
+    }
+  },
+  "combined_scenarios": {
+    "Low": {
+      "scenario": "Low (FTA-exempt, high elasticity)",
+      "tariff_revenue_B": 217.38750000000002,
+      "consumer_burden_B": 304.34250000000003,
+      "revenue_vs_fy25_B": 22.387500000000017,
+      "annual_interest_cost_B": 5.984999999999999,
+      "net_fiscal_change_B": 16.402500000000018,
+      "b50_spending_cuts_B": 131.43,
+      "b50_tariff_burden_B": 101.18931611250002,
+      "b50_combined_B": 232.61931611250003,
+      "b50_per_person": 1703.2818381522811,
+      "b50_pct_income": 13.597970925692806,
+      "quintile_detail": {
+        "Q1": {
+          "spending_cut_B": 64.65,
+          "tariff_burden_B": 31.645533150000006,
+          "total_B": 96.29553315000001,
+          "per_person": 1762.7818117291354,
+          "pct_income": 445.1469221538221
+        },
+        "Q2": {
+          "spending_cut_B": 50.45,
+          "tariff_burden_B": 42.449691900000005,
+          "total_B": 92.89969190000001,
+          "per_person": 1700.6100322595264,
+          "pct_income": 10.74567188335351
+        },
+        "Q3": {
+          "spending_cut_B": 32.66,
+          "tariff_burden_B": 54.18818212500001,
+          "total_B": 86.84818212500001,
+          "per_person": 1589.639799940971,
+          "pct_income": 4.4628984529070745
+        },
+        "Q4": {
+          "spending_cut_B": 23.88,
+          "tariff_burden_B": 70.3761597,
+          "total_B": 94.2561597,
+          "per_person": 1725.3827078929241,
+          "pct_income": 3.3198312704781885
+        },
+        "Q5": {
+          "spending_cut_B": 12.36,
+          "tariff_burden_B": 105.68597655000002,
+          "total_B": 118.04597655000002,
+          "per_person": 2160.9297998806464,
+          "pct_income": 1.6729735922338107
+        }
+      }
+    },
+    "Central": {
+      "scenario": "Central (full base, moderate elasticity)",
+      "tariff_revenue_B": 404.3478260869565,
+      "consumer_burden_B": 566.086956521739,
+      "revenue_vs_fy25_B": 209.3478260869565,
+      "annual_interest_cost_B": 5.984999999999999,
+      "net_fiscal_change_B": 203.3628260869565,
+      "b50_spending_cuts_B": 131.43,
+      "b50_tariff_burden_B": 188.21542173913042,
+      "b50_combined_B": 319.6454217391304,
+      "b50_per_person": 2340.503147354627,
+      "b50_pct_income": 18.68516004594146,
+      "quintile_detail": {
+        "Q1": {
+          "spending_cut_B": 64.65,
+          "tariff_burden_B": 58.861721739130424,
+          "total_B": 123.51172173913042,
+          "per_person": 2261.0001678680055,
+          "pct_income": 570.9596383505065
+        },
+        "Q2": {
+          "spending_cut_B": 50.45,
+          "tariff_burden_B": 78.95780869565215,
+          "total_B": 129.40780869565214,
+          "per_person": 2368.923009534196,
+          "pct_income": 14.968551810528218
+        },
+        "Q3": {
+          "spending_cut_B": 32.66,
+          "tariff_burden_B": 100.79178260869564,
+          "total_B": 133.45178260869562,
+          "per_person": 2442.656366744911,
+          "pct_income": 6.857734261896491
+        },
+        "Q4": {
+          "spending_cut_B": 23.88,
+          "tariff_burden_B": 130.90194782608694,
+          "total_B": 154.78194782608693,
+          "per_person": 2833.3224812374274,
+          "pct_income": 5.451632573765542
+        },
+        "Q5": {
+          "spending_cut_B": 12.36,
+          "tariff_burden_B": 196.5793565217391,
+          "total_B": 208.93935652173911,
+          "per_person": 3824.808731913639,
+          "pct_income": 2.9611346024244884
+        }
+      }
+    },
+    "High": {
+      "scenario": "High (full base, low elasticity)",
+      "tariff_revenue_B": 441.75,
+      "consumer_burden_B": 618.4499999999999,
+      "revenue_vs_fy25_B": 246.75,
+      "annual_interest_cost_B": 5.984999999999999,
+      "net_fiscal_change_B": 240.765,
+      "b50_spending_cuts_B": 131.43,
+      "b50_tariff_burden_B": 205.62534825,
+      "b50_combined_B": 337.05534825,
+      "b50_per_person": 2467.981862902001,
+      "b50_pct_income": 19.70287292752675,
+      "quintile_detail": {
+        "Q1": {
+          "spending_cut_B": 64.65,
+          "tariff_burden_B": 64.30643099999999,
+          "total_B": 128.956431,
+          "per_person": 2360.6707770982753,
+          "pct_income": 596.1289841157261
+        },
+        "Q2": {
+          "spending_cut_B": 50.45,
+          "tariff_burden_B": 86.26140599999998,
+          "total_B": 136.71140599999998,
+          "per_person": 2502.6217397810888,
+          "pct_income": 15.813356121452601
+        },
+        "Q3": {
+          "spending_cut_B": 32.66,
+          "tariff_burden_B": 110.1150225,
+          "total_B": 142.77502249999998,
+          "per_person": 2613.305801574572,
+          "pct_income": 7.336830909274747
+        },
+        "Q4": {
+          "spending_cut_B": 23.88,
+          "tariff_burden_B": 143.01037799999997,
+          "total_B": 166.89037799999997,
+          "per_person": 3054.9703407332186,
+          "pct_income": 5.878108098078232
+        },
+        "Q5": {
+          "spending_cut_B": 12.36,
+          "tariff_burden_B": 214.762947,
+          "total_B": 227.122947,
+          "per_person": 4157.6744820364875,
+          "pct_income": 3.218836453611594
+        }
+      }
+    }
+  },
+  "welfare_analysis": {
+    "sigma": 2,
+    "sq_welfare_weighted_loss": 636877119390274.2,
+    "scenario_welfare_weighted_loss": 1000143873301624.8,
+    "welfare_change_pct": 57.03875093819204
+  },
+  "status_quo_comparison": {
+    "tariff_revenue_B": 195,
+    "consumer_burden_B": 140,
+    "b50_combined_B": 181.8,
+    "b50_per_person": 1331,
+    "b50_pct_income": 10.6
+  }
+}
