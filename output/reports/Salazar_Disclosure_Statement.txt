@@ -1,0 +1,53 @@
+DISCLOSURE STATEMENT
+
+Title: The Distributional Consequences of Federal Fiscal Policy, FY2000–FY2025:
+       A Quarter-Century of Structural Shift and the 2025 Inflection Point
+Author: Andy Salazar
+Date: February 2026
+
+1. FUNDING
+This research received no external funding from any source.
+
+2. CONFLICTS OF INTEREST
+The author declares no conflicts of interest, financial or otherwise.
+
+3. INSTITUTIONAL AFFILIATION
+Independent researcher.
+
+4. IRB / HUMAN SUBJECTS
+Not applicable. All data are from publicly available administrative sources
+(Congressional Budget Office, U.S. Treasury, Census Bureau, Bureau of Labor
+Statistics, Federal Reserve). CPS ASEC microdata are de-identified public-use
+files distributed by the Census Bureau.
+
+5. DATA AVAILABILITY
+All code and reproducible data are publicly available at:
+  https://github.com/andsalazar/FederalBudgetAnalysis
+
+The paper and replication package are posted at:
+  https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038
+
+6. AI TOOLS DISCLOSURE
+AI tools (GitHub Copilot, powered by Anthropic Claude) were used in the
+following capacities during this research:
+
+  (a) Code development: Assisted with writing Python scripts for data
+      collection, statistical analysis, and figure generation. All code was
+      reviewed, tested (59 automated tests), and validated by the author.
+
+  (b) Statistical methodology: Consulted on implementation of structural break
+      tests, bootstrap confidence intervals, and welfare analysis
+      specifications. All methodological choices were validated against cited
+      literature (Athey & Imbens, 2017; Amiti et al., 2019; Fajgelbaum et al.,
+      2020).
+
+  (c) Writing assistance: Assisted with drafting, editing, and formatting the
+      manuscript, including LaTeX/PDF generation. All substantive claims,
+      interpretations, and analytical judgments are the author's own.
+
+  (d) Robustness and quality review: Assisted with code auditing, numerical
+      verification, and narrative consistency checks.
+
+All data collection, analytical decisions, parameter choices, and interpretive
+conclusions are solely the responsibility of the author. AI tools were not used
+to generate data or fabricate results.
