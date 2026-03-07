@@ -34,6 +34,7 @@ FIGURES_DIR = OUTPUT_DIR / "figures"
 PDF_DIR = OUTPUT_DIR / "reports"
 PDF_DIR.mkdir(parents=True, exist_ok=True)
 
+# Default output names (overridden when --source is used)
 PANDOC_PDF = PDF_DIR / "FINDINGS_journal.pdf"
 XHTML2PDF_OUT = PDF_DIR / "FINDINGS_publication.pdf"
 
@@ -112,9 +113,10 @@ def check_xhtml2pdf():
 #  PANDOC / LaTeX PIPELINE
 # ==============================================================================
 
-def prepare_pandoc_markdown():
+def prepare_pandoc_markdown(source_md=None):
     """Prepare Markdown with YAML front-matter for Pandoc -> LaTeX -> PDF."""
-    text = FINDINGS_MD.read_text(encoding="utf-8")
+    src = source_md or FINDINGS_MD
+    text = src.read_text(encoding="utf-8")
     lines = text.split("\n")
 
     # Extract title from the first H1 line in FINDINGS.md
@@ -124,12 +126,19 @@ def prepare_pandoc_markdown():
             doc_title = line.lstrip("# ").strip()
             break
 
+    # Detect date from the markdown (look for **Date:** line)
+    doc_date = "March 2026"
+    for line in lines:
+        if line.strip().startswith("**Date:"):
+            doc_date = line.replace("**Date:**", "").strip()
+            break
+
     yaml_block = f"""---
 title: |
   {doc_title}
 author:
   - Andy Salazar
-date: February 2026
+date: {doc_date}
 abstract: |
 """
 
@@ -155,7 +164,7 @@ abstract: |
         if line.startswith("**JEL Codes:**"):
             jel_codes = line.replace("**JEL Codes:**", "").strip()
 
-    thanks_parts = ["Working Paper. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038."]
+    thanks_parts = ["Working Paper. Resubmission to AEJ: Economic Policy. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038."]
     if jel_codes:
         thanks_parts.append(f"JEL: {jel_codes}.")
     thanks_parts.append("Replication package: https://github.com/andsalazar/FederalBudgetAnalysis.")
@@ -197,9 +206,10 @@ header-includes:
 
     # Page breaks between major sections
     body = re.sub(r"\n(## \d+\.)", r"\n\\newpage\n\1", body)
+    body = re.sub(r"\n(## Appendix [A-F])", r"\n\\newpage\n\1", body)
 
-    # Replace Appendix B table with inline figure references
-    body = re.sub(r"## Appendix B: Figures.*?(?=\n##|\Z)", "", body, flags=re.DOTALL)
+    # Replace Appendix F (or Appendix B) figure table with inline figure references
+    body = re.sub(r"## Appendix [BF]: Figures.*?(?=\n##|\Z)", "", body, flags=re.DOTALL)
 
     figures_md = "\n\\newpage\n\n## Appendix B: Figures\n\n"
     for idx, f in enumerate(FIGURE_FILES, 1):
@@ -210,13 +220,15 @@ header-includes:
     return yaml_block + "\n" + body
 
 
-def generate_pandoc_pdf():
+def generate_pandoc_pdf(source_md=None, output_pdf=None):
     print("=" * 60)
     print("Generating PDF via Pandoc + LaTeX...")
     print("=" * 60)
 
-    prepared_md = PDF_DIR / "FINDINGS_prepared.md"
-    prepared_md.write_text(prepare_pandoc_markdown(), encoding="utf-8")
+    target_pdf = output_pdf or PANDOC_PDF
+    stem = target_pdf.stem
+    prepared_md = PDF_DIR / f"{stem}_prepared.md"
+    prepared_md.write_text(prepare_pandoc_markdown(source_md), encoding="utf-8")
 
     engine = next(
         (e for e in ("xelatex", "lualatex", "pdflatex") if shutil.which(e)),
@@ -224,7 +236,7 @@ def generate_pandoc_pdf():
     )
 
     cmd = [
-        "pandoc", str(prepared_md), "-o", str(PANDOC_PDF),
+        "pandoc", str(prepared_md), "-o", str(target_pdf),
         f"--pdf-engine={engine}", "--standalone",
         "--toc", "--toc-depth=3",
         f"--resource-path={OUTPUT_DIR}",
@@ -236,8 +248,8 @@ def generate_pandoc_pdf():
     )
 
     if result.returncode == 0:
-        sz = PANDOC_PDF.stat().st_size / (1024 * 1024)
-        print(f"\n  PDF generated: {PANDOC_PDF} ({sz:.1f} MB)")
+        sz = target_pdf.stat().st_size / (1024 * 1024)
+        print(f"\n  PDF generated: {target_pdf} ({sz:.1f} MB)")
         return True
     else:
         print(f"\n  Pandoc failed: {result.stderr[:500]}")
@@ -415,10 +427,10 @@ def markdown_to_html(md_text: str) -> str:
     import markdown
     from markdown.extensions.tables import TableExtension
 
-    # Strip the Appendix B figure table -- we replace with embedded images
+    # Strip the Appendix B or F figure table -- we replace with embedded images
     md_text = re.sub(
-        r"## Appendix B: Figures.*?(?=\n##|\Z)",
-        "## Appendix B: Figures\n\n<!-- FIGURES -->\n",
+        r"## Appendix [BF]: Figures.*?(?=\n##|\Z)",
+        "## Figures\n\n<!-- FIGURES -->\n",
         md_text,
         flags=re.DOTALL,
     )
@@ -455,6 +467,13 @@ def markdown_to_html(md_text: str) -> str:
     # markdown passes HTML comments through without <p> wrapping
     html_body = html_body.replace("<!-- FIGURES -->", figures_html)
 
+    # Detect date from the markdown
+    doc_date = "March 2026"
+    for line in md_text.split("\n"):
+        if line.strip().startswith("**Date:"):
+            doc_date = line.replace("**Date:**", "").strip()
+            break
+
     full_html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -466,7 +485,7 @@ def markdown_to_html(md_text: str) -> str:
 <body>
     <div id="headerContent">
         <p style="font-size: 8pt; color: #666666; text-align: center; font-family: Helvetica;">
-            Working Paper &mdash; February 2026
+            Working Paper &mdash; {doc_date}
         </p>
     </div>
     <div id="footerContent">
@@ -482,7 +501,7 @@ def markdown_to_html(md_text: str) -> str:
     return full_html
 
 
-def generate_xhtml2pdf():
+def generate_xhtml2pdf(source_md=None, output_pdf=None):
     """Generate PDF via xhtml2pdf (pure Python)."""
     print("=" * 60)
     print("Generating PDF via xhtml2pdf...")
@@ -490,25 +509,29 @@ def generate_xhtml2pdf():
 
     from xhtml2pdf import pisa
 
-    md_text = FINDINGS_MD.read_text(encoding="utf-8")
+    src = source_md or FINDINGS_MD
+    target_pdf = output_pdf or XHTML2PDF_OUT
+    stem = target_pdf.stem
+    md_text = src.read_text(encoding="utf-8")
+    print(f"  Source: {src}")
     print("  Converting Markdown to HTML...")
     html = markdown_to_html(md_text)
 
     # Save HTML preview
-    html_file = PDF_DIR / "FINDINGS_preview.html"
+    html_file = PDF_DIR / f"{stem}_preview.html"
     html_file.write_text(html, encoding="utf-8")
     print(f"  HTML preview: {html_file}")
 
-    print("  Rendering PDF (this may take a minute with 29 embedded figures)...")
-    with open(XHTML2PDF_OUT, "wb") as pdf_file:
+    print("  Rendering PDF (this may take a minute with embedded figures)...")
+    with open(target_pdf, "wb") as pdf_file:
         status = pisa.CreatePDF(html, dest=pdf_file)
 
     if status.err:
         print(f"\n  xhtml2pdf reported {status.err} error(s)")
         return False
 
-    size_mb = XHTML2PDF_OUT.stat().st_size / (1024 * 1024)
-    print(f"\n  PDF generated: {XHTML2PDF_OUT} ({size_mb:.1f} MB)")
+    size_mb = target_pdf.stat().st_size / (1024 * 1024)
+    print(f"\n  PDF generated: {target_pdf} ({size_mb:.1f} MB)")
     return True
 
 
@@ -526,15 +549,47 @@ def main():
         default="auto",
         help="PDF engine (default: auto-detect best available)",
     )
+    parser.add_argument(
+        "--source",
+        type=str,
+        default=None,
+        help="Source markdown file (default: output/FINDINGS.md)",
+    )
+    parser.add_argument(
+        "--version-tag",
+        type=str,
+        default=None,
+        help="Version tag for output filenames (e.g., 'v3' -> FINDINGS_v3_journal.pdf)",
+    )
     args = parser.parse_args()
 
-    if not FINDINGS_MD.exists():
-        print(f"Error: {FINDINGS_MD} not found")
+    # Resolve source file
+    if args.source:
+        source_path = Path(args.source)
+        if not source_path.is_absolute():
+            source_path = BASE_DIR / source_path
+    else:
+        source_path = FINDINGS_MD
+
+    # Resolve output filenames
+    vtag = args.version_tag
+    if vtag:
+        pandoc_out = PDF_DIR / f"FINDINGS_{vtag}_journal.pdf"
+        xhtml2pdf_out = PDF_DIR / f"FINDINGS_{vtag}_publication.pdf"
+    else:
+        pandoc_out = PANDOC_PDF
+        xhtml2pdf_out = XHTML2PDF_OUT
+
+    if not source_path.exists():
+        print(f"Error: {source_path} not found")
         sys.exit(1)
 
-    print(f"Source:  {FINDINGS_MD}")
+    print(f"Source:  {source_path}")
     print(f"Figures: {len(FIGURE_FILES)} PNG files in {FIGURES_DIR}")
-    print(f"Output:  {PDF_DIR}/\n")
+    print(f"Output:  {PDF_DIR}/")
+    if vtag:
+        print(f"Version: {vtag}")
+    print()
 
     has_pandoc = check_pandoc()
     has_xhtml2pdf = check_xhtml2pdf()
@@ -552,13 +607,13 @@ def main():
 
     success = False
     if engine in ("pandoc", "both") and has_pandoc:
-        success = generate_pandoc_pdf() or success
+        success = generate_pandoc_pdf(source_md=source_path, output_pdf=pandoc_out) or success
     elif engine == "pandoc" and not has_pandoc:
         print("Pandoc + LaTeX not found.")
         print("  Install from https://pandoc.org + https://miktex.org")
 
     if engine in ("xhtml2pdf", "both") and has_xhtml2pdf:
-        success = generate_xhtml2pdf() or success
+        success = generate_xhtml2pdf(source_md=source_path, output_pdf=xhtml2pdf_out) or success
     elif engine == "xhtml2pdf" and not has_xhtml2pdf:
         print("xhtml2pdf not found. Run: pip install xhtml2pdf markdown")
 
@@ -570,10 +625,10 @@ def main():
     print("=" * 60)
     print()
     print("Submission targets:")
+    print("  AEJ:Policy   https://www.aeaweb.org/journals/pol (resubmission)")
+    print("  J.Pub.Econ   https://www.journals.elsevier.com/journal-of-public-economics")
     print("  SSRN         Upload PDF at https://www.ssrn.com/")
     print("  Brookings    Contact BPEA editor; PDF + replication package")
-    print("  QJE          https://academic.oup.com/qje (LaTeX preferred)")
-    print("  NBER WP      Requires affiliation; internal portal")
     print()
     print("For top-5 journals, install Pandoc + MiKTeX for LaTeX-quality output.")
     print("For working paper repos (SSRN, NBER), xhtml2pdf output is sufficient.")
