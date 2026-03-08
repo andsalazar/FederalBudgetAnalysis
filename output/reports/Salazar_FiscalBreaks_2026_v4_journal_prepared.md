@@ -537,7 +537,6 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ---
 
-\newpage
 
 ### F.1 Structural Break and 26-Year Trend Figures
 
@@ -574,7 +573,6 @@ Figures 15–48: Descriptive budget visualizations, real-terms analysis, agency-
 
 ---
 
-\newpage
 \newpage
 
 ## Appendix F: Figures
@@ -676,6 +674,7 @@ Figures 15–48: Descriptive budget visualizations, real-terms analysis, agency-
 ![Top agencies by spending change](figures/real_top_agencies.png){width=90%}
 
 
+\newpage
 ## Appendix G: Policy Scenario Analysis—Judicial Revocation and Legislative Replacement
 
 Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), this appendix extends the structural break framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.

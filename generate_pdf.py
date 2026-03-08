@@ -240,7 +240,8 @@ header-includes:
     body = re.sub(r"\n(## Appendix [A-G])", r"\n\\newpage\n\1", body)
 
     # Replace Appendix F (or Appendix B) figure table with inline figure references
-    body = re.sub(r"## Appendix [BF]: Figures.*?(?=\n##|\Z)", "", body, flags=re.DOTALL)
+    # (this also removes the \newpage that was inserted before the original heading)
+    body = re.sub(r"\\newpage\n\n?## Appendix [BF]: Figures.*?(?=\n##|\n\\newpage|\Z)", "", body, flags=re.DOTALL)
 
     figures_md = "\n\\newpage\n\n## Appendix F: Figures\n\n"
     for idx, f in enumerate(FIGURE_FILES, 1):
@@ -248,10 +249,15 @@ header-includes:
         figures_md += f"![{desc}](figures/{f.name}){{width=90%}}\n\n"
 
     # Insert Appendix F figures before Appendix G for correct TOC order
-    appendix_g_match = re.search(r"\n(\\newpage\n\n)?## Appendix G", body)
+    # Ensure Appendix G starts on a new page after the figures
+    appendix_g_match = re.search(r"\n(\\newpage\n+)?## Appendix G", body)
     if appendix_g_match:
         pos = appendix_g_match.start()
-        body = body[:pos] + figures_md + body[pos:]
+        # Ensure \newpage before Appendix G heading
+        g_text = body[pos:]
+        if not g_text.lstrip("\n").startswith("\\newpage"):
+            g_text = "\n\\newpage\n" + g_text.lstrip("\n")
+        body = body[:pos] + figures_md + g_text
     else:
         body += figures_md
 
