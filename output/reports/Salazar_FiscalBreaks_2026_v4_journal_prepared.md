@@ -31,7 +31,7 @@ header-includes:
 
 ## 1. Introduction
 
-The fiscal year 2025 federal budget simultaneously altered three channels of fiscal incidence: tariffs escalated to levels not seen since before the income tax, means-tested spending fell $188 billion below baseline, and interest payments on the national debt exceeded combined safety-net spending for the first time since the pre–New Deal era. Each of these shifts has distributional consequences that fall disproportionately on lower-income households. But a fundamental empirical question precedes any distributional accounting: *which of these shifts represent genuine policy discontinuities, and which are continuations of secular fiscal trends?*
+The fiscal year 2025 federal budget simultaneously altered three channels of fiscal incidence: tariffs escalated to levels not seen since before the income tax, means-tested spending fell $188 billion below baseline, and interest payments on the national debt exceeded combined income security and Medicaid spending for the first time since the pre–New Deal era. Each of these shifts has distributional consequences that fall disproportionately on lower-income households. But a fundamental empirical question precedes any distributional accounting: *which of these shifts represent genuine policy discontinuities, and which are continuations of secular fiscal trends?*
 
 This distinction matters. If the growing regressivity of the federal revenue mix is a 25-year trend, it will not reverse with a change of administration; it requires structural tax reform. If the tariff explosion is a statistically identifiable rupture from the historical pattern, its distributional consequences are attributable to specific policy choices and, in principle, reversible. Conflating the two—treating trend as discontinuity or discontinuity as trend—leads to misdiagnosed policy responses.
 
@@ -81,7 +81,7 @@ BLS CEX 2023 published quintile tables (Table 1101) for expenditure by goods cat
 
 $$\text{B50}_{\text{CEX}} = Q_1 + Q_2 + Q_3 + 0.414 \times Q_4$$
 
-This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details). For the spending-cut analysis, I use CPS person-income quintiles where B50 = Q1+Q2+0.5×Q3 (136.6M persons).
+This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details; income distribution baseline in Appendix B). For the spending-cut analysis, I use CPS person-income quintiles where B50 = Q1+Q2+0.5×Q3 (136.6M persons).
 
 ### 2.4 CPI Sub-Indices
 
@@ -179,7 +179,7 @@ Tariff burden is allocated using BLS CEX 2023 expenditure shares by quintile, wi
 
 ### 4.5 Robustness Design
 
-I subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019).
+I subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019). Welfare analysis and poverty simulations appear in Appendix C; structural break regression detail in Appendix D; data sources and replication instructions in Appendix E; all figures are cataloged in Appendix F.
 
 ---
 
@@ -244,7 +244,7 @@ I compare actual FY2025 spending against the CBO January 2025 baseline:
 | Net Interest | $952B | $980B | +$28B |
 | **Total** | **$7,023B** | **$6,835B** | **−$188B** |
 
-The $188B shortfall is concentrated in three categories with high bottom-50% incidence. On the revenue side, customs duties reached $195B (+153% YoY), generating $100B above baseline.
+The $188B shortfall is concentrated in three categories with high bottom-50% incidence; unlisted categories account for the difference between the displayed items and the total. On the revenue side, customs duties reached $195B nominal (+153% YoY; $189.7B in real FY2024 dollars per Table 1), generating $100B above baseline.
 
 ### 5.4 Tariff Price Pass-Through
 
@@ -316,7 +316,7 @@ The burden at the 20th percentile (19.8% of income) exceeds that at the 99th per
 
 ### 6.4 The Interest-Crowding Mechanism
 
-Net interest payments reached $980B in FY2025, exceeding combined income security and Medicaid ($930B) by 105%. This threshold was last crossed in the pre–New Deal era. Interest payments flow to bondholders concentrated in the top decile (67% of bonds and fixed-income securities, Federal Reserve 2023 SCF), while the spending they crowd out—Medicaid, income security, nondefense discretionary—flows to the bottom quintiles. The interest/safety-net ratio's classification as a structural break (z = 2.4) is consistent with a substantial redistribution from the bottom to the top of the income distribution operating through the federal balance sheet.
+Net interest payments reached $980B in FY2025, reaching 105% of combined income security and Medicaid ($930B). This threshold was last crossed in the pre–New Deal era. Interest payments flow to bondholders concentrated in the top decile (67% of bonds and fixed-income securities, Federal Reserve 2023 SCF), while the spending they crowd out—Medicaid, income security, nondefense discretionary—flows to the bottom quintiles. The interest/safety-net ratio's classification as a structural break (z = 2.4) is consistent with a substantial redistribution from the bottom to the top of the income distribution operating through the federal balance sheet.
 
 ---
 
@@ -384,31 +384,17 @@ Amiti, M., Redding, S. J., & Weinstein, D. E. (2019). The impact of the 2018 tar
 
 Amiti, M., Redding, S. J., & Weinstein, D. E. (2020). Who's paying for the US tariffs? A longer-term perspective. *AEA Papers and Proceedings*, 110, 541–546.
 
-Athey, S., & Imbens, G. W. (2017). The econometrics of randomized experiments. *Handbook of Economic Field Experiments*, 1, 73–140.
-
 Athey, S., & Imbens, G. W. (2023). Design-based analysis in difference-in-differences settings with staggered adoption. *Journal of Econometrics*, 226(1), 62–79.
 
-Attanasio, O., Hurst, E., & Pistaferri, L. (2015). The evolution of income, consumption, and leisure inequality in the US, 1980–2010. In *Improving the Measurement of Consumer Expenditures*. Chicago: University of Chicago Press.
-
 Auerbach, A. J., & Gorodnichenko, Y. (2012). Measuring the output responses to fiscal policy. *American Economic Journal: Economic Policy*, 4(2), 1–27.
-
-Batty, M., Bricker, J., Briggs, J., et al. (2019). Introducing the Distributional Financial Accounts of the United States. *FEDS* 2019-017.
-
-Benguria, F., & Saffie, F. (2025). Rounding up the effect of tariffs on financial markets. NBER WP 34036.
-
-Bernal, J. L., Cummins, S., & Gasparrini, A. (2017). Interrupted time series regression for the evaluation of public health interventions. *International Journal of Epidemiology*, 46(1), 348–355.
 
 Bitler, M. P., Gelbach, J. B., & Hoynes, H. W. (2006). What mean impacts miss. *American Economic Review*, 96(4), 988–1012.
 
 Bitler, M. P., Gelbach, J. B., & Hoynes, H. W. (2010). Distributional impacts of the Self-Sufficiency Project. *Journal of Public Economics*, 94(11–12), 781–793.
 
-Bricker, J., Goodman, S., & Moore, K. B. (2020). Wealth and income concentration in the SCF: 1989–2019. *FEDS Notes*.
-
 Cavallo, A. (2018). Scraped data and sticky prices. *Review of Economics and Statistics*, 100(1), 105–119.
 
 Cavallo, A., Gopinath, G., Neiman, B., & Tang, J. (2021). Tariff pass-through at the border and at the store. *AER: Insights*, 3(1), 19–34.
-
-Clausing, K. A., & Lovely, M. E. (2024). Why Trump's tariff proposals would harm working Americans. PIIE Policy Brief.
 
 Clausing, K. A., & Obstfeld, M. (2025). Tariffs as fiscal policy. NBER WP 34192.
 
@@ -419,8 +405,6 @@ Fajgelbaum, P. D., Goldberg, P. K., Kennedy, P. J., & Khandelwal, A. K. (2020). 
 Falkenheim, M. (2022). How changes in the federal budget affect the economy. CBO Working Paper.
 
 Federal Reserve Board. (2023). Changes in U.S. family finances from 2019 to 2022. *Federal Reserve Bulletin*, 109(4).
-
-Firpo, S. (2007). Efficient semiparametric estimation of quantile treatment effects. *Econometrica*, 75(1), 259–276.
 
 Gopinath, G., Itskhoki, O., & Rigobon, R. (2010). Currency choice and exchange rate pass-through. *AER*, 100(1), 304–336.
 
@@ -435,10 +419,6 @@ Peltzman, S. (2000). Prices rise faster than they fall. *JPE*, 108(3), 466–502
 Perese, K. (2017). CBO's framework for analyzing means-tested transfers and federal taxes. CBO WP 2017-09.
 
 Piketty, T., Saez, E., & Zucman, G. (2018). Distributional national accounts: Methods and estimates for the United States. *QJE*, 133(2), 553–609.
-
-Price, M. L. (2026, Feb. 21). Trump says he'll raise tariffs to 15 percent after Supreme Court ruling. *AP*.
-
-Schwert, G. W. (1989). Tests for unit roots. *JBES*, 7(2), 147–159.
 
 The Budget Lab at Yale. (2026). The effect of tariffs on poverty. Working Paper.
 
@@ -590,7 +570,7 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ### F.4 Supplementary Figures (available in replication package)
 
-Figures 18–49: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). Full catalog in replication package README.
+Figures 15–49: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). Full catalog in replication package README.
 
 ---
 
