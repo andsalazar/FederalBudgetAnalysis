@@ -158,13 +158,13 @@ Spending cuts are attributed to income quintiles using program-specific distribu
 - **Income Security (−$53B):** 50% Q1, 30% Q2, 12% Q3, 6% Q4, 2% Q5
 - **Nondefense Discretionary (−$95B):** 25% Q1, 25% Q2, 22% Q3, 18% Q4, 10% Q5
 
-These weights are validated against CPS ASEC program receipt rates: SSI receipt is 64:1 (Q1 vs. Q5), public assistance 16:1, EITC 329:1 in average dollar terms (Table A2).
+These weights are validated against CPS ASEC program receipt rates: SSI receipt is 64:1 (Q1 vs. Q5), public assistance 16:1, EITC 329:1 in average dollar terms (Table B2).
 
 Tariff burden is allocated using BLS CEX 2023 expenditure shares by quintile, with the B50 share (51.7%) calibrated via the CPS-CEX cross-walk (Section 2.3). Deadweight loss is estimated at 1.4× tariff revenue following Amiti et al. (2019), with sensitivity ranging from 1.0× to 2.0×.
 
 ### 4.5 Robustness Design
 
-I subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019). Welfare analysis and poverty simulations appear in Appendix C; structural break regression detail in Appendix D; data sources and replication instructions in Appendix E; all figures are cataloged in Appendix F.
+I subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019). Welfare analysis and poverty simulations appear in Appendix C; structural break regression detail in Appendix D; data sources and replication instructions in Appendix F; all figures are cataloged in Appendix G.
 
 ---
 
@@ -346,7 +346,7 @@ What is historically anomalous is the tariff channel. The customs revenue share 
 
 These structural breaks are precisely the channels that burden the bottom 50% most heavily. The combined fiscal burden on the B50 is $1,331 per person (10.6% of pretax income, robust across 21 specifications)—an amount comparable in magnitude to total means-tested transfer income separating B50 from their market-income baseline. This burden exceeds that at the 99th percentile by more than two orders of magnitude as a share of income, validated across 1.4 million person-records of CPS ASEC microdata.
 
-Appendix G extends the framework to the post-*Learning Resources* policy environment, showing that tariff revocation under price stickiness provides limited near-term consumer relief and that the announced legislative replacement would amplify rather than resolve the structural break.
+Appendix E extends the framework to the post-*Learning Resources* policy environment, showing that tariff revocation under price stickiness provides limited near-term consumer relief and that the announced legislative replacement would amplify rather than resolve the structural break.
 
 When the CPS ASEC 2025 becomes available (September 2026), synthetic difference-in-differences estimation following Athey and Imbens (2023) will enable formal causal identification. Until then, the evidence presented here—linking 26 years of fiscal accounting, structural break tests, realized price pass-through, and validated distributional weights—constitutes the strongest available assessment of which features of FY2025 are trend, which are discontinuity, and who bears the cost of each.
 
@@ -420,7 +420,7 @@ This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 × 22.7%). Sensiti
 
 ## Appendix B: Income Distribution Baseline (CPS ASEC)
 
-**Table A1. National Income Shares, CY2023 (PSZ Framework)**
+**Table B1. National Income Shares, CY2023 (PSZ Framework)**
 
 | Group | Market Income | Pretax Income | Post-Tax Income | Capital Income |
 |-------|-------------- |--------------|-----------------|---------------|
@@ -431,7 +431,7 @@ This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 × 22.7%). Sensiti
 
 The B50 earns 6.7% of market income but receives 12.0% of post-tax income—the difference is entirely attributable to the transfer system, making the B50 uniquely exposed to cuts in means-tested spending.
 
-**Table A2. Income and Transfer Receipt by Quintile (Person-Weighted)**
+**Table B2. Income and Transfer Receipt by Quintile (Person-Weighted)**
 
 | Quintile | Mean Pretax | Mean Means-Tested | Eff. Tax Rate | SSI Receipt | EITC Mean |
 |----------|------------|-------------------|---------------|-------------|-----------|
@@ -453,7 +453,7 @@ Under CRRA with σ = 2, the welfare weight for Q1 exceeds Q5 by a factor of appr
 
 ### C.2 SPM Poverty Simulation
 
-**Table A3. Poverty Simulation Under SNAP Reduction Scenarios**
+**Table C1. Poverty Simulation Under SNAP Reduction Scenarios**
 
 | Scenario | SPM Rate | Change | Additional Persons |
 |----------|---------|--------|--------------------|
@@ -477,7 +477,7 @@ This geographic variation forms the basis for future synthetic DiD estimation wi
 
 ## Appendix D: Structural Break Regression Detail
 
-**Table A4. Full OLS Outputs**
+**Table D1. Full OLS Outputs**
 
 | Parameter | Customs / Rev | Interest / Safety-net | Regressive Rev Share | Safety-net / Outlays |
 |-----------|:------------:|:---------------------:|:-------------------:|:-------------------:|
@@ -496,7 +496,44 @@ The z-score uses the full out-of-sample prediction SE:  $SE_{pred} = \hat{\sigma
 
 ---
 
-## Appendix E: Data Sources and Replication
+## Appendix E: Policy Scenario Analysis—Judicial Revocation and Legislative Replacement
+
+Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), this appendix extends the structural break framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.
+
+### E.1 Tariff Revocation Does Not Reverse the B50 Burden
+
+Under the empirically grounded assumption of asymmetric price adjustment (Peltzman, 2000; Cavallo, 2018; Gopinath, Itskhoki & Rigobon, 2010), tariff revocation does not reduce consumer prices in the near term. The tariff wedge shifts from Treasury revenue to importer/retailer margins, while $133B+ in refunds flows to the importers who paid duties at the border—not to consumers. Under price stickiness, the B50 burden is unchanged at $1,331/person.
+
+### E.2 The 15% Legislative Replacement Nearly Doubles the Burden
+
+A 15% uniform tariff on the full $3,100B goods import base generates substantially higher consumer burden than the targeted executive tariffs:
+
+**Table E1. B50 Burden: Status Quo vs. Combined Revocation + Replacement**
+
+| Metric | Status Quo | Central Scenario |
+|--------|-----------|------------------|
+| Consumer burden | $140B | $566B |
+| B50 combined burden | $181.8B | $319.6B |
+| B50 per person | $1,331 | $2,341 |
+| B50 % of pretax income | 10.6% | 18.7% |
+
+Under the central scenario, the B50 combined burden increases 76% to $2,341 per person—exceeding B50 mean transfer income by a factor of 2.1. The broader import base of a universal tariff amplifies its consumption-tax character relative to category-specific executive tariffs. Sensitivity analysis (Low: $1,703; High: $2,468 per person) brackets trade elasticity uncertainty.
+
+### E.3 Implications for the Structural Break Framework
+
+The transition from IEEPA tariffs to a legislative replacement does not reverse the customs-revenue structural break. Under the central scenario, customs revenue increases from $195B to $404B, pushing the z-score even further above the break threshold. The only scenario that reverses the structural break is full tariff revocation *with* flexible downward price adjustment and *without* a replacement tariff—a combination that is neither empirically likely in the short run nor politically plausible given the announced 15% replacement.
+
+### E.4 SCOTUS Scenario Figures
+
+| Figure | Description |
+|--------|-------------|
+| E1 | B50 per-person burden: status quo vs. replacement scenarios |
+| E2 | Price stickiness incidence flow diagram |
+| E3 | Sensitivity range and welfare impact |
+
+---
+
+## Appendix F: Data Sources and Replication
 
 | Source | Access Method | Files |
 |--------|-------------|-------|
@@ -512,9 +549,9 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ---
 
-## Appendix F: Figures
+## Appendix G: Figures
 
-### F.1 Structural Break and 26-Year Trend Figures
+### G.1 Structural Break and 26-Year Trend Figures
 
 | Figure | Description |
 |--------|-------------|
@@ -524,7 +561,7 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 | 4 | Revenue composition shares (stacked, FY2000–2025) |
 | 5 | Income inequality evolution (Census quintile shares) |
 
-### F.2 Distributional Impact Figures
+### G.2 Distributional Impact Figures
 
 | Figure | Description |
 |--------|-------------|
@@ -535,7 +572,7 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 | 10 | Tariff burden by quintile (absolute + % of income) |
 | 11 | CBO counterfactual waterfall |
 
-### F.3 Robustness Figures
+### G.3 Robustness Figures
 
 | Figure | Description |
 |--------|-------------|
@@ -543,43 +580,6 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 | 13 | Structural break prediction bands (forest plot) |
 | 14 | B50 calibration diagram |
 
-### F.4 Supplementary Figures
+### G.4 Supplementary Figures
 
 Figures 15–48: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). All figures are embedded in the PDF appendix; source data and scripts are available in the replication package.
-
----
-
-## Appendix G: Policy Scenario Analysis—Judicial Revocation and Legislative Replacement
-
-Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), this appendix extends the structural break framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.
-
-### G.1 Tariff Revocation Does Not Reverse the B50 Burden
-
-Under the empirically grounded assumption of asymmetric price adjustment (Peltzman, 2000; Cavallo, 2018; Gopinath, Itskhoki & Rigobon, 2010), tariff revocation does not reduce consumer prices in the near term. The tariff wedge shifts from Treasury revenue to importer/retailer margins, while $133B+ in refunds flows to the importers who paid duties at the border—not to consumers. Under price stickiness, the B50 burden is unchanged at $1,331/person.
-
-### G.2 The 15% Legislative Replacement Nearly Doubles the Burden
-
-A 15% uniform tariff on the full $3,100B goods import base generates substantially higher consumer burden than the targeted executive tariffs:
-
-**Table G1. B50 Burden: Status Quo vs. Combined Revocation + Replacement**
-
-| Metric | Status Quo | Central Scenario |
-|--------|-----------|------------------|
-| Consumer burden | $140B | $566B |
-| B50 combined burden | $181.8B | $319.6B |
-| B50 per person | $1,331 | $2,341 |
-| B50 % of pretax income | 10.6% | 18.7% |
-
-Under the central scenario, the B50 combined burden increases 76% to $2,341 per person—exceeding B50 mean transfer income by a factor of 2.1. The broader import base of a universal tariff amplifies its consumption-tax character relative to category-specific executive tariffs. Sensitivity analysis (Low: $1,703; High: $2,468 per person) brackets trade elasticity uncertainty.
-
-### G.3 Implications for the Structural Break Framework
-
-The transition from IEEPA tariffs to a legislative replacement does not reverse the customs-revenue structural break. Under the central scenario, customs revenue increases from $195B to $404B, pushing the z-score even further above the break threshold. The only scenario that reverses the structural break is full tariff revocation *with* flexible downward price adjustment and *without* a replacement tariff—a combination that is neither empirically likely in the short run nor politically plausible given the announced 15% replacement.
-
-### G.4 SCOTUS Scenario Figures
-
-| Figure | Description |
-|--------|-------------|
-| G1 | B50 per-person burden: status quo vs. replacement scenarios |
-| G2 | Price stickiness incidence flow diagram |
-| G3 | Sensitivity range and welfare impact |

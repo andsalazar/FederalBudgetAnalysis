@@ -42,7 +42,7 @@ PAPER_STEM = "Salazar_FiscalBreaks_2026"
 PANDOC_PDF = PDF_DIR / f"{PAPER_STEM}_journal.pdf"
 XHTML2PDF_OUT = PDF_DIR / f"{PAPER_STEM}_publication.pdf"
 
-# Catalog figures in narrative order (Appendix F, Figures 1–14)
+# Catalog figures in narrative order (Appendix G, Figures 1–14)
 _CATALOG_ORDER = [
     "25yr_structural_breaks.png",            # 1  Structural break tests (4-panel)
     "25yr_customs_trajectory.png",           # 2  Customs revenue trajectory
@@ -103,10 +103,10 @@ FIGURE_DESCRIPTIONS = {
     "fig18_welfare_logscale.png": "Welfare-weighted loss (log-scale, CRRA σ=2)",
     "fig19_state_exposure_dots.png": "State fiscal exposure index (dot plot)",
     "fig20_spm_dose_response.png": "SPM poverty dose-response (food program scenarios)",
-    "fig21_scotus_scenario_comparison.png": "SCOTUS scenario: B50 per-person burden comparison (Appendix G)",
-    "fig22_scotus_quintile_decomposition.png": "Central combined scenario: quintile burden decomposition (Appendix G)",
-    "fig23_price_stickiness_flows.png": "Price stickiness and the incidence of tariff revocation (Appendix G)",
-    "fig24_scotus_welfare_sensitivity.png": "SCOTUS scenario: sensitivity range and welfare impact (Appendix G)",
+    "fig21_scotus_scenario_comparison.png": "SCOTUS scenario: B50 per-person burden comparison (Appendix E)",
+    "fig22_scotus_quintile_decomposition.png": "Central combined scenario: quintile burden decomposition (Appendix E)",
+    "fig23_price_stickiness_flows.png": "Price stickiness and the incidence of tariff revocation (Appendix E)",
+    "fig24_scotus_welfare_sensitivity.png": "SCOTUS scenario: sensitivity range and welfare impact (Appendix E)",
     "real_budget_function_waterfall.png": "Budget function waterfall (real terms)",
     "real_cumulative_by_tier.png": "Cumulative spending by tier (real terms)",
     "real_defense_vs_social.png": "Defense vs. social spending (real terms)",
@@ -239,27 +239,17 @@ header-includes:
     body = re.sub(r"\n(## \d+\.)", r"\n\\newpage\n\1", body)
     body = re.sub(r"\n(## Appendix [A-G])", r"\n\\newpage\n\1", body)
 
-    # Replace Appendix F (or Appendix B) figure table with inline figure references
+    # Replace Appendix G (or Appendix B/F) figure table with inline figure references
     # (this also removes the \newpage that was inserted before the original heading)
-    body = re.sub(r"\\newpage\n\n?## Appendix [BF]: Figures.*?(?=\n##|\n\\newpage|\Z)", "", body, flags=re.DOTALL)
+    body = re.sub(r"\\newpage\n\n?## Appendix [BFG]: Figures.*?(?=\n##|\n\\newpage|\Z)", "", body, flags=re.DOTALL)
 
-    figures_md = "\n\\newpage\n\n## Appendix F: Figures\n\n"
+    figures_md = "\n\\newpage\n\n## Appendix G: Figures\n\n"
     for idx, f in enumerate(FIGURE_FILES, 1):
         desc = FIGURE_DESCRIPTIONS.get(f.name, f.stem.replace("_", " ").title())
         figures_md += f"![{desc}](figures/{f.name}){{width=90%}}\n\n"
 
-    # Insert Appendix F figures before Appendix G for correct TOC order
-    # Ensure Appendix G starts on a new page after the figures
-    appendix_g_match = re.search(r"\n(\\newpage\n+)?## Appendix G", body)
-    if appendix_g_match:
-        pos = appendix_g_match.start()
-        # Ensure \newpage before Appendix G heading
-        g_text = body[pos:]
-        if not g_text.lstrip("\n").startswith("\\newpage"):
-            g_text = "\n\\newpage\n" + g_text.lstrip("\n")
-        body = body[:pos] + figures_md + g_text
-    else:
-        body += figures_md
+    # Appendix G (Figures) is the last appendix — simply append
+    body += figures_md
 
     # Replace Unicode symbols with LaTeX-safe equivalents for reliable XeLaTeX rendering.
     # NOTE: U+2212 (−) is replaced with ASCII hyphen-minus to avoid collision
@@ -522,10 +512,10 @@ def markdown_to_html(md_text: str) -> str:
     import markdown
     from markdown.extensions.tables import TableExtension
 
-    # Strip the Appendix B or F figure table -- we replace with embedded images
+    # Strip the Appendix B, F, or G figure table -- we replace with embedded images
     md_text = re.sub(
-        r"## Appendix [BF]: Figures.*?(?=\n##|\Z)",
-        "## Appendix F: Figures\n\n<!-- FIGURES -->\n",
+        r"## Appendix [BFG]: Figures.*?(?=\n##|\Z)",
+        "## Appendix G: Figures\n\n<!-- FIGURES -->\n",
         md_text,
         flags=re.DOTALL,
     )

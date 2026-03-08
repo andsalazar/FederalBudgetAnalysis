@@ -851,7 +851,10 @@ def quantile_treatment_effects():
         
         total_loss = snap_loss + medicaid_loss + nondiscr_loss + tariff_loss
         
-        as_pct_income = (total_loss / mean_income * 100) if mean_income > 0 else 0
+        # Floor mean income at $1,000 to avoid extreme pct_of_income at near-zero
+        # incomes (e.g., p13 = $0.43 → 264,000%).  Paper cites only p20+ values.
+        floored_income = max(mean_income, 1000)
+        as_pct_income = (total_loss / floored_income * 100)
         
         qte_results.append({
             'percentile': pctile,
@@ -1018,6 +1021,12 @@ def generate_charts(quintile_data, total_impacts, welfare_df, qte_df, spm_result
         axes[1].set_ylabel('Loss as % of Pre-Tax Income')
         axes[1].set_title('B. Quantile Treatment Effects (% of Income)')
         axes[1].axhline(y=0, color='black', linewidth=0.5)
+        
+        # Footnote: income floor
+        axes[1].text(0.98, 0.02,
+                     'Note: Income floored at $1,000 for percentiles below p20.',
+                     transform=axes[1].transAxes, fontsize=7,
+                     ha='right', va='bottom', style='italic', color='gray')
         
         # Add annotation for key finding
         p10_val = qte_df[qte_df['percentile'] == 10]['pct_of_income'].values

@@ -429,18 +429,14 @@ def fig_specification_curve():
 # Figure 6: CBO COUNTERFACTUAL WATERFALL
 # ==============================================================================
 def fig_counterfactual_waterfall():
-    """Waterfall chart showing CBO baseline → policy gaps → actual."""
-    print("  [6/10] CBO counterfactual waterfall...")
+    """Two-panel waterfall: (A) full scale, (B) zoomed gap components."""
+    print("  [6/10] CBO counterfactual waterfall (two-panel)...")
     cf = load_json("counterfactual_analysis_results.json")
     baseline = cf['cbo_baseline']
     gap = cf['policy_gap']
+    actual_outlays = cf['actual_estimates']['Total Outlays']
 
-    # Build waterfall items
-    categories = ['CBO Baseline\nTotal Outlays']
-    values = [baseline['Total Outlays']]
-    colors_wf = [PALETTE['medicaid']]
-
-    # Policy gap components (negative = cuts)
+    # ── shared data ────────────────────────────────────────────────────────
     gap_items = [
         ('Medicaid', gap['Medicaid']),
         ('Income\nSecurity', gap['Income Security']),
@@ -448,88 +444,91 @@ def fig_counterfactual_waterfall():
         ('Other\nMandatory', gap['Other Mandatory']),
         ('Net Interest\n(increase)', gap['Net Interest']),
     ]
+    total_gap = gap['Total Outlays']
 
+    # ── Panel A: full waterfall at $7 000 B scale ──────────────────────────
+    cats_a = ['CBO Baseline\nTotal Outlays']
+    vals_a = [baseline['Total Outlays']]
+    cols_a = [PALETTE['medicaid']]
     for name, val in gap_items:
-        categories.append(name)
-        values.append(val)
-        colors_wf.append(PALETTE['snap'] if val < 0 else PALETTE['nondiscr'])
+        cats_a.append(name)
+        vals_a.append(val)
+        cols_a.append(PALETTE['snap'] if val < 0 else PALETTE['nondiscr'])
+    cats_a.append('Actual FY2025\nEstimate')
+    vals_a.append(actual_outlays)
+    cols_a.append(PALETTE['tariff'])
 
-    # Final actual
-    actual_outlays = cf['actual_estimates']['Total Outlays']
-    categories.append('Actual FY2025\nEstimate')
-    values.append(actual_outlays)
-    colors_wf.append(PALETTE['tariff'])
-
-    fig, ax = plt.subplots(figsize=(10, 6))
-
-    # Compute waterfall positions
-    n = len(values)
-    cumulative = baseline['Total Outlays']
-    bottoms = []
-    heights = []
-
-    for i in range(n):
+    n_a = len(vals_a)
+    cum_a = baseline['Total Outlays']
+    bots_a, hts_a = [], []
+    for i in range(n_a):
         if i == 0:
-            bottoms.append(0)
-            heights.append(values[0])
-        elif i == n - 1:
-            bottoms.append(0)
-            heights.append(values[-1])
+            bots_a.append(0); hts_a.append(vals_a[0])
+        elif i == n_a - 1:
+            bots_a.append(0); hts_a.append(vals_a[-1])
         else:
-            heights.append(values[i])
-            if values[i] < 0:
-                bottoms.append(cumulative + values[i])
-            else:
-                bottoms.append(cumulative)
-            cumulative += values[i]
+            hts_a.append(vals_a[i])
+            bots_a.append(cum_a + vals_a[i] if vals_a[i] < 0 else cum_a)
+            cum_a += vals_a[i]
 
-    bars = ax.bar(range(n), heights, bottom=bottoms, color=colors_wf,
-                  edgecolor='white', linewidth=1.2, width=0.65)
+    # ── Panel B: gap components only (zoomed) ──────────────────────────────
+    cats_b = [name for name, _ in gap_items] + ['Total\nGap']
+    vals_b = [val for _, val in gap_items] + [total_gap]
+    cols_b = [PALETTE['snap'] if v < 0 else PALETTE['nondiscr'] for v in vals_b]
 
-    # Value labels
-    for i, (b, h) in enumerate(zip(bottoms, heights)):
-        if i == 0 or i == n - 1:
-            ax.text(i, b + h + 30, f'${h:,.0f}B', ha='center', va='bottom',
-                    fontsize=9, fontweight='bold')
+    # ── draw ───────────────────────────────────────────────────────────────
+    fig, (ax_a, ax_b) = plt.subplots(1, 2, figsize=(14, 6),
+                                      gridspec_kw={'width_ratios': [3, 2]})
+
+    # Panel A
+    ax_a.bar(range(n_a), hts_a, bottom=bots_a, color=cols_a,
+             edgecolor='white', linewidth=1.2, width=0.65)
+    for i, (b, h) in enumerate(zip(bots_a, hts_a)):
+        if i == 0 or i == n_a - 1:
+            ax_a.text(i, b + h + 30, f'${h:,.0f}B', ha='center', va='bottom',
+                      fontsize=8, fontweight='bold')
         else:
             sign = '+' if h > 0 else ''
-            ypos = b + h/2
-            ax.text(i, ypos, f'{sign}${h:,.0f}B', ha='center', va='center',
-                    fontsize=9, fontweight='bold', color='white')
-
-    # Connector lines
-    for i in range(n - 2):
-        top_i = bottoms[i] + heights[i]
+            ax_a.text(i, b + h/2, f'{sign}${h:,.0f}B', ha='center',
+                      va='center', fontsize=8, fontweight='bold', color='white')
+    # connector lines
+    cum_line = vals_a[0]
+    for i in range(n_a - 2):
+        cum_line_next = cum_line + vals_a[i + 1] if i > 0 else vals_a[0] + vals_a[1]
         if i == 0:
-            connect_y = top_i
+            cum_line_next = vals_a[0] + vals_a[1]
         else:
-            connect_y = bottoms[i] + (heights[i] if heights[i] > 0 else 0)
-            connect_y = bottoms[i+1] + (heights[i+1] if heights[i+1] > 0 else 0)
-        # Simple horizontal connector
-        if i < n - 2:
-            y_connect = bottoms[i+1] + max(0, heights[i+1])
-            # Use cumulative
-            y_line = sum(values[:i+2]) if i > 0 else values[0]
-            # Actually just draw from the top of current to the start of next
-            cum_val = values[0] + sum(values[1:i+2])
-            ax.plot([i + 0.35, i + 0.65], [cum_val, cum_val],
-                    color='gray', linewidth=0.8, linestyle='-')
+            cum_line_next = vals_a[0] + sum(vals_a[1:i+2])
+        ax_a.plot([i + 0.35, i + 0.65], [cum_line_next, cum_line_next],
+                  color='gray', linewidth=0.8, linestyle='-')
+        cum_line = cum_line_next
 
-    ax.set_xticks(range(n))
-    ax.set_xticklabels(categories, fontsize=9)
-    ax.set_ylabel('Federal Outlays ($B)')
-    ax.set_title('CBO Counterfactual: Baseline to Actual FY2025 Outlays')
-    ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'${x:,.0f}B'))
+    ax_a.set_xticks(range(n_a))
+    ax_a.set_xticklabels(cats_a, fontsize=8)
+    ax_a.set_ylabel('Federal Outlays ($B)')
+    ax_a.set_title('(A)  Full Waterfall', fontsize=11, fontweight='bold')
+    ax_a.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'${x:,.0f}B'))
 
-    # Total gap annotation
-    total_gap = gap['Total Outlays']
-    ax.annotate(f'Total Policy Gap: ${total_gap:,.0f}B',
-                xy=(3, cumulative - 50), fontsize=11, fontweight='bold',
-                color=PALETTE['snap'],
-                bbox=dict(boxstyle='round,pad=0.4', facecolor='#fff0f0', alpha=0.9))
+    # Panel B — simple bar chart of gap components
+    x_b = range(len(vals_b))
+    ax_b.bar(x_b, vals_b, color=cols_b, edgecolor='white', linewidth=1.2, width=0.6)
+    for i, v in enumerate(vals_b):
+        sign = '+' if v > 0 else ''
+        va = 'bottom' if v < 0 else 'top'
+        offset = -3 if v < 0 else 3
+        ax_b.text(i, v + offset, f'{sign}${v:,.0f}B', ha='center', va=va,
+                  fontsize=9, fontweight='bold')
+    ax_b.axhline(0, color='black', linewidth=0.6)
+    ax_b.set_xticks(list(x_b))
+    ax_b.set_xticklabels(cats_b, fontsize=9)
+    ax_b.set_ylabel('Policy Gap ($B)')
+    ax_b.set_title('(B)  Gap Components (zoomed)', fontsize=11, fontweight='bold')
+    ax_b.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f'${x:,.0f}B'))
 
+    fig.suptitle('CBO Counterfactual: Baseline to Actual FY2025 Outlays',
+                 fontsize=13, fontweight='bold', y=1.01)
     fig.tight_layout()
-    fig.savefig(FIGURES / "fig16_counterfactual_waterfall.png")
+    fig.savefig(FIGURES / "fig16_counterfactual_waterfall.png", bbox_inches='tight')
     plt.close(fig)
 
 
