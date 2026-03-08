@@ -42,10 +42,37 @@ PAPER_STEM = "Salazar_FiscalBreaks_2026"
 PANDOC_PDF = PDF_DIR / f"{PAPER_STEM}_journal.pdf"
 XHTML2PDF_OUT = PDF_DIR / f"{PAPER_STEM}_publication.pdf"
 
-FIGURE_FILES = sorted(
+# Catalog figures in narrative order (Appendix F, Figures 1–14)
+_CATALOG_ORDER = [
+    "25yr_structural_breaks.png",            # 1  Structural break tests (4-panel)
+    "25yr_customs_trajectory.png",           # 2  Customs revenue trajectory
+    "25yr_interest_vs_safetynet.png",        # 3  Interest vs. safety-net (25-year)
+    "25yr_revenue_composition.png",          # 4  Revenue composition shares
+    "25yr_inequality_evolution.png",         # 5  Income inequality evolution
+    "fig2_distributional_impact.png",        # 6  Distributional impact by quintile
+    "fig11_burden_decomposition.png",        # 7  Burden decomposition
+    "fig13_services_price_acceleration.png", # 8  Tariff pass-through
+    "fig7_tariff_price_changes.png",         # 9  CPI price changes
+    "fig8_tariff_burden_by_quintile.png",    # 10 Tariff burden by quintile
+    "fig16_counterfactual_waterfall.png",    # 11 CBO counterfactual waterfall
+    "fig15_specification_curve.png",         # 12 Specification curve
+    "fig12_structural_break_bands.png",      # 13 Structural break prediction bands
+    "fig14_b50_calibration.png",             # 14 B50 calibration diagram
+]
+
+# All PNG files: catalog order first, then remaining in alphabetical order
+_all_pngs = sorted(
     [f for f in FIGURES_DIR.glob("*.png")],
     key=lambda p: p.name,
 )
+_catalog_set = set(_CATALOG_ORDER)
+_ordered = []
+for _name in _CATALOG_ORDER:
+    _match = next((f for f in _all_pngs if f.name == _name), None)
+    if _match:
+        _ordered.append(_match)
+_ordered.extend(f for f in _all_pngs if f.name not in _catalog_set)
+FIGURE_FILES = _ordered
 
 FIGURE_DESCRIPTIONS = {
     "01_outlay_composition.png": "Federal outlay composition (stacked area, FY2015-2025)",
@@ -76,10 +103,10 @@ FIGURE_DESCRIPTIONS = {
     "fig18_welfare_logscale.png": "Welfare-weighted loss (log-scale, CRRA σ=2)",
     "fig19_state_exposure_dots.png": "State fiscal exposure index (dot plot)",
     "fig20_spm_dose_response.png": "SPM poverty dose-response (food program scenarios)",
-    "fig21_scotus_scenario_comparison.png": "SCOTUS scenario: B50 per-person burden comparison (Section 12)",
-    "fig22_scotus_quintile_decomposition.png": "Central combined scenario: quintile burden decomposition (Section 12)",
-    "fig23_price_stickiness_flows.png": "Price stickiness and the incidence of tariff revocation (Section 12)",
-    "fig24_scotus_welfare_sensitivity.png": "SCOTUS scenario: sensitivity range and welfare impact (Section 12)",
+    "fig21_scotus_scenario_comparison.png": "SCOTUS scenario: B50 per-person burden comparison (Appendix G)",
+    "fig22_scotus_quintile_decomposition.png": "Central combined scenario: quintile burden decomposition (Appendix G)",
+    "fig23_price_stickiness_flows.png": "Price stickiness and the incidence of tariff revocation (Appendix G)",
+    "fig24_scotus_welfare_sensitivity.png": "SCOTUS scenario: sensitivity range and welfare impact (Appendix G)",
     "real_budget_function_waterfall.png": "Budget function waterfall (real terms)",
     "real_cumulative_by_tier.png": "Cumulative spending by tier (real terms)",
     "real_defense_vs_social.png": "Defense vs. social spending (real terms)",
@@ -210,7 +237,7 @@ header-includes:
 
     # Page breaks between major sections
     body = re.sub(r"\n(## \d+\.)", r"\n\\newpage\n\1", body)
-    body = re.sub(r"\n(## Appendix [A-F])", r"\n\\newpage\n\1", body)
+    body = re.sub(r"\n(## Appendix [A-G])", r"\n\\newpage\n\1", body)
 
     # Replace Appendix F (or Appendix B) figure table with inline figure references
     body = re.sub(r"## Appendix [BF]: Figures.*?(?=\n##|\Z)", "", body, flags=re.DOTALL)
@@ -219,7 +246,14 @@ header-includes:
     for idx, f in enumerate(FIGURE_FILES, 1):
         desc = FIGURE_DESCRIPTIONS.get(f.name, f.stem.replace("_", " ").title())
         figures_md += f"![{desc}](figures/{f.name}){{width=90%}}\n\n"
-    body += figures_md
+
+    # Insert Appendix F figures before Appendix G for correct TOC order
+    appendix_g_match = re.search(r"\n(\\newpage\n\n)?## Appendix G", body)
+    if appendix_g_match:
+        pos = appendix_g_match.start()
+        body = body[:pos] + figures_md + body[pos:]
+    else:
+        body += figures_md
 
     # Replace Unicode symbols with LaTeX-safe equivalents for reliable XeLaTeX rendering.
     # NOTE: U+2212 (−) is replaced with ASCII hyphen-minus to avoid collision
@@ -485,7 +519,7 @@ def markdown_to_html(md_text: str) -> str:
     # Strip the Appendix B or F figure table -- we replace with embedded images
     md_text = re.sub(
         r"## Appendix [BF]: Figures.*?(?=\n##|\Z)",
-        "## Figures\n\n<!-- FIGURES -->\n",
+        "## Appendix F: Figures\n\n<!-- FIGURES -->\n",
         md_text,
         flags=re.DOTALL,
     )

@@ -570,9 +570,111 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ### F.4 Supplementary Figures
 
-Figures 15–49: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). All figures are embedded in the PDF appendix; source data and scripts are available in the replication package.
+Figures 15–48: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). All figures are embedded in the PDF appendix; source data and scripts are available in the replication package.
 
 ---
+
+\newpage
+\newpage
+
+## Appendix F: Figures
+
+![Structural break tests (4-panel: actual vs. trend)](figures/25yr_structural_breaks.png){width=90%}
+
+![Customs revenue trajectory (with tariff regime markers)](figures/25yr_customs_trajectory.png){width=90%}
+
+![Interest vs. safety-net spending (25-year trajectory)](figures/25yr_interest_vs_safetynet.png){width=90%}
+
+![Revenue composition shares (stacked area, FY2000–2025)](figures/25yr_revenue_composition.png){width=90%}
+
+![Income inequality evolution (Census quintile shares)](figures/25yr_inequality_evolution.png){width=90%}
+
+![Distributional impact of FY2025 policy](figures/fig2_distributional_impact.png){width=90%}
+
+![Burden decomposition by income percentile (stacked area)](figures/fig11_burden_decomposition.png){width=90%}
+
+![Tariff pass-through: traded goods vs. services control](figures/fig13_services_price_acceleration.png){width=90%}
+
+![CPI price changes in tariff-affected goods](figures/fig7_tariff_price_changes.png){width=90%}
+
+![Tariff burden by income quintile](figures/fig8_tariff_burden_by_quintile.png){width=90%}
+
+![CBO counterfactual waterfall (baseline to actual)](figures/fig16_counterfactual_waterfall.png){width=90%}
+
+![Robustness specification summary (6 dimensions)](figures/fig15_specification_curve.png){width=90%}
+
+![Structural break prediction bands (forest plot)](figures/fig12_structural_break_bands.png){width=90%}
+
+![B50 calibration diagram (quintile person shares)](figures/fig14_b50_calibration.png){width=90%}
+
+![Federal outlay composition (stacked area, FY2015-2025)](figures/01_outlay_composition.png){width=90%}
+
+![Revenue by source (stacked area)](figures/02_revenue_composition.png){width=90%}
+
+![Net interest vs. safety-net spending](figures/03_interest_vs_safety_net.png){width=90%}
+
+![CPI essentials indexed (with tariff event markers)](figures/04_cpi_essentials.png){width=90%}
+
+![Corporate profits vs. wages (indexed)](figures/05_profits_vs_wages.png){width=90%}
+
+![Customs revenue spike (bar chart)](figures/06_customs_revenue_spike.png){width=90%}
+
+![Federal deficit trend (with policy periods)](figures/07_deficit_trend.png){width=90%}
+
+![Income security waterfall (FY2019-2025)](figures/09_income_security_waterfall.png){width=90%}
+
+![Net interest as percent of GDP](figures/10_interest_pct_gdp.png){width=90%}
+
+![FY2025 context dashboard (6-panel summary)](figures/25yr_fy2025_context_dashboard.png){width=90%}
+
+![B50 transfer dependency and poverty (CPS ASEC benchmarks)](figures/25yr_poverty_and_benefits.png){width=90%}
+
+![Real spending composition (stacked area, FY2000–2025)](figures/25yr_spending_composition.png){width=90%}
+
+![Historical B50 income share and transfer dependency](figures/fig17_historical_b50.png){width=90%}
+
+![Welfare-weighted loss (log-scale, CRRA $\sigma$=2)](figures/fig18_welfare_logscale.png){width=90%}
+
+![State fiscal exposure index (dot plot)](figures/fig19_state_exposure_dots.png){width=90%}
+
+![Income distribution by quintile (CPS ASEC)](figures/fig1_income_distribution.png){width=90%}
+
+![SPM poverty dose-response (food program scenarios)](figures/fig20_spm_dose_response.png){width=90%}
+
+![SCOTUS scenario: B50 per-person burden comparison (Appendix G)](figures/fig21_scotus_scenario_comparison.png){width=90%}
+
+![Central combined scenario: quintile burden decomposition (Appendix G)](figures/fig22_scotus_quintile_decomposition.png){width=90%}
+
+![Price stickiness and the incidence of tariff revocation (Appendix G)](figures/fig23_price_stickiness_flows.png){width=90%}
+
+![SCOTUS scenario: sensitivity range and welfare impact (Appendix G)](figures/fig24_scotus_welfare_sensitivity.png){width=90%}
+
+![Simulated distributional burden curve](figures/fig3_quantile_treatment_effects.png){width=90%}
+
+![SPM poverty simulation](figures/fig4_spm_poverty_simulation.png){width=90%}
+
+![State exposure classification map](figures/fig5_state_exposure.png){width=90%}
+
+![Welfare-weighted impact (CRRA)](figures/fig6_welfare_weighted_impact.png){width=90%}
+
+![B50 vs. T50 tariff cost by goods category](figures/fig9_b50_tariff_by_category.png){width=90%}
+
+![Budget function waterfall (real terms)](figures/real_budget_function_waterfall.png){width=90%}
+
+![Cumulative spending by tier (real terms)](figures/real_cumulative_by_tier.png){width=90%}
+
+![Defense vs. social spending (real terms)](figures/real_defense_vs_social.png){width=90%}
+
+![Interest payment timeline (real terms)](figures/real_interest_timeline.png){width=90%}
+
+![Propensity classification comparison](figures/real_propensity_comparison.png){width=90%}
+
+![Propensity stacked area chart](figures/real_propensity_stacked_area.png){width=90%}
+
+![Tariff windfall flow diagram. Assumes 4.5% 10-yr rate (FRED DGS10), 20$\times$ P/E (conservative); equity ownership 93% top-10 (Fed 2023 SCF), bond ownership ~67% top-10 (Fed DFA)](figures/real_tariff_windfall_flow.png){width=90%}
+
+![Top agencies by spending change](figures/real_top_agencies.png){width=90%}
+
 
 ## Appendix G: Policy Scenario Analysis—Judicial Revocation and Legislative Replacement
 
@@ -608,104 +710,3 @@ The transition from IEEPA tariffs to a legislative replacement does not reverse 
 | G1 | B50 per-person burden: status quo vs. replacement scenarios |
 | G2 | Price stickiness incidence flow diagram |
 | G3 | Sensitivity range and welfare impact |
-
-\newpage
-
-## Appendix F: Figures
-
-![Federal outlay composition (stacked area, FY2015-2025)](figures/01_outlay_composition.png){width=90%}
-
-![Revenue by source (stacked area)](figures/02_revenue_composition.png){width=90%}
-
-![Net interest vs. safety-net spending](figures/03_interest_vs_safety_net.png){width=90%}
-
-![CPI essentials indexed (with tariff event markers)](figures/04_cpi_essentials.png){width=90%}
-
-![Corporate profits vs. wages (indexed)](figures/05_profits_vs_wages.png){width=90%}
-
-![Customs revenue spike (bar chart)](figures/06_customs_revenue_spike.png){width=90%}
-
-![Federal deficit trend (with policy periods)](figures/07_deficit_trend.png){width=90%}
-
-![Income security waterfall (FY2019-2025)](figures/09_income_security_waterfall.png){width=90%}
-
-![Net interest as percent of GDP](figures/10_interest_pct_gdp.png){width=90%}
-
-![Customs revenue trajectory (with tariff regime markers)](figures/25yr_customs_trajectory.png){width=90%}
-
-![FY2025 context dashboard (6-panel summary)](figures/25yr_fy2025_context_dashboard.png){width=90%}
-
-![Income inequality evolution (Census quintile shares)](figures/25yr_inequality_evolution.png){width=90%}
-
-![Interest vs. safety-net spending (25-year trajectory)](figures/25yr_interest_vs_safetynet.png){width=90%}
-
-![B50 transfer dependency and poverty (CPS ASEC benchmarks)](figures/25yr_poverty_and_benefits.png){width=90%}
-
-![Revenue composition shares (stacked area, FY2000–2025)](figures/25yr_revenue_composition.png){width=90%}
-
-![Real spending composition (stacked area, FY2000–2025)](figures/25yr_spending_composition.png){width=90%}
-
-![Structural break tests (4-panel: actual vs. trend)](figures/25yr_structural_breaks.png){width=90%}
-
-![Burden decomposition by income percentile (stacked area)](figures/fig11_burden_decomposition.png){width=90%}
-
-![Structural break prediction bands (forest plot)](figures/fig12_structural_break_bands.png){width=90%}
-
-![Tariff pass-through: traded goods vs. services control](figures/fig13_services_price_acceleration.png){width=90%}
-
-![B50 calibration diagram (quintile person shares)](figures/fig14_b50_calibration.png){width=90%}
-
-![Robustness specification summary (6 dimensions)](figures/fig15_specification_curve.png){width=90%}
-
-![CBO counterfactual waterfall (baseline to actual)](figures/fig16_counterfactual_waterfall.png){width=90%}
-
-![Historical B50 income share and transfer dependency](figures/fig17_historical_b50.png){width=90%}
-
-![Welfare-weighted loss (log-scale, CRRA $\sigma$=2)](figures/fig18_welfare_logscale.png){width=90%}
-
-![State fiscal exposure index (dot plot)](figures/fig19_state_exposure_dots.png){width=90%}
-
-![Income distribution by quintile (CPS ASEC)](figures/fig1_income_distribution.png){width=90%}
-
-![SPM poverty dose-response (food program scenarios)](figures/fig20_spm_dose_response.png){width=90%}
-
-![SCOTUS scenario: B50 per-person burden comparison (Section 12)](figures/fig21_scotus_scenario_comparison.png){width=90%}
-
-![Central combined scenario: quintile burden decomposition (Section 12)](figures/fig22_scotus_quintile_decomposition.png){width=90%}
-
-![Price stickiness and the incidence of tariff revocation (Section 12)](figures/fig23_price_stickiness_flows.png){width=90%}
-
-![SCOTUS scenario: sensitivity range and welfare impact (Section 12)](figures/fig24_scotus_welfare_sensitivity.png){width=90%}
-
-![Distributional impact of FY2025 policy](figures/fig2_distributional_impact.png){width=90%}
-
-![Simulated distributional burden curve](figures/fig3_quantile_treatment_effects.png){width=90%}
-
-![SPM poverty simulation](figures/fig4_spm_poverty_simulation.png){width=90%}
-
-![State exposure classification map](figures/fig5_state_exposure.png){width=90%}
-
-![Welfare-weighted impact (CRRA)](figures/fig6_welfare_weighted_impact.png){width=90%}
-
-![CPI price changes in tariff-affected goods](figures/fig7_tariff_price_changes.png){width=90%}
-
-![Tariff burden by income quintile](figures/fig8_tariff_burden_by_quintile.png){width=90%}
-
-![B50 vs. T50 tariff cost by goods category](figures/fig9_b50_tariff_by_category.png){width=90%}
-
-![Budget function waterfall (real terms)](figures/real_budget_function_waterfall.png){width=90%}
-
-![Cumulative spending by tier (real terms)](figures/real_cumulative_by_tier.png){width=90%}
-
-![Defense vs. social spending (real terms)](figures/real_defense_vs_social.png){width=90%}
-
-![Interest payment timeline (real terms)](figures/real_interest_timeline.png){width=90%}
-
-![Propensity classification comparison](figures/real_propensity_comparison.png){width=90%}
-
-![Propensity stacked area chart](figures/real_propensity_stacked_area.png){width=90%}
-
-![Tariff windfall flow diagram. Assumes 4.5% 10-yr rate (FRED DGS10), 20$\times$ P/E (conservative); equity ownership 93% top-10 (Fed 2023 SCF), bond ownership ~67% top-10 (Fed DFA)](figures/real_tariff_windfall_flow.png){width=90%}
-
-![Top agencies by spending change](figures/real_top_agencies.png){width=90%}
-
