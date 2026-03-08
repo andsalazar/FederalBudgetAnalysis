@@ -543,9 +543,9 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 | 13 | Structural break prediction bands (forest plot) |
 | 14 | B50 calibration diagram |
 
-### F.4 Supplementary Figures (available in replication package)
+### F.4 Supplementary Figures
 
-Figures 15–49: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). Full catalog in replication package README.
+Figures 15–49: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). All figures are embedded in the PDF appendix; source data and scripts are available in the replication package.
 
 ---
 

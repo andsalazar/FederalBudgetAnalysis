@@ -215,13 +215,32 @@ header-includes:
     # Replace Appendix F (or Appendix B) figure table with inline figure references
     body = re.sub(r"## Appendix [BF]: Figures.*?(?=\n##|\Z)", "", body, flags=re.DOTALL)
 
-    figures_md = "\n\\newpage\n\n## Appendix B: Figures\n\n"
+    figures_md = "\n\\newpage\n\n## Appendix F: Figures\n\n"
     for idx, f in enumerate(FIGURE_FILES, 1):
         desc = FIGURE_DESCRIPTIONS.get(f.name, f.stem.replace("_", " ").title())
         figures_md += f"![{desc}](figures/{f.name}){{width=90%}}\n\n"
     body += figures_md
 
-    return yaml_block + "\n" + body
+    # Replace Unicode symbols with LaTeX-safe equivalents for reliable XeLaTeX rendering.
+    # NOTE: U+2212 (−) is replaced with ASCII hyphen-minus to avoid collision
+    # with literal $ (dollar) signs in text like "−$36B".
+    unicode_to_latex = {
+        "\u2212": "-",          # − → ASCII hyphen-minus (safe near $ signs)
+        "\u00d7": "$\\times$",  # × (multiplication sign)
+        "\u2264": "$\\leq$",    # ≤ (less-than-or-equal)
+        "\u2265": "$\\geq$",    # ≥ (greater-than-or-equal)
+        "\u2248": "$\\approx$", # ≈ (approximately equal)
+        "\u03c1": "$\\rho$",    # ρ
+        "\u03c3": "$\\sigma$",  # σ
+        "\u03b1": "$\\alpha$",  # α
+        "\u03b2": "$\\beta$",   # β
+        "\u0394": "$\\Delta$",  # Δ
+        "\u00b1": "$\\pm$",     # ±
+    }
+    result = yaml_block + "\n" + body
+    for char, latex in unicode_to_latex.items():
+        result = result.replace(char, latex)
+    return result
 
 
 def generate_pandoc_pdf(source_md=None, output_pdf=None):
