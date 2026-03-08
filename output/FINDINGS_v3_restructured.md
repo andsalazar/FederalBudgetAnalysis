@@ -1,6 +1,6 @@
 # Structural Breaks in the Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–FY2025
 
-**Authors:** Andy Salazar  
+**Author:** Andy Salazar  
 **Date:** March 2026 (Revised)  
 **Replication package:** [github.com/andsalazar/FederalBudgetAnalysis](https://github.com/andsalazar/FederalBudgetAnalysis)  
 **Pre-registration:** `docs/hypothesis_preregistration.md` (registered before data collection)
@@ -9,7 +9,7 @@
 
 ## Abstract
 
-Does fiscal year 2025 represent a structural break in the distributional incidence of U.S. federal fiscal policy, or a continuation of quarter-century trends? We embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records), applying out-of-sample structural break tests to four distributional indicators. Two indicators register as genuine discontinuities: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within pre-existing trends. The channels identified as structural breaks are precisely those that burden the bottom 50% most heavily: the combined fiscal burden on the B50 is $1,331 per person (10.6% of pretax income). Distinguishing trend from discontinuity matters for policy: secular trends require structural reform, while discontinuities are potentially reversible—though we show that tariff revocation provides zero near-term consumer relief under empirically grounded price stickiness.
+Does fiscal year 2025 represent a structural break in the distributional incidence of U.S. federal fiscal policy, or a continuation of quarter-century trends? I embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records), applying out-of-sample structural break tests to four distributional indicators. Two indicators register as genuine discontinuities: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within pre-existing trends. The channels identified as structural breaks are precisely those that burden the bottom 50% most heavily: the combined fiscal burden on the B50 is $1,331 per person (10.6% of pretax income). Distinguishing trend from discontinuity matters for policy: secular trends require structural reform, while discontinuities are potentially reversible—though I show that tariff revocation provides zero near-term consumer relief under empirically grounded price stickiness.
 
 **Keywords:** structural break, fiscal incidence, tariff pass-through, income inequality, distributional analysis, bottom 50%
 
@@ -23,19 +23,19 @@ The fiscal year 2025 federal budget simultaneously altered three channels of fis
 
 This distinction matters. If the growing regressivity of the federal revenue mix is a 25-year trend, it will not reverse with a change of administration; it requires structural tax reform. If the tariff explosion is a statistically identifiable rupture from the historical pattern, its distributional consequences are attributable to specific policy choices and, in principle, reversible. Conflating the two—treating trend as discontinuity or discontinuity as trend—leads to misdiagnosed policy responses.
 
-We answer this question by embedding fiscal year 2025 within the 26-year span FY2000–FY2025 and testing whether key distributional indicators deviate significantly from their historical trajectories. Our identification strategy is a structural break test: for each indicator, we fit an OLS linear trend over a pre-break training period and test whether the FY2025 realized value falls outside the out-of-sample prediction interval (|z| > 2.0). We then trace the distributional consequences of the identified breaks to the bottom 50% of the income distribution using CPS ASEC microdata.
+I answer this question by embedding fiscal year 2025 within the 26-year span FY2000–FY2025 and testing whether key distributional indicators deviate significantly from their historical trajectories. My identification strategy is a structural break test: for each indicator, I fit an OLS linear trend over a pre-break training period and test whether the FY2025 realized value falls outside the out-of-sample prediction interval (|z| > 2.0). I then trace the distributional consequences of the identified breaks to the bottom 50% of the income distribution using CPS ASEC microdata.
 
-**Preview of findings.** Two of four indicators register as structural breaks: customs revenue as a share of total revenue (z = 25.8) and the interest-to-safety-net crowding ratio (z = 2.4). Two do not: the regressive revenue share (z = 0.5) and the safety-net outlay share (z = −1.5). The channels identified as breaks are precisely those imposing the largest burden on the bottom 50%—a combined $1,331 per person (10.6% of pretax income), validated across 21 robustness specifications. Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, Feb. 20, 2026), we extend the framework to show that tariff revocation provides zero near-term consumer relief under price stickiness, while the announced 15% legislative replacement nearly doubles the B50 burden.
+**Preview of findings.** Two of four indicators register as structural breaks: customs revenue as a share of total revenue (z = 25.8) and the interest-to-safety-net crowding ratio (z = 2.4). Two do not: the regressive revenue share (z = 0.5) and the safety-net outlay share (z = −1.5). The channels identified as breaks are precisely those imposing the largest burden on the bottom 50%—a combined $1,331 per person (10.6% of pretax income), validated across 21 robustness specifications. Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, Feb. 20, 2026), I extend the framework to show that tariff revocation provides zero near-term consumer relief under price stickiness, while the announced 15% legislative replacement nearly doubles the B50 burden.
 
-**Contribution.** We contribute to the literatures on fiscal incidence (Piketty, Saez & Zucman, 2018; CBO, 2022), tariff pass-through (Amiti, Redding & Weinstein, 2019; Fajgelbaum et al., 2020; Cavallo et al., 2021), and debt-service crowding (Falkenheim, 2022) by providing: (i) the first formal structural break classification of distributional fiscal indicators over a quarter-century horizon; (ii) a unified incidence analysis integrating tariff, spending, and interest-crowding channels; (iii) microdata-validated distributional weights from 1.4 million CPS ASEC person-records; (iv) realized (not projected) price pass-through measurement through January 2026; and (v) a policy scenario analysis grounded in the empirical framework.
+**Contribution.** I contribute to the literatures on fiscal incidence (Piketty, Saez & Zucman, 2018; CBO, 2022), tariff pass-through (Amiti, Redding & Weinstein, 2019; Fajgelbaum et al., 2020; Cavallo et al., 2021), and debt-service crowding (Falkenheim, 2022) by providing: (i) the first formal structural break classification of distributional fiscal indicators over a quarter-century horizon; (ii) a unified incidence analysis integrating tariff, spending, and interest-crowding channels; (iii) microdata-validated distributional weights from 1.4 million CPS ASEC person-records; (iv) realized (not projected) price pass-through measurement through January 2026; and (v) a policy scenario analysis grounded in the empirical framework.
 
 ### 1.1 Related Literature
 
-**Tariff incidence.** Amiti, Redding, and Weinstein (2019, 2020) established near-complete pass-through of 2018–2019 tariffs to domestic prices. Fajgelbaum et al. (2020, *QJE*) quantified $51 billion in consumer losses with regional heterogeneity. Cavallo et al. (2021, *AER: Insights*) traced customs-to-retail pass-through using scanner data. Leibovici and Dunn (2025, Federal Reserve Bank of St. Louis) survey the 2018–19 evidence and confirm near-complete consumer incidence. We extend this work to the 2025 tariff regime at roughly four times the 2018–19 scale. Contemporaneous analyses by Clausing and Obstfeld (2025), Minton and Somale (2025), Gopinath and Neiman (2026), and The Budget Lab at Yale (2026) corroborate significant and regressive pass-through.
+**Tariff incidence.** Amiti, Redding, and Weinstein (2019, 2020) established near-complete pass-through of 2018–2019 tariffs to domestic prices. Fajgelbaum et al. (2020, *QJE*) quantified $51 billion in consumer losses with regional heterogeneity. Cavallo et al. (2021, *AER: Insights*) traced customs-to-retail pass-through using scanner data. Leibovici and Dunn (2025, Federal Reserve Bank of St. Louis) survey the 2018–19 evidence and confirm near-complete consumer incidence. I extend this work to the 2025 tariff regime at roughly four times the 2018–19 scale. Contemporaneous analyses by Clausing and Obstfeld (2025), Minton and Somale (2025), Gopinath and Neiman (2026), and The Budget Lab at Yale (2026) corroborate significant and regressive pass-through.
 
-**Distributional fiscal analysis.** The CBO's distributional framework (Perese, 2017) and Piketty, Saez, and Zucman (2018) provide the methodological foundation for our income decomposition. Wolff and Zacharias (2007) conduct a similar multi-channel fiscal incidence analysis for 1989–2000, but without structural break identification or tariff incidence. Bitler, Gelbach, and Hoynes (2006, 2010) develop methods for distributional effects of spending changes that motivate our simulation approach.
+**Distributional fiscal analysis.** The CBO's distributional framework (Perese, 2017) and Piketty, Saez, and Zucman (2018) provide the methodological foundation for my income decomposition. Wolff and Zacharias (2007) conduct a similar multi-channel fiscal incidence analysis for 1989–2000, but without structural break identification or tariff incidence. Bitler, Gelbach, and Hoynes (2006, 2010) develop methods for distributional effects of spending changes that motivate my simulation approach.
 
-**Debt service and crowding out.** Falkenheim (2022) and Auerbach and Gorodnichenko (2012) analyze how rising interest payments crowd out discretionary and mandatory spending. We formalize this as a testable structural break indicator.
+**Debt service and crowding out.** Falkenheim (2022) and Auerbach and Gorodnichenko (2012) analyze how rising interest payments crowd out discretionary and mandatory spending. I formalize this as a testable structural break indicator.
 
 ---
 
@@ -43,7 +43,7 @@ We answer this question by embedding fiscal year 2025 within the 26-year span FY
 
 ### 2.1 Administrative Budget Data
 
-We collect 69,000+ observations across 160+ economic series from four administrative sources:
+I collect 69,000+ observations across 160+ economic series from four administrative sources:
 
 | Source | Series/Tables | Observations | Period |
 |--------|--------------|-------------|--------|
@@ -52,7 +52,7 @@ We collect 69,000+ observations across 160+ economic series from four administra
 | Congressional Budget Office | Historical Budget Data (67 series) | 4,691 | 1962–2035 |
 | BEA NIPA via FRED | 11 government spending series | 512 | 2000–2025 |
 
-For the structural analysis, we extract CBO historical outlay and revenue series back to FY2000, yielding 26 annual observations for each of 32 budget aggregates in both nominal and real (FY2024 dollar) terms. CBO baseline projections (January 2025) provide the FY2025 counterfactual.
+For the structural analysis, I extract CBO historical outlay and revenue series back to FY2000, yielding 26 annual observations for each of 32 budget aggregates in both nominal and real (FY2024 dollar) terms. CBO baseline projections (January 2025) provide the FY2025 counterfactual.
 
 ### 2.2 Census Income Distribution Data
 
@@ -64,11 +64,11 @@ For the structural analysis, we extract CBO historical outlay and revenue series
 
 ### 2.3 Consumer Expenditure Survey
 
-BLS CEX 2023 published quintile tables (Table 1101) for expenditure by goods category and income quintile. We calibrate the CEX-to-CPS cross-walk using CPS ASEC 2024 microdata: grouping respondents by household, the person-weighted 50th percentile of household income is $96,000, yielding:
+BLS CEX 2023 published quintile tables (Table 1101) for expenditure by goods category and income quintile. I calibrate the CEX-to-CPS cross-walk using CPS ASEC 2024 microdata: grouping respondents by household, the person-weighted 50th percentile of household income is $96,000, yielding:
 
 $$\text{B50}_{\text{CEX}} = Q_1 + Q_2 + Q_3 + 0.414 \times Q_4$$
 
-This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details). For the spending-cut analysis, we use CPS person-income quintiles where B50 = Q1+Q2+0.5×Q3 (136.6M persons).
+This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details). For the spending-cut analysis, I use CPS person-income quintiles where B50 = Q1+Q2+0.5×Q3 (136.6M persons).
 
 ### 2.4 CPI Sub-Indices
 
@@ -84,7 +84,7 @@ All dollar values in constant FY2024 dollars (CPI-U base = 311.6). Robustness to
 
 ### 3.1 Three Channels of Fiscal Incidence
 
-We model the distributional impact of federal fiscal policy through three channels that may operate simultaneously:
+I model the distributional impact of federal fiscal policy through three channels that may operate simultaneously:
 
 1. **The tariff channel.** Tariffs function as a consumption tax whose incidence depends on import content of consumer goods and spending shares across the income distribution. Because lower-income households spend a higher share of income on goods (vs. services) and on import-intensive necessities (food, clothing, household goods), tariff burdens are regressive as a share of income (Fajgelbaum et al., 2020).
 
@@ -114,13 +114,13 @@ This means analyzing any channel in isolation—as the existing literature does�
 
 ### 4.1 Structural Break Identification
 
-For each of four distributional indicators, we test whether the FY2025 value constitutes a structural break from the historical trajectory. The procedure is:
+For each of four distributional indicators, I test whether the FY2025 value constitutes a structural break from the historical trajectory. The procedure is:
 
-1. **Training period selection.** We use indicator-specific training periods to avoid contamination:
+1. **Training period selection.** I use indicator-specific training periods to avoid contamination:
    - *Customs share* and *regressive revenue share*: FY2000–FY2017 (n = 18), ending before Section 301 tariff actions.
    - *Interest/safety-net ratio* and *safety-net outlay share*: FY2000–FY2024 excluding COVID-distorted FY2020–FY2021 (n = 23).
 
-2. **OLS trend estimation.** For each indicator $y$, we estimate:
+2. **OLS trend estimation.** For each indicator $y$, I estimate:
 $$y_t = \alpha + \beta \cdot t + \varepsilon_t$$
 over the training period.
 
@@ -134,15 +134,15 @@ where $\hat{\sigma}$ is the residual standard deviation, $n$ is the training sam
 
 ### 4.2 Aggregate Fiscal Accounting
 
-We measure the FY2025 fiscal shift by comparing actual spending and revenue against the CBO January 2025 baseline projection (*The Budget and Economic Outlook: 2025 to 2035*), which embodies current-law assumptions and thus provides a "no policy change" counterfactual.
+I measure the FY2025 fiscal shift by comparing actual spending and revenue against the CBO January 2025 baseline projection (*The Budget and Economic Outlook: 2025 to 2035*), which embodies current-law assumptions and thus provides a "no policy change" counterfactual.
 
 ### 4.3 Tariff Price Pass-Through
 
-We test for tariff-driven price increases using two complementary identification strategies:
+I test for tariff-driven price increases using two complementary identification strategies:
 
 **Within-goods dose-response.** The Spearman rank correlation between effective tariff rate and CPI price acceleration across 12 consumer goods categories provides a non-parametric test of whether higher-tariff goods experienced above-trend price increases.
 
-**Services control group.** We compare CPI acceleration in eight tariff-exposed traded goods against five non-tradable service categories (medical care, shelter, education, services less energy, transportation services) that are unaffected by customs tariffs, following the identification logic of Amiti et al. (2019). Difference in acceleration isolates the tariff signal from background inflation trends.
+**Services control group.** I compare CPI acceleration in eight tariff-exposed traded goods against five non-tradable service categories (medical care, shelter, education, services less energy, transportation services) that are unaffected by customs tariffs, following the identification logic of Amiti et al. (2019). Difference in acceleration isolates the tariff signal from background inflation trends.
 
 ### 4.4 Distributional Attribution
 
@@ -157,7 +157,7 @@ Tariff burden is allocated using BLS CEX 2023 expenditure shares by quintile, wi
 
 ### 4.5 Robustness Design
 
-We subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019).
+I subject all findings to six dimensions of robustness (21 distinct specifications plus 500-draw household-clustered bootstrap): propensity classification (4 specs), tariff pass-through (6 specs), CBO baseline uncertainty (5 specs), alternative deflators (5 specs), bootstrap confidence intervals (500 draws), and a placebo test (FY2019).
 
 ---
 
@@ -165,7 +165,7 @@ We subject all findings to six dimensions of robustness (21 distinct specificati
 
 ### 5.1 The 26-Year Fiscal Trajectory
 
-Before presenting break test results, we establish the structural context. All values in constant FY2024 dollars.
+Before presenting break test results, I establish the structural context. All values in constant FY2024 dollars.
 
 **Table 1. Federal Budget Aggregates, FY2000 vs. FY2025 (Real FY2024 $)**
 
@@ -207,7 +207,7 @@ Full OLS outputs in Appendix D. The results partition FY2025 into two categories
 
 ### 5.3 The Aggregate FY2025 Fiscal Shift
 
-We compare actual FY2025 spending against the CBO January 2025 baseline:
+I compare actual FY2025 spending against the CBO January 2025 baseline:
 
 **Table 4. FY2025 Spending: CBO Baseline vs. Actual**
 
@@ -245,7 +245,7 @@ The $188B shortfall is concentrated in three categories with high bottom-50% inc
 
 ## 6. Results II: Distributional Consequences of the Structural Breaks
 
-Having established which features of FY2025 are structural breaks and confirmed tariff-to-price pass-through, we now trace their distributional consequences.
+Having established which features of FY2025 are structural breaks and confirmed tariff-to-price pass-through, I now trace their distributional consequences.
 
 ### 6.1 Who Bears the FY2025 Fiscal Shift?
 
@@ -277,7 +277,7 @@ B50 mean pretax income is $12,526 (CPS ASEC 2024). The combined burden of 10.6% 
 
 ### 6.3 The Regressivity Gradient
 
-Using CPS ASEC 2024 microdata, we simulate the policy burden at each income percentile:
+Using CPS ASEC 2024 microdata, I simulate the policy burden at each income percentile:
 
 **Table 8. Simulated Policy Burden by Percentile**
 
@@ -315,7 +315,7 @@ All 21 specifications confirm the direction and approximate magnitude of B50 fis
 
 ## 8. Policy Implications: Judicial Revocation and Legislative Replacement
 
-Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), we extend the framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.
+Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), I extend the framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.
 
 ### 8.1 Tariff Revocation Does Not Reverse the B50 Burden
 
@@ -354,7 +354,7 @@ The transition from IEEPA tariffs to a legislative replacement does not reverse 
 
 5. **CEX-to-CPS mapping** uses a calibrated but not exact partitioning. Sensitivity bounds (42.2–65.3% B50 tariff share) bracket the 51.7% estimate.
 
-6. **Price stickiness duration** is uncertain. Our near-term (0–12 month) assumption is empirically grounded but prices may partially adjust over 12–24 months.
+6. **Price stickiness duration** is uncertain. My near-term (0–12 month) assumption is empirically grounded but prices may partially adjust over 12–24 months.
 
 ---
 
@@ -371,6 +371,12 @@ These structural breaks are precisely the channels that burden the bottom 50% mo
 The Supreme Court's invalidation of IEEPA tariff authority does not resolve the distributional burden. Under empirically grounded price stickiness, revocation provides zero near-term consumer relief, and the announced 15% legislative replacement nearly doubles the B50 burden to $2,341 per person. The structural break in customs revenue persists—or deepens—under all politically plausible scenarios.
 
 When the CPS ASEC 2025 becomes available (September 2026), synthetic difference-in-differences estimation following Athey and Imbens (2023) will enable formal causal identification. Until then, the evidence presented here—linking 26 years of fiscal accounting, structural break tests, realized price pass-through, and validated distributional weights—constitutes the strongest available assessment of which features of FY2025 are trend, which are discontinuity, and who bears the cost of each.
+
+---
+
+## Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process
+
+During the preparation of this work the author used Claude Opus 4.6 in order to code this project and make available on GitHub. After using this tool/service, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
 
 ---
 
@@ -444,13 +450,13 @@ Wolff, E. N., & Zacharias, A. (2007). The distributional consequences of governm
 
 ## Appendix A: B50 Calibration and CEX-CPS Cross-Walk
 
-CEX quintile boundaries (Q1 < $23,810; Q5 > $127,080) are defined by consumer unit before-tax income, which differs from person-level income ranking. We calibrate the cross-walk using CPS ASEC 2024 (115,836 persons): grouping by household (PH_SEQ), summing pretax income, and assigning each person their household's CEX quintile band. The person-weighted 50th percentile of household income is $96,000—in CEX Q4 ($77,025–$127,080). Exactly 41.4% of Q4 persons have household income below this threshold:
+CEX quintile boundaries (Q1 < $23,810; Q5 > $127,080) are defined by consumer unit before-tax income, which differs from person-level income ranking. I calibrate the cross-walk using CPS ASEC 2024 (115,836 persons): grouping by household (PH_SEQ), summing pretax income, and assigning each person their household's CEX quintile band. The person-weighted 50th percentile of household income is $96,000—in CEX Q4 ($77,025–$127,080). Exactly 41.4% of Q4 persons have household income below this threshold:
 
 $$\text{B50}_{\text{CEX}} = Q_1 + Q_2 + Q_3 + 0.414 \times Q_4$$
 
 This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 × 22.7%). Sensitivity bounds: Q1+Q2+Q3 only (40.6%, 42.2% tariff share) to Q1+Q2+Q3+Q4 (63.3%, 65.3% tariff share).
 
-**Important distinction.** The CEX calibration applies only to tariff expenditure share calculations. For spending-cut attribution, we use CPS person-income quintiles where each quintile contains exactly 20% of persons: B50 = Q1+Q2+0.5×Q3 (136.6M persons).
+**Important distinction.** The CEX calibration applies only to tariff expenditure share calculations. For spending-cut attribution, I use CPS person-income quintiles where each quintile contains exactly 20% of persons: B50 = Q1+Q2+0.5×Q3 (136.6M persons).
 
 ---
 

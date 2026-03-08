@@ -1,15 +1,15 @@
-# The Distributional Consequences of Federal Fiscal Policy, FY2000–FY2025
+# Structural Breaks in the Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–2025
 
 **Author:** Andy Salazar  
-**Date:** February 2026  
+**Date:** March 2026  
 **Status:** Working Paper  
-**Paper:** [`output/FINDINGS.md`](output/FINDINGS.md) &nbsp;|&nbsp; PDF: [`output/reports/FINDINGS_publication.pdf`](output/reports/FINDINGS_publication.pdf)
+**Paper:** [`output/FINDINGS_v3_restructured.md`](output/FINDINGS_v3_restructured.md) &nbsp;|&nbsp; PDF: [`output/reports/`](output/reports/)
 
 ---
 
 ## Overview
 
-This repository contains the data, code, and replication materials for "The Distributional Consequences of Federal Fiscal Policy, FY2000–FY2025: A Quarter-Century of Structural Shift and the 2025 Inflection Point."
+This repository contains the data, code, and replication materials for "Structural Breaks in the Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–2025."
 
 The paper provides a unified distributional analysis of U.S. federal fiscal policy combining:
 - 26 annual observations of CBO historical budget data (FY2000–FY2025)
@@ -152,12 +152,11 @@ FederalBudgetAnalysis/
 If you use this code or data, please cite:
 
 ```bibtex
-@techreport{salazar2026distributional,
-  title={The Distributional Consequences of Federal Fiscal Policy, {FY2000--FY2025}: 
-         A Quarter-Century of Structural Shift and the 2025 Inflection Point},
+@techreport{salazar2026structural,
+  title={Structural Breaks in the Distributional Incidence of {U.S.} Federal Fiscal Policy, {FY2000--FY2025}},
   author={Salazar, Andy},
   year={2026},
-  month={February},
+  month={March},
   type={Working Paper},
   institution={SSRN},
   number={6285038},

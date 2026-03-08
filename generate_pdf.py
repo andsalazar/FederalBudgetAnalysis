@@ -11,6 +11,7 @@ Usage:
   python generate_pdf.py --engine pandoc    # Force Pandoc/LaTeX
   python generate_pdf.py --engine xhtml2pdf # Force xhtml2pdf
   python generate_pdf.py --engine both      # Generate both versions
+  python generate_pdf.py --docx             # Also generate Word (.docx)
 
 Installation:
   Quick (Option B):   pip install xhtml2pdf markdown
@@ -164,7 +165,7 @@ abstract: |
         if line.startswith("**JEL Codes:**"):
             jel_codes = line.replace("**JEL Codes:**", "").strip()
 
-    thanks_parts = ["Working Paper. Resubmission to AEJ: Economic Policy. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038."]
+    thanks_parts = ["Working Paper. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038."]
     if jel_codes:
         thanks_parts.append(f"JEL: {jel_codes}.")
     thanks_parts.append("Replication package: https://github.com/andsalazar/FederalBudgetAnalysis.")
@@ -253,6 +254,38 @@ def generate_pandoc_pdf(source_md=None, output_pdf=None):
         return True
     else:
         print(f"\n  Pandoc failed: {result.stderr[:500]}")
+        return False
+
+
+def generate_pandoc_docx(source_md=None, output_docx=None):
+    """Generate Word (.docx) via Pandoc — handles tables, math (OMML), and images."""
+    print("=" * 60)
+    print("Generating Word document via Pandoc...")
+    print("=" * 60)
+
+    target_docx = output_docx or (PDF_DIR / "FINDINGS.docx")
+    stem = target_docx.stem
+    prepared_md = PDF_DIR / f"{stem}_prepared.md"
+    prepared_md.write_text(prepare_pandoc_markdown(source_md), encoding="utf-8")
+
+    cmd = [
+        "pandoc", str(prepared_md), "-o", str(target_docx),
+        "--standalone",
+        "--toc", "--toc-depth=3",
+        f"--resource-path={OUTPUT_DIR}",
+    ]
+    print(f"Running: {' '.join(cmd)}")
+    result = subprocess.run(
+        cmd, capture_output=True, cwd=str(OUTPUT_DIR),
+        encoding="utf-8", errors="replace",
+    )
+
+    if result.returncode == 0:
+        sz = target_docx.stat().st_size / (1024 * 1024)
+        print(f"\n  Word document generated: {target_docx} ({sz:.1f} MB)")
+        return True
+    else:
+        print(f"\n  Pandoc (docx) failed: {result.stderr[:500]}")
         return False
 
 
@@ -561,6 +594,11 @@ def main():
         default=None,
         help="Version tag for output filenames (e.g., 'v3' -> FINDINGS_v3_journal.pdf)",
     )
+    parser.add_argument(
+        "--docx",
+        action="store_true",
+        help="Also generate a Word (.docx) document via Pandoc (requires Pandoc)",
+    )
     args = parser.parse_args()
 
     # Resolve source file
@@ -576,9 +614,11 @@ def main():
     if vtag:
         pandoc_out = PDF_DIR / f"FINDINGS_{vtag}_journal.pdf"
         xhtml2pdf_out = PDF_DIR / f"FINDINGS_{vtag}_publication.pdf"
+        docx_out = PDF_DIR / f"FINDINGS_{vtag}.docx"
     else:
         pandoc_out = PANDOC_PDF
         xhtml2pdf_out = XHTML2PDF_OUT
+        docx_out = PDF_DIR / "FINDINGS.docx"
 
     if not source_path.exists():
         print(f"Error: {source_path} not found")
@@ -617,6 +657,15 @@ def main():
     elif engine == "xhtml2pdf" and not has_xhtml2pdf:
         print("xhtml2pdf not found. Run: pip install xhtml2pdf markdown")
 
+    # Word document generation (optional)
+    if args.docx:
+        if has_pandoc:
+            docx_ok = generate_pandoc_docx(source_md=source_path, output_docx=docx_out)
+            success = success or docx_ok
+        else:
+            print("Pandoc not found — cannot generate Word document.")
+            print("  Install from https://pandoc.org")
+
     if not success:
         sys.exit(1)
 
@@ -625,7 +674,6 @@ def main():
     print("=" * 60)
     print()
     print("Submission targets:")
-    print("  AEJ:Policy   https://www.aeaweb.org/journals/pol (resubmission)")
     print("  J.Pub.Econ   https://www.journals.elsevier.com/journal-of-public-economics")
     print("  SSRN         Upload PDF at https://www.ssrn.com/")
     print("  Brookings    Contact BPEA editor; PDF + replication package")
