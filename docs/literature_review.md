@@ -392,23 +392,9 @@ Following Clarke, Pailañir, Athey & Imbens (2023):
 
 ### Phase 4: Framing and Submission (Weeks 10–16)
 
-**Target journals (in order of fit):**
+**Venue considerations:**
 
-1. **QJE** — Best fit given Fajgelbaum et al. (2020) and Piketty et al. (2018) precedent. QJE publishes trade-and-distribution and fiscal policy papers with strong identification.
-
-2. **AER** — Bitler et al. (2006), Autor et al. (2013) both AER. Requires the strongest identification strategy.
-
-3. **AEJ: Economic Policy** — Ideal if we can't achieve full causal identification but have compelling descriptive + quasi-experimental evidence.
-
-4. **Journal of Public Economics** — Strong fit for fiscal incidence analysis.
-
-5. **Brookings Papers on Economic Activity (BPEA)** — Accepts timely policy analysis with less restrictive identification requirements; Saez & Zucman (2019) published progressive wealth taxation there.
-
-**Working paper venues (immediate):**
-- NBER Working Paper (requires NBER affiliation or co-author)
-- SSRN (immediate, no restrictions)
-- Brookings Economic Studies (policy brief format)
-- Tax Policy Center (if focused on H1b/H1c)
+The paper's combination of structural break identification, fiscal incidence analysis, and microdata validation positions it for journals publishing trade-and-distribution, fiscal policy, or public economics research. Working paper distribution via SSRN provides immediate availability.
 
 ---
 

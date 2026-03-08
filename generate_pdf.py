@@ -673,12 +673,8 @@ def main():
     print("PDF READY FOR SUBMISSION")
     print("=" * 60)
     print()
-    print("Submission targets:")
-    print("  J.Pub.Econ   https://www.journals.elsevier.com/journal-of-public-economics")
-    print("  SSRN         Upload PDF at https://www.ssrn.com/")
-    print("  Brookings    Contact BPEA editor; PDF + replication package")
-    print()
-    print("For top-5 journals, install Pandoc + MiKTeX for LaTeX-quality output.")
+    print("Upload to SSRN or submit to target journal.")
+    print("For journal submission, Pandoc + MiKTeX gives LaTeX-quality output.")
     print("For working paper repos (SSRN, NBER), xhtml2pdf output is sufficient.")
 
 
