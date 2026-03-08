@@ -1,20 +1,32 @@
-# Structural Breaks in the Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–FY2025
-
-**Author:** Andy Salazar  
-**Date:** March 2026 (Revised)  
-**Replication package:** [github.com/andsalazar/FederalBudgetAnalysis](https://github.com/andsalazar/FederalBudgetAnalysis)  
-**Pre-registration:** `docs/hypothesis_preregistration.md` (registered before data collection)
-
 ---
+title: |
+  Structural Breaks in the Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–FY2025
+author:
+  - Andy Salazar
+date: March 2026 (Revised)
+abstract: |
+  
+  Does fiscal year 2025 represent a structural break in the distributional incidence of U.S. federal fiscal policy, or a continuation of quarter-century trends? I embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records), applying out-of-sample structural break tests to four distributional indicators. Two indicators register as genuine discontinuities: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within pre-existing trends. The channels identified as structural breaks are precisely those that burden the bottom 50% most heavily: the combined fiscal burden on the B50 is $1,331 per person (10.6% of pretax income). Distinguishing trend from discontinuity matters for policy: secular trends require structural reform, while discrete discontinuities are potentially reversible through targeted policy action.
 
-## Abstract
-
-Does fiscal year 2025 represent a structural break in the distributional incidence of U.S. federal fiscal policy, or a continuation of quarter-century trends? I embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records), applying out-of-sample structural break tests to four distributional indicators. Two indicators register as genuine discontinuities: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within pre-existing trends. The channels identified as structural breaks are precisely those that burden the bottom 50% most heavily: the combined fiscal burden on the B50 is $1,331 per person (10.6% of pretax income). Distinguishing trend from discontinuity matters for policy: secular trends require structural reform, while discrete discontinuities are potentially reversible through targeted policy action.
-
-**Keywords:** structural break, fiscal incidence, tariff pass-through, income inequality, distributional analysis, bottom 50%
-
-**JEL Codes:** H22, H23, H53, D31, F13, E62
-
+keywords: "structural break, fiscal incidence, tariff pass-through, income inequality, distributional analysis, bottom 50%"
+thanks: "Working Paper. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038. JEL: H22, H23, H53, D31, F13, E62. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
+geometry: margin=1in
+fontsize: 11pt
+linestretch: 1.5
+numbersections: false
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{graphicx}
+  - \usepackage{float}
+  - \usepackage{caption}
+  - \captionsetup{font=small,labelfont=bf}
+  - \usepackage{hyperref}
+  - \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+  - \usepackage{amsmath}
+  - \usepackage{array}
+  - \renewcommand{\arraystretch}{1.2}
+  - \setlength{\tabcolsep}{4pt}
 ---
 
 ## 1. Introduction
@@ -39,6 +51,7 @@ I answer this question by embedding fiscal year 2025 within the 26-year span FY2
 
 ---
 
+\newpage
 ## 2. Data
 
 ### 2.1 Administrative Budget Data
@@ -80,6 +93,7 @@ All dollar values in constant FY2024 dollars (CPI-U base = 311.6). Robustness to
 
 ---
 
+\newpage
 ## 3. Conceptual Framework
 
 ### 3.1 Three Channels of Fiscal Incidence
@@ -117,6 +131,7 @@ This means analyzing any channel in isolation—as the existing literature does�
 
 ---
 
+\newpage
 ## 4. Empirical Strategy
 
 ### 4.1 Structural Break Identification
@@ -168,6 +183,7 @@ I subject all findings to six dimensions of robustness (21 distinct specificatio
 
 ---
 
+\newpage
 ## 5. Results I: Structural Break Classification
 
 ### 5.1 The 26-Year Fiscal Trajectory
@@ -250,6 +266,7 @@ The $188B shortfall is concentrated in three categories with high bottom-50% inc
 
 ---
 
+\newpage
 ## 6. Results II: Distributional Consequences of the Structural Breaks
 
 Having established which features of FY2025 are structural breaks and confirmed tariff-to-price pass-through, I now trace their distributional consequences.
@@ -303,6 +320,7 @@ Net interest payments reached $980B in FY2025, exceeding combined income securit
 
 ---
 
+\newpage
 ## 7. Robustness
 
 **Table 9. Robustness Battery (6 Dimensions, 21 Specifications + 500 Bootstrap Draws)**
@@ -320,6 +338,7 @@ All 21 specifications confirm the direction and approximate magnitude of B50 fis
 
 ---
 
+\newpage
 ## 8. Limitations
 
 1. **FY2025 spending estimates** use CBO January 2025 baseline and partial-year Treasury data. Full-year reconciliation against final MTS actuals is warranted.
@@ -336,6 +355,7 @@ All 21 specifications confirm the direction and approximate magnitude of B50 fis
 
 ---
 
+\newpage
 ## 9. Conclusion
 
 Embedding FY2025 within 26 years of fiscal data reveals that the current fiscal configuration is part trend, part discontinuity—and the distinction matters for both diagnosis and remedy.
@@ -426,6 +446,7 @@ Wolff, E. N., & Zacharias, A. (2007). The distributional consequences of governm
 
 ---
 
+\newpage
 ## Appendix A: B50 Calibration and CEX-CPS Cross-Walk
 
 CEX quintile boundaries (Q1 < $23,810; Q5 > $127,080) are defined by consumer unit before-tax income, which differs from person-level income ranking. I calibrate the cross-walk using CPS ASEC 2024 (115,836 persons): grouping by household (PH_SEQ), summing pretax income, and assigning each person their household's CEX quintile band. The person-weighted 50th percentile of household income is $96,000—in CEX Q4 ($77,025–$127,080). Exactly 41.4% of Q4 persons have household income below this threshold:
@@ -438,6 +459,7 @@ This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 × 22.7%). Sensiti
 
 ---
 
+\newpage
 ## Appendix B: Income Distribution Baseline (CPS ASEC)
 
 **Table A1. National Income Shares, CY2023 (PSZ Framework)**
@@ -465,6 +487,7 @@ Inequality measures: Gini (pretax) = 0.587 [95% CI: 0.584–0.591]; B50 income s
 
 ---
 
+\newpage
 ## Appendix C: Welfare Analysis and Simulations
 
 ### C.1 CRRA Welfare Weighting (σ = 2)
@@ -495,6 +518,7 @@ This geographic variation forms the basis for future synthetic DiD estimation wi
 
 ---
 
+\newpage
 ## Appendix D: Structural Break Regression Detail
 
 **Table A4. Full OLS Outputs**
@@ -516,6 +540,7 @@ The z-score uses the full out-of-sample prediction SE:  $SE_{pred} = \hat{\sigma
 
 ---
 
+\newpage
 ## Appendix E: Data Sources and Replication
 
 | Source | Access Method | Files |
@@ -532,7 +557,7 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ---
 
-## Appendix F: Figures
+\newpage
 
 ### F.1 Structural Break and 26-Year Trend Figures
 
@@ -603,3 +628,104 @@ The transition from IEEPA tariffs to a legislative replacement does not reverse 
 | G1 | B50 per-person burden: status quo vs. replacement scenarios |
 | G2 | Price stickiness incidence flow diagram |
 | G3 | Sensitivity range and welfare impact |
+
+\newpage
+
+## Appendix B: Figures
+
+![Federal outlay composition (stacked area, FY2015-2025)](figures/01_outlay_composition.png){width=90%}
+
+![Revenue by source (stacked area)](figures/02_revenue_composition.png){width=90%}
+
+![Net interest vs. safety-net spending](figures/03_interest_vs_safety_net.png){width=90%}
+
+![CPI essentials indexed (with tariff event markers)](figures/04_cpi_essentials.png){width=90%}
+
+![Corporate profits vs. wages (indexed)](figures/05_profits_vs_wages.png){width=90%}
+
+![Customs revenue spike (bar chart)](figures/06_customs_revenue_spike.png){width=90%}
+
+![Federal deficit trend (with policy periods)](figures/07_deficit_trend.png){width=90%}
+
+![Income security waterfall (FY2019-2025)](figures/09_income_security_waterfall.png){width=90%}
+
+![Net interest as percent of GDP](figures/10_interest_pct_gdp.png){width=90%}
+
+![Customs revenue trajectory (with tariff regime markers)](figures/25yr_customs_trajectory.png){width=90%}
+
+![FY2025 context dashboard (6-panel summary)](figures/25yr_fy2025_context_dashboard.png){width=90%}
+
+![Income inequality evolution (Census quintile shares)](figures/25yr_inequality_evolution.png){width=90%}
+
+![Interest vs. safety-net spending (25-year trajectory)](figures/25yr_interest_vs_safetynet.png){width=90%}
+
+![B50 transfer dependency and poverty (CPS ASEC benchmarks)](figures/25yr_poverty_and_benefits.png){width=90%}
+
+![Revenue composition shares (stacked area, FY2000–2025)](figures/25yr_revenue_composition.png){width=90%}
+
+![Real spending composition (stacked area, FY2000–2025)](figures/25yr_spending_composition.png){width=90%}
+
+![Structural break tests (4-panel: actual vs. trend)](figures/25yr_structural_breaks.png){width=90%}
+
+![Burden decomposition by income percentile (stacked area)](figures/fig11_burden_decomposition.png){width=90%}
+
+![Structural break prediction bands (forest plot)](figures/fig12_structural_break_bands.png){width=90%}
+
+![Tariff pass-through: traded goods vs. services control](figures/fig13_services_price_acceleration.png){width=90%}
+
+![B50 calibration diagram (quintile person shares)](figures/fig14_b50_calibration.png){width=90%}
+
+![Robustness specification summary (6 dimensions)](figures/fig15_specification_curve.png){width=90%}
+
+![CBO counterfactual waterfall (baseline to actual)](figures/fig16_counterfactual_waterfall.png){width=90%}
+
+![Historical B50 income share and transfer dependency](figures/fig17_historical_b50.png){width=90%}
+
+![Welfare-weighted loss (log-scale, CRRA σ=2)](figures/fig18_welfare_logscale.png){width=90%}
+
+![State fiscal exposure index (dot plot)](figures/fig19_state_exposure_dots.png){width=90%}
+
+![Income distribution by quintile (CPS ASEC)](figures/fig1_income_distribution.png){width=90%}
+
+![SPM poverty dose-response (food program scenarios)](figures/fig20_spm_dose_response.png){width=90%}
+
+![SCOTUS scenario: B50 per-person burden comparison (Section 12)](figures/fig21_scotus_scenario_comparison.png){width=90%}
+
+![Central combined scenario: quintile burden decomposition (Section 12)](figures/fig22_scotus_quintile_decomposition.png){width=90%}
+
+![Price stickiness and the incidence of tariff revocation (Section 12)](figures/fig23_price_stickiness_flows.png){width=90%}
+
+![SCOTUS scenario: sensitivity range and welfare impact (Section 12)](figures/fig24_scotus_welfare_sensitivity.png){width=90%}
+
+![Distributional impact of FY2025 policy](figures/fig2_distributional_impact.png){width=90%}
+
+![Simulated distributional burden curve](figures/fig3_quantile_treatment_effects.png){width=90%}
+
+![SPM poverty simulation](figures/fig4_spm_poverty_simulation.png){width=90%}
+
+![State exposure classification map](figures/fig5_state_exposure.png){width=90%}
+
+![Welfare-weighted impact (CRRA)](figures/fig6_welfare_weighted_impact.png){width=90%}
+
+![CPI price changes in tariff-affected goods](figures/fig7_tariff_price_changes.png){width=90%}
+
+![Tariff burden by income quintile](figures/fig8_tariff_burden_by_quintile.png){width=90%}
+
+![B50 vs. T50 tariff cost by goods category](figures/fig9_b50_tariff_by_category.png){width=90%}
+
+![Budget function waterfall (real terms)](figures/real_budget_function_waterfall.png){width=90%}
+
+![Cumulative spending by tier (real terms)](figures/real_cumulative_by_tier.png){width=90%}
+
+![Defense vs. social spending (real terms)](figures/real_defense_vs_social.png){width=90%}
+
+![Interest payment timeline (real terms)](figures/real_interest_timeline.png){width=90%}
+
+![Propensity classification comparison](figures/real_propensity_comparison.png){width=90%}
+
+![Propensity stacked area chart](figures/real_propensity_stacked_area.png){width=90%}
+
+![Tariff windfall flow diagram. Assumes 4.5% 10-yr rate (FRED DGS10), 20× P/E (conservative); equity ownership 93% top-10 (Fed 2023 SCF), bond ownership ~67% top-10 (Fed DFA)](figures/real_tariff_windfall_flow.png){width=90%}
+
+![Top agencies by spending change](figures/real_top_agencies.png){width=90%}
+
