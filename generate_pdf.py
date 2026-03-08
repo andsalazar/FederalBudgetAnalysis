@@ -35,9 +35,12 @@ FIGURES_DIR = OUTPUT_DIR / "figures"
 PDF_DIR = OUTPUT_DIR / "reports"
 PDF_DIR.mkdir(parents=True, exist_ok=True)
 
+# Canonical filename stem (Author_ShortTitle_Year)
+PAPER_STEM = "Salazar_FiscalBreaks_2026"
+
 # Default output names (overridden when --source is used)
-PANDOC_PDF = PDF_DIR / "FINDINGS_journal.pdf"
-XHTML2PDF_OUT = PDF_DIR / "FINDINGS_publication.pdf"
+PANDOC_PDF = PDF_DIR / f"{PAPER_STEM}_journal.pdf"
+XHTML2PDF_OUT = PDF_DIR / f"{PAPER_STEM}_publication.pdf"
 
 FIGURE_FILES = sorted(
     [f for f in FIGURES_DIR.glob("*.png")],
@@ -263,7 +266,7 @@ def generate_pandoc_docx(source_md=None, output_docx=None):
     print("Generating Word document via Pandoc...")
     print("=" * 60)
 
-    target_docx = output_docx or (PDF_DIR / "FINDINGS.docx")
+    target_docx = output_docx or (PDF_DIR / f"{PAPER_STEM}.docx")
     stem = target_docx.stem
     prepared_md = PDF_DIR / f"{stem}_prepared.md"
     prepared_md.write_text(prepare_pandoc_markdown(source_md), encoding="utf-8")
@@ -592,7 +595,7 @@ def main():
         "--version-tag",
         type=str,
         default=None,
-        help="Version tag for output filenames (e.g., 'v3' -> FINDINGS_v3_journal.pdf)",
+        help="Version tag for output filenames (e.g., 'v4' -> Salazar_FiscalBreaks_2026_v4_journal.pdf)",
     )
     parser.add_argument(
         "--docx",
@@ -612,13 +615,13 @@ def main():
     # Resolve output filenames
     vtag = args.version_tag
     if vtag:
-        pandoc_out = PDF_DIR / f"FINDINGS_{vtag}_journal.pdf"
-        xhtml2pdf_out = PDF_DIR / f"FINDINGS_{vtag}_publication.pdf"
-        docx_out = PDF_DIR / f"FINDINGS_{vtag}.docx"
+        pandoc_out = PDF_DIR / f"{PAPER_STEM}_{vtag}_journal.pdf"
+        xhtml2pdf_out = PDF_DIR / f"{PAPER_STEM}_{vtag}_publication.pdf"
+        docx_out = PDF_DIR / f"{PAPER_STEM}_{vtag}.docx"
     else:
         pandoc_out = PANDOC_PDF
         xhtml2pdf_out = XHTML2PDF_OUT
-        docx_out = PDF_DIR / "FINDINGS.docx"
+        docx_out = PDF_DIR / f"{PAPER_STEM}.docx"
 
     if not source_path.exists():
         print(f"Error: {source_path} not found")
