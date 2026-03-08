@@ -372,6 +372,12 @@ When the CPS ASEC 2025 becomes available (September 2026), synthetic difference-
 
 ---
 
+## Declaration of Interest
+
+The author declares no competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. This research received no external funding.
+
+---
+
 ## Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process
 
 During the preparation of this work the author used Claude Opus 4.6 in order to code this project and make available on GitHub. After using this tool/service, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
