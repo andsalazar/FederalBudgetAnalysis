@@ -32,6 +32,9 @@ newfig_out.txt
 tariff_out.txt
 fred_collect.log
 
+# Cover letters (not for public repo)
+output/reports/ITPF_Cover_Letter*
+
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
