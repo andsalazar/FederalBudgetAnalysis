@@ -44,7 +44,7 @@ XHTML2PDF_OUT = PDF_DIR / f"{PAPER_STEM}_publication.pdf"
 
 # Catalog figures in narrative order (Appendix G, Figures 1–14)
 _CATALOG_ORDER = [
-    "25yr_structural_breaks.png",            # 1  Structural break tests (4-panel)
+    "25yr_structural_breaks.png",            # 1  Departure-from-trend tests (4-panel)
     "25yr_customs_trajectory.png",           # 2  Customs revenue trajectory
     "25yr_interest_vs_safetynet.png",        # 3  Interest vs. safety-net (25-year)
     "25yr_revenue_composition.png",          # 4  Revenue composition shares
@@ -56,7 +56,7 @@ _CATALOG_ORDER = [
     "fig8_tariff_burden_by_quintile.png",    # 10 Tariff burden by quintile
     "fig16_counterfactual_waterfall.png",    # 11 CBO counterfactual waterfall
     "fig15_specification_curve.png",         # 12 Specification curve
-    "fig12_structural_break_bands.png",      # 13 Structural break prediction bands
+    "fig12_structural_break_bands.png",      # 13 Departure-from-trend prediction bands
     "fig14_b50_calibration.png",             # 14 B50 calibration diagram
 ]
 
@@ -94,7 +94,7 @@ FIGURE_DESCRIPTIONS = {
     "fig8_tariff_burden_by_quintile.png": "Tariff burden by income quintile",
     "fig9_b50_tariff_by_category.png": "B50 vs. T50 tariff cost by goods category",
     "fig11_burden_decomposition.png": "Burden decomposition by income percentile (stacked area)",
-    "fig12_structural_break_bands.png": "Structural break prediction bands (forest plot)",
+    "fig12_structural_break_bands.png": "Departure-from-trend prediction bands (forest plot)",
     "fig13_services_price_acceleration.png": "Tariff pass-through: traded goods vs. services control",
     "fig14_b50_calibration.png": "B50 calibration diagram (quintile person shares)",
     "fig15_specification_curve.png": "Robustness specification summary (6 dimensions)",
@@ -121,7 +121,7 @@ FIGURE_DESCRIPTIONS = {
     "25yr_customs_trajectory.png": "Customs revenue trajectory (with tariff regime markers)",
     "25yr_inequality_evolution.png": "Income inequality evolution (Census quintile shares)",
     "25yr_poverty_and_benefits.png": "B50 transfer dependency and poverty (CPS ASEC benchmarks)",
-    "25yr_structural_breaks.png": "Structural break tests (4-panel: actual vs. trend)",
+    "25yr_structural_breaks.png": "Departure-from-trend tests (4-panel: actual vs. trend)",
     "25yr_fy2025_context_dashboard.png": "FY2025 context dashboard (6-panel summary)",
 }
 

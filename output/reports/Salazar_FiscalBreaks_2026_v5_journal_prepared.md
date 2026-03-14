@@ -1,20 +1,32 @@
-# The Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–FY2025: Trend, Departure, and the Bottom 50%
-
-**Author:** Andy Salazar  
-**Date:** March 2026 (Revised)  
-**Replication package:** [github.com/andsalazar/FederalBudgetAnalysis](https://github.com/andsalazar/FederalBudgetAnalysis)  
-**Pre-registration:** `docs/hypothesis_preregistration.md` (registered before data collection)
-
 ---
+title: |
+  The Distributional Incidence of U.S. Federal Fiscal Policy, FY2000–FY2025: Trend, Departure, and the Bottom 50%
+author:
+  - Andy Salazar
+date: March 2026 (Revised)
+abstract: |
+  
+  The combined fiscal burden of tariff escalation, means-tested spending cuts, and interest crowding on the bottom 50% of the U.S. income distribution reached $1,331 per person (10.6% of pretax income) in FY2025—an amount comparable to total means-tested transfer income separating B50 households from their market-income baseline. I embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records) and use out-of-sample prediction tests to classify each distributional channel as either a departure from its historical trajectory or a continuation of pre-existing trends. Two channels register as statistically significant departures: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within their quarter-century trajectories. The channels classified as departures are precisely those that burden the bottom 50% most heavily. Whether these departures prove temporary or permanent cannot be assessed from a single post-departure observation; this paper identifies them, traces their distributional incidence, and distinguishes them from secular trends that require fundamentally different policy responses.
 
-## Abstract
-
-The combined fiscal burden of tariff escalation, means-tested spending cuts, and interest crowding on the bottom 50% of the U.S. income distribution reached $1,331 per person (10.6% of pretax income) in FY2025—an amount comparable to total means-tested transfer income separating B50 households from their market-income baseline. I embed FY2025 within a 26-year panel (FY2000–FY2025) of CBO budget data, Treasury administrative records, and CPS ASEC microdata (1.4 million person-records) and use out-of-sample prediction tests to classify each distributional channel as either a departure from its historical trajectory or a continuation of pre-existing trends. Two channels register as statistically significant departures: customs revenue's share of total revenue jumped from 1.0% to 3.7% (z = 25.8), and the interest-to-safety-net crowding ratio doubled to 0.91 (z = 2.4). Two others—the regressive revenue share and the safety-net outlay share—remain within their quarter-century trajectories. The channels classified as departures are precisely those that burden the bottom 50% most heavily. Whether these departures prove temporary or permanent cannot be assessed from a single post-departure observation; this paper identifies them, traces their distributional incidence, and distinguishes them from secular trends that require fundamentally different policy responses.
-
-**Keywords:** fiscal incidence, tariff incidence, income distribution, means-tested transfers, departure from trend, bottom 50%
-
-**JEL Codes:** H22, H23, H53, D31, F13, E62
-
+keywords: "fiscal incidence, tariff incidence, income distribution, means-tested transfers, departure from trend, bottom 50%"
+thanks: "Working Paper. SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6285038. JEL: H22, H23, H53, D31, F13, E62. Replication package: https://github.com/andsalazar/FederalBudgetAnalysis. Pre-registration: docs/hypothesis_preregistration.md"
+geometry: margin=1in
+fontsize: 11pt
+linestretch: 1.5
+numbersections: false
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{graphicx}
+  - \usepackage{float}
+  - \usepackage{caption}
+  - \captionsetup{font=small,labelfont=bf}
+  - \usepackage{hyperref}
+  - \hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+  - \usepackage{amsmath}
+  - \usepackage{array}
+  - \renewcommand{\arraystretch}{1.2}
+  - \setlength{\tabcolsep}{4pt}
 ---
 
 ## 1. Introduction
@@ -25,7 +37,7 @@ But a descriptive accounting of FY2025 alone is insufficient for policy analysis
 
 I answer this question by embedding fiscal year 2025 within the 26-year span FY2000–FY2025 and testing whether key distributional indicators deviate significantly from their historical trajectories. For each indicator, I fit an OLS linear trend over a pre-treatment training period and test whether the FY2025 realized value falls outside the out-of-sample prediction interval (|z| > 2.0). I then trace the distributional consequences of the identified departures to the bottom 50% of the income distribution using CPS ASEC microdata.
 
-**Preview of findings.** Two of four indicators register as statistically significant departures from trend: customs revenue as a share of total revenue (z = 25.8) and the interest-to-safety-net crowding ratio (z = 2.4). Two do not: the regressive revenue share (z = 0.5) and the safety-net outlay share (z = −1.5). The channels classified as departures are precisely those imposing the largest burden on the bottom 50%—a combined $1,331 per person (10.6% of pretax income), validated across 21 robustness specifications.
+**Preview of findings.** Two of four indicators register as statistically significant departures from trend: customs revenue as a share of total revenue (z = 25.8) and the interest-to-safety-net crowding ratio (z = 2.4). Two do not: the regressive revenue share (z = 0.5) and the safety-net outlay share (z = -1.5). The channels classified as departures are precisely those imposing the largest burden on the bottom 50%—a combined $1,331 per person (10.6% of pretax income), validated across 21 robustness specifications.
 
 An important limitation: a single post-departure observation cannot distinguish a temporary shock from a permanent regime change. The departure-from-trend tests identify FY2025 as a statistical outlier relative to the 26-year trajectory, but whether the customs and crowding channels revert or persist is an empirical question that future data must resolve. The contribution of this paper is not to settle permanence but to (a) quantify the distributional burden, (b) identify *which* channels drive it, and (c) distinguish those channels from secular trends that would persist under any plausible counterfactual.
 
@@ -41,6 +53,7 @@ An important limitation: a single post-departure observation cannot distinguish 
 
 ---
 
+\newpage
 ## 2. Data
 
 ### 2.1 Administrative Budget Data
@@ -70,7 +83,7 @@ BLS CEX 2023 published quintile tables (Table 1101) for expenditure by goods cat
 
 $$\text{B50}_{\text{CEX}} = Q_1 + Q_2 + Q_3 + 0.414 \times Q_4$$
 
-This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details; income distribution baseline in Appendix B). For the spending-cut analysis, I use CPS person-income quintiles where B50 = Q1+Q2+0.5×Q3 (136.6M persons).
+This captures exactly 50.0% of persons by household income rank (see Appendix A for calibration details; income distribution baseline in Appendix B). For the spending-cut analysis, I use CPS person-income quintiles where B50 = Q1+Q2+0.5$\times$Q3 (136.6M persons).
 
 ### 2.4 CPI Sub-Indices
 
@@ -82,6 +95,7 @@ All dollar values in constant FY2024 dollars (CPI-U base = 311.6). Robustness to
 
 ---
 
+\newpage
 ## 3. Conceptual Framework
 
 ### 3.1 Three Channels of Fiscal Incidence
@@ -106,7 +120,7 @@ These predictions generate four testable hypotheses:
 
 - **H1 (Customs departure):** The customs revenue share in FY2025 exceeds the out-of-sample prediction interval from the FY2000–2017 trend (|z| > 2.0).
 - **H2 (Crowding departure):** The interest-to-safety-net ratio in FY2025 exceeds the out-of-sample prediction interval from the FY2000–2024 trend (|z| > 2.0).
-- **H3 (Trend continuity):** The regressive revenue share and safety-net outlay share in FY2025 fall within their respective prediction intervals (|z| ≤ 2.0).
+- **H3 (Trend continuity):** The regressive revenue share and safety-net outlay share in FY2025 fall within their respective prediction intervals (|z| $\leq$ 2.0).
 - **H4 (Regressive departure):** The channels classified as departures from trend impose a larger per-person burden on the bottom 50% than the channels classified as within-trend.
 
 ### 3.3 Interaction Effects
@@ -119,6 +133,7 @@ This means analyzing any channel in isolation—as the existing literature does�
 
 ---
 
+\newpage
 ## 4. Empirical Strategy
 
 ### 4.1 Departure-from-Trend Identification
@@ -156,13 +171,13 @@ I test for tariff-driven price increases using two complementary identification 
 ### 4.4 Distributional Attribution
 
 Spending cuts are attributed to income quintiles using program-specific distributional weights derived from CPS ASEC receipt data:
-- **Medicaid (−$36B):** 40% Q1, 30% Q2, 15% Q3, 10% Q4, 5% Q5
-- **Income Security (−$53B):** 50% Q1, 30% Q2, 12% Q3, 6% Q4, 2% Q5
-- **Nondefense Discretionary (−$95B):** 25% Q1, 25% Q2, 22% Q3, 18% Q4, 10% Q5
+- **Medicaid (-$36B):** 40% Q1, 30% Q2, 15% Q3, 10% Q4, 5% Q5
+- **Income Security (-$53B):** 50% Q1, 30% Q2, 12% Q3, 6% Q4, 2% Q5
+- **Nondefense Discretionary (-$95B):** 25% Q1, 25% Q2, 22% Q3, 18% Q4, 10% Q5
 
 These weights are validated against CPS ASEC program receipt rates: SSI receipt is 64:1 (Q1 vs. Q5), public assistance 16:1, EITC 329:1 in average dollar terms (Table B2).
 
-Tariff burden is allocated using BLS CEX 2023 expenditure shares by quintile, with the B50 share (51.7%) calibrated via the CPS-CEX cross-walk (Section 2.3). Deadweight loss is estimated at 1.4× tariff revenue following Amiti et al. (2019), with sensitivity ranging from 1.0× to 2.0×.
+Tariff burden is allocated using BLS CEX 2023 expenditure shares by quintile, with the B50 share (51.7%) calibrated via the CPS-CEX cross-walk (Section 2.3). Deadweight loss is estimated at 1.4$\times$ tariff revenue following Amiti et al. (2019), with sensitivity ranging from 1.0$\times$ to 2.0$\times$.
 
 ### 4.5 Robustness Design
 
@@ -170,6 +185,7 @@ I subject all findings to six dimensions of robustness (21 distinct specificatio
 
 ---
 
+\newpage
 ## 5. Results I: Trend vs. Departure Classification
 
 ### 5.1 The 26-Year Fiscal Trajectory
@@ -191,7 +207,7 @@ Three patterns stand out: (i) interest payments grew faster than any spending ca
 
 | Revenue Source | FY2000 | FY2025 | Change |
 |---------------|--------|--------|--------|
-| Progressive (income + corp.) | 59.8% | 57.1% | −2.7pp |
+| Progressive (income + corp.) | 59.8% | 57.1% | -2.7pp |
 | Regressive (excise + customs + FICA) | 36.6% | 39.1% | +2.5pp |
 | Customs alone | 1.0% | 3.7% | +2.7pp |
 
@@ -206,13 +222,13 @@ Census data confirm a concurrent compression of income shares: the B50 household
 | Customs / total revenue | FY2000–2017 | 1.20% | 3.72% | **25.8** | **Departure** |
 | Interest / safety-net | FY2000–2024 excl. COVID | 0.45 | 0.91 | **2.4** | **Departure** |
 | Regressive revenue share | FY2000–2017 | 37.4% | 39.1% | 0.5 | Trend |
-| Safety-net / total outlays | FY2000–2024 excl. COVID | 17.7% | 15.2% | −1.5 | Trend |
+| Safety-net / total outlays | FY2000–2024 excl. COVID | 17.7% | 15.2% | -1.5 | Trend |
 
 Full OLS outputs in Appendix D. The results partition FY2025 into two categories:
 
 **Departures from trend (z > 2.0).** The customs share (z = 25.8) is the most statistically extreme: a 26-fold deviation from the prediction standard error, driven by Liberation Day and related executive tariff actions that took customs revenue from $77B (FY2024) to $195B (FY2025). The interest/safety-net ratio (z = 2.4) reflects the compounding of post-pandemic debt accumulation and rate normalization, pushing interest payments roughly double their trend-predicted level relative to safety-net spending. Together, these departures represent a large and identifiable shift in fiscal incidence toward channels that disproportionately burden lower-income households.
 
-**Within-trend (|z| ≤ 2.0).** The regressive revenue share (z = 0.5) and safety-net outlay share (z = −1.5) are not statistically distinguishable from their 25-year trajectories. FY2025 did not initiate the shift toward more regressive revenue or away from safety-net spending—these are multi-decade trends that would persist under any plausible counterfactual. The safety-net share (15.2%, predicted 17.7%) merits monitoring but does not meet the departure threshold once COVID-era observations are excluded from the training sample.
+**Within-trend (|z| $\leq$ 2.0).** The regressive revenue share (z = 0.5) and safety-net outlay share (z = -1.5) are not statistically distinguishable from their 25-year trajectories. FY2025 did not initiate the shift toward more regressive revenue or away from safety-net spending—these are multi-decade trends that would persist under any plausible counterfactual. The safety-net share (15.2%, predicted 17.7%) merits monitoring but does not meet the departure threshold once COVID-era observations are excluded from the training sample.
 
 ### 5.3 The Aggregate FY2025 Fiscal Shift
 
@@ -224,11 +240,11 @@ I compare actual FY2025 spending against the CBO January 2025 baseline:
 |----------|-------------|--------|-----|
 | Social Security | $1,530B | $1,530B | $0B |
 | Medicare | $869B | $869B | $0B |
-| Medicaid | $616B | $580B | −$36B |
-| Income Security | $403B | $350B | −$53B |
-| Nondefense Discretionary | $755B | $660B | −$95B |
+| Medicaid | $616B | $580B | -$36B |
+| Income Security | $403B | $350B | -$53B |
+| Nondefense Discretionary | $755B | $660B | -$95B |
 | Net Interest | $952B | $980B | +$28B |
-| **Total** | **$7,023B** | **$6,835B** | **−$188B** |
+| **Total** | **$7,023B** | **$6,835B** | **-$188B** |
 
 The $188B shortfall is concentrated in three categories with high bottom-50% incidence; unlisted categories account for the difference between the displayed items and the total. On the revenue side, customs duties reached $195B nominal (+153% YoY; $189.7B in real FY2024 dollars per Table 1), generating $100B above baseline.
 
@@ -238,20 +254,21 @@ The $188B shortfall is concentrated in three categories with high bottom-50% inc
 
 | Category | Eff. Tariff | Pre-Tariff YoY | Post-Tariff YoY | Acceleration |
 |----------|------------|----------------|-----------------|-------------|
-| Consumer Electronics | 10–145% | −6.05% | +1.57% | **+7.61pp** |
+| Consumer Electronics | 10–145% | -6.05% | +1.57% | **+7.61pp** |
 | Household Furnishings | 10–145% | +0.48% | +3.93% | **+3.46pp** |
 | Toys and Games | 10–145% | +3.71% | +5.54% | **+1.84pp** |
 | Footwear | 10–145% | +1.03% | +1.95% | +0.93pp |
-| New Vehicles | 25% | −0.34% | +0.37% | +0.71pp |
+| New Vehicles | 25% | -0.34% | +0.37% | +0.71pp |
 | Food at Home | 10–25% | +1.84% | +2.18% | +0.33pp |
-| Gasoline | 10–25% | −0.13% | −7.49% | −7.37pp |
+| Gasoline | 10–25% | -0.13% | -7.49% | -7.37pp |
 
-**Identification test 1 (within-goods dose-response).** Spearman rank correlation between tariff rate and price acceleration: **ρ = 0.684, p = 0.020**. High-tariff goods (>15% effective rate) saw mean acceleration of +2.30pp vs. −1.46pp for low-tariff goods.
+**Identification test 1 (within-goods dose-response).** Spearman rank correlation between tariff rate and price acceleration: **$\rho$ = 0.684, p = 0.020**. High-tariff goods (>15% effective rate) saw mean acceleration of +2.30pp vs. -1.46pp for low-tariff goods.
 
-**Identification test 2 (services control group).** Traded goods accelerated +1.66pp while non-tradable services decelerated −1.78pp, yielding a differential of +3.44pp (Mann-Whitney p = 0.015, Cohen's d = 1.26). This rules out the hypothesis that observed price increases reflect broader inflationary pressure.
+**Identification test 2 (services control group).** Traded goods accelerated +1.66pp while non-tradable services decelerated -1.78pp, yielding a differential of +3.44pp (Mann-Whitney p = 0.015, Cohen's d = 1.26). This rules out the hypothesis that observed price increases reflect broader inflationary pressure.
 
 ---
 
+\newpage
 ## 6. Results II: Distributional Consequences of the Departures from Trend
 
 Having established which features of FY2025 are departures from trend and confirmed tariff-to-price pass-through, I now trace their distributional consequences.
@@ -262,13 +279,13 @@ Having established which features of FY2025 are departures from trend and confir
 
 | Quintile | Spending Cuts | Tariff Burden | Total | Per Person | % Pretax Income |
 |----------|-------------|--------------|-------|-----------|----------------|
-| Q1 (Bottom 20%) | −$64.7B | −$14.0B | −$78.7B | −$1,440 | 363.3%* |
-| Q2 | −$50.4B | −$21.0B | −$71.4B | −$1,308 | 8.3% |
-| Q3 | −$32.7B | −$30.8B | −$63.5B | −$1,162 | 3.3% |
-| Q4 | −$23.9B | −$37.8B | −$61.7B | −$1,129 | 1.8% |
-| Q5 (Top 20%) | −$12.4B | −$36.4B | −$48.8B | −$893 | 0.5% |
+| Q1 (Bottom 20%) | -$64.7B | -$14.0B | -$78.7B | -$1,440 | 363.3%* |
+| Q2 | -$50.4B | -$21.0B | -$71.4B | -$1,308 | 8.3% |
+| Q3 | -$32.7B | -$30.8B | -$63.5B | -$1,162 | 3.3% |
+| Q4 | -$23.9B | -$37.8B | -$61.7B | -$1,129 | 1.8% |
+| Q5 (Top 20%) | -$12.4B | -$36.4B | -$48.8B | -$893 | 0.5% |
 
-*Q1 percentage reflects near-zero pretax income ($396/person). The B50 is Q1+Q2+0.5×Q3 of CPS person-income quintiles (136.6M persons).*
+*Q1 percentage reflects near-zero pretax income ($396/person). The B50 is Q1+Q2+0.5$\times$Q3 of CPS person-income quintiles (136.6M persons).*
 
 The spending-cut channel is strongly progressive in incidence (Q1 bears 35% of cuts). The tariff channel is regressive as a share of income. The combined effect is monotonically regressive: burden falls from $1,440 (Q1) to $893 (Q5) per person, and steeply when expressed as income shares.
 
@@ -305,6 +322,7 @@ Net interest payments reached $980B in FY2025, reaching 105% of combined income 
 
 ---
 
+\newpage
 ## 7. Robustness
 
 **Table 9. Robustness Battery (6 Dimensions, 21 Specifications + 500 Bootstrap Draws)**
@@ -316,19 +334,20 @@ Net interest payments reached $980B in FY2025, reaching 105% of combined income 
 | CBO Baseline Uncertainty | 5 | All scenarios below baseline |
 | Alternative Deflators | 5 | Income security decline >70% under all |
 | Bootstrap CIs (n=500, HH-clustered) | 500 | B50 share: 11.12% [10.96, 11.29] |
-| Placebo (FY2019) | 1 | FY2019 gap ≈ $0B vs. FY2025 −$404B |
+| Placebo (FY2019) | 1 | FY2019 gap $\approx$ $0B vs. FY2025 -$404B |
 
 All 21 specifications confirm the direction and approximate magnitude of B50 fiscal burden. The FY2019 placebo test—applying the identical methodology to a non-event year—produces a spending gap of approximately $0B, confirming that the FY2025 findings are not an artifact of the CBO baseline methodology.
 
 ---
 
+\newpage
 ## 8. Limitations
 
 1. **FY2025 spending estimates** use CBO January 2025 baseline and partial-year Treasury data. Full-year reconciliation against final MTS actuals is warranted.
 
 2. **CPS ASEC 2024 reflects CY2023 income**—a pre-policy baseline. When the ASEC 2025 becomes available (September 2026), formal difference-in-differences estimation exploiting cross-state tariff and transfer exposure variation will enable causal identification.
 
-3. **Causal identification is partial.** The CBO counterfactual identifies the spending gap. Tariff price effects are supported by two identification strategies (within-goods dose-response ρ = 0.684, p = 0.020; traded-vs.-services differential +3.44pp, p = 0.015) but cannot fully separate tariff causality from other supply-side factors.
+3. **Causal identification is partial.** The CBO counterfactual identifies the spending gap. Tariff price effects are supported by two identification strategies (within-goods dose-response $\rho$ = 0.684, p = 0.020; traded-vs.-services differential +3.44pp, p = 0.015) but cannot fully separate tariff causality from other supply-side factors.
 
 4. **Post-pandemic normalization** in income security spending is partially captured by the FY2019 placebo test but requires a formal panel DiD for definitive causal claims.
 
@@ -338,13 +357,14 @@ All 21 specifications confirm the direction and approximate magnitude of B50 fis
 
 ---
 
+\newpage
 ## 9. Conclusion
 
 The combined fiscal burden of tariff escalation, means-tested spending cuts, and interest crowding on the bottom 50% of the U.S. income distribution reached $1,331 per person in FY2025—10.6% of pretax income, robust across 21 specifications. This amount is comparable in magnitude to total means-tested transfer income ($1,111/person) separating B50 households from their market-income baseline, and exceeds the burden at the 99th percentile by more than two orders of magnitude as a share of income.
 
 Embedding FY2025 within 26 years of fiscal data reveals that this burden is part trend, part departure—and the distinction matters for both diagnosis and remedy.
 
-The gradual shift toward more regressive federal revenue (+2.5pp over 25 years) and the compression of the B50 income share (from 19.9% to 18.0%) are secular trends that predate 2025, would continue under any administration, and require structural reform. The safety-net outlay share, while below its trend-predicted level, does not meet the departure threshold (z = −1.5) once pandemic-era observations are excluded.
+The gradual shift toward more regressive federal revenue (+2.5pp over 25 years) and the compression of the B50 income share (from 19.9% to 18.0%) are secular trends that predate 2025, would continue under any administration, and require structural reform. The safety-net outlay share, while below its trend-predicted level, does not meet the departure threshold (z = -1.5) once pandemic-era observations are excluded.
 
 What is historically anomalous is the tariff channel. The customs revenue share jumped from 1.0% to 3.7% of total revenue—a z-score of 25.8, the most dramatic single-year change in the federal revenue mix since the introduction of the income tax. The interest-crowding ratio (z = 2.4) also departs from trend, pushing interest payments to double their predicted level relative to safety-net spending. These departures are precisely the channels that burden the bottom 50% most heavily.
 
@@ -416,25 +436,27 @@ Wolff, E. N., & Zacharias, A. (2007). The distributional consequences of governm
 
 ---
 
+\newpage
 ## Appendix A: B50 Calibration and CEX-CPS Cross-Walk
 
 CEX quintile boundaries (Q1 < $23,810; Q5 > $127,080) are defined by consumer unit before-tax income, which differs from person-level income ranking. I calibrate the cross-walk using CPS ASEC 2024 (115,836 persons): grouping by household (PH_SEQ), summing pretax income, and assigning each person their household's CEX quintile band. The person-weighted 50th percentile of household income is $96,000—in CEX Q4 ($77,025–$127,080). Exactly 41.4% of Q4 persons have household income below this threshold:
 
 $$\text{B50}_{\text{CEX}} = Q_1 + Q_2 + Q_3 + 0.414 \times Q_4$$
 
-This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 × 22.7%). Sensitivity bounds: Q1+Q2+Q3 only (40.6%, 42.2% tariff share) to Q1+Q2+Q3+Q4 (63.3%, 65.3% tariff share).
+This captures 50.0% of persons (10.1% + 12.7% + 17.8% + 0.414 $\times$ 22.7%). Sensitivity bounds: Q1+Q2+Q3 only (40.6%, 42.2% tariff share) to Q1+Q2+Q3+Q4 (63.3%, 65.3% tariff share).
 
-**Important distinction.** The CEX calibration applies only to tariff expenditure share calculations. For spending-cut attribution, I use CPS person-income quintiles where each quintile contains exactly 20% of persons: B50 = Q1+Q2+0.5×Q3 (136.6M persons).
+**Important distinction.** The CEX calibration applies only to tariff expenditure share calculations. For spending-cut attribution, I use CPS person-income quintiles where each quintile contains exactly 20% of persons: B50 = Q1+Q2+0.5$\times$Q3 (136.6M persons).
 
 ---
 
+\newpage
 ## Appendix B: Income Distribution Baseline (CPS ASEC)
 
 **Table B1. National Income Shares, CY2023 (PSZ Framework)**
 
 | Group | Market Income | Pretax Income | Post-Tax Income | Capital Income |
 |-------|-------------- |--------------|-----------------|---------------|
-| Bottom 50% | 6.7% | 11.1% | 12.0% | −0.1% |
+| Bottom 50% | 6.7% | 11.1% | 12.0% | -0.1% |
 | Middle 40% | 48.6% | 47.3% | 48.1% | 9.0% |
 | Top 10% | 44.7% | 41.6% | 39.9% | 91.1% |
 | Top 1% | 13.0% | 11.9% | 11.1% | 42.8% |
@@ -455,11 +477,12 @@ Inequality measures: Gini (pretax) = 0.587 [95% CI: 0.584–0.591]; B50 income s
 
 ---
 
+\newpage
 ## Appendix C: Welfare Analysis and Simulations
 
-### C.1 CRRA Welfare Weighting (σ = 2)
+### C.1 CRRA Welfare Weighting ($\sigma$ = 2)
 
-Under CRRA with σ = 2, the welfare weight for Q1 exceeds Q5 by a factor of approximately 11,000, making Q1 welfare losses orders of magnitude more consequential.
+Under CRRA with $\sigma$ = 2, the welfare weight for Q1 exceeds Q5 by a factor of approximately 11,000, making Q1 welfare losses orders of magnitude more consequential.
 
 ### C.2 SPM Poverty Simulation
 
@@ -479,12 +502,13 @@ Following Fajgelbaum et al. (2020), composite state-level exposure using transfe
 | Classification | States |
 |---------------|--------|
 | **High Exposure** | MS (1.86), LA (1.60), WV (1.40), NM (1.36), KY (0.91), SC (0.84) |
-| **Low Exposure** | DC (−1.78), SD (−1.38), VT (−1.16), MN (−1.05), ND (−0.96) |
+| **Low Exposure** | DC (-1.78), SD (-1.38), VT (-1.16), MN (-1.05), ND (-0.96) |
 
 This geographic variation forms the basis for future synthetic DiD estimation with post-treatment ASEC data.
 
 ---
 
+\newpage
 ## Appendix D: Departure-from-Trend Regression Detail
 
 **Table D1. Full OLS Outputs**
@@ -493,19 +517,20 @@ This geographic variation forms the basis for future synthetic DiD estimation wi
 |-----------|:------------:|:---------------------:|:-------------------:|:-------------------:|
 | Training period | FY2000–2017 | FY2000–2024 excl. COVID | FY2000–2017 | FY2000–2024 excl. COVID |
 | N | 18 | 23 | 18 | 23 |
-| Intercept (α̂) | −12.28 | 6.63 | 377.9 | −152.5 |
-| Slope (β̂) | +0.0067 pp/yr | −0.0031 /yr | −0.168 pp/yr | +0.084 pp/yr |
-| SE(β̂) | 0.0035 | 0.0051 | 0.131 | 0.045 |
+| Intercept ($\alpha$̂) | -12.28 | 6.63 | 377.9 | -152.5 |
+| Slope ($\beta$̂) | +0.0067 pp/yr | -0.0031 /yr | -0.168 pp/yr | +0.084 pp/yr |
+| SE($\beta$̂) | 0.0035 | 0.0051 | 0.131 | 0.045 |
 | R² | 0.19 | 0.02 | 0.09 | 0.14 |
-| σ̂ | 0.072 | 0.166 | 2.73 | 1.46 |
+| $\sigma$̂ | 0.072 | 0.166 | 2.73 | 1.46 |
 | Predicted FY2025 | 1.20% | 0.450 | 37.4% | 17.7% |
 | Actual FY2025 | 3.72% | 0.910 | 39.1% | 15.2% |
-| **z-score** | **25.8** | **2.4** | **0.5** | **−1.5** |
+| **z-score** | **25.8** | **2.4** | **0.5** | **-1.5** |
 
 The z-score uses the full out-of-sample prediction SE:  $SE_{pred} = \hat{\sigma} \sqrt{1 + 1/n + (x_{new} - \bar{x})^2/SS_x}$.
 
 ---
 
+\newpage
 ## Appendix E: Policy Scenario Analysis—Judicial Revocation and Legislative Replacement
 
 Following the Supreme Court's invalidation of IEEPA tariff authority (*Learning Resources, Inc. v. Trump*, No. 24-1287, Feb. 20, 2026), this appendix extends the departure-from-trend framework to model the distributional consequences of tariff revocation and the announced 15% universal legislative replacement.
@@ -543,6 +568,7 @@ The transition from IEEPA tariffs to a legislative replacement does not reverse 
 
 ---
 
+\newpage
 ## Appendix F: Data Sources and Replication
 
 | Source | Access Method | Files |
@@ -559,7 +585,6 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 
 ---
 
-## Appendix G: Figures
 
 ### G.1 Departure-from-Trend and 26-Year Trend Figures
 
@@ -593,3 +618,104 @@ All scripts available at [github.com/andsalazar/FederalBudgetAnalysis](https://g
 ### G.4 Supplementary Figures
 
 Figures 15–48: Descriptive budget visualizations, real-terms analysis, agency-level detail, historical B50 trends, SPM dose-response, state exposure maps, welfare analysis (log-scale). All figures are embedded in the PDF appendix; source data and scripts are available in the replication package.
+
+\newpage
+
+## Appendix G: Figures
+
+![Departure-from-trend tests (4-panel: actual vs. trend)](figures/25yr_structural_breaks.png){width=90%}
+
+![Customs revenue trajectory (with tariff regime markers)](figures/25yr_customs_trajectory.png){width=90%}
+
+![Interest vs. safety-net spending (25-year trajectory)](figures/25yr_interest_vs_safetynet.png){width=90%}
+
+![Revenue composition shares (stacked area, FY2000–2025)](figures/25yr_revenue_composition.png){width=90%}
+
+![Income inequality evolution (Census quintile shares)](figures/25yr_inequality_evolution.png){width=90%}
+
+![Distributional impact of FY2025 policy](figures/fig2_distributional_impact.png){width=90%}
+
+![Burden decomposition by income percentile (stacked area)](figures/fig11_burden_decomposition.png){width=90%}
+
+![Tariff pass-through: traded goods vs. services control](figures/fig13_services_price_acceleration.png){width=90%}
+
+![CPI price changes in tariff-affected goods](figures/fig7_tariff_price_changes.png){width=90%}
+
+![Tariff burden by income quintile](figures/fig8_tariff_burden_by_quintile.png){width=90%}
+
+![CBO counterfactual waterfall (baseline to actual)](figures/fig16_counterfactual_waterfall.png){width=90%}
+
+![Robustness specification summary (6 dimensions)](figures/fig15_specification_curve.png){width=90%}
+
+![Departure-from-trend prediction bands (forest plot)](figures/fig12_structural_break_bands.png){width=90%}
+
+![B50 calibration diagram (quintile person shares)](figures/fig14_b50_calibration.png){width=90%}
+
+![Federal outlay composition (stacked area, FY2015-2025)](figures/01_outlay_composition.png){width=90%}
+
+![Revenue by source (stacked area)](figures/02_revenue_composition.png){width=90%}
+
+![Net interest vs. safety-net spending](figures/03_interest_vs_safety_net.png){width=90%}
+
+![CPI essentials indexed (with tariff event markers)](figures/04_cpi_essentials.png){width=90%}
+
+![Corporate profits vs. wages (indexed)](figures/05_profits_vs_wages.png){width=90%}
+
+![Customs revenue spike (bar chart)](figures/06_customs_revenue_spike.png){width=90%}
+
+![Federal deficit trend (with policy periods)](figures/07_deficit_trend.png){width=90%}
+
+![Income security waterfall (FY2019-2025)](figures/09_income_security_waterfall.png){width=90%}
+
+![Net interest as percent of GDP](figures/10_interest_pct_gdp.png){width=90%}
+
+![FY2025 context dashboard (6-panel summary)](figures/25yr_fy2025_context_dashboard.png){width=90%}
+
+![B50 transfer dependency and poverty (CPS ASEC benchmarks)](figures/25yr_poverty_and_benefits.png){width=90%}
+
+![Real spending composition (stacked area, FY2000–2025)](figures/25yr_spending_composition.png){width=90%}
+
+![Historical B50 income share and transfer dependency](figures/fig17_historical_b50.png){width=90%}
+
+![Welfare-weighted loss (log-scale, CRRA $\sigma$=2)](figures/fig18_welfare_logscale.png){width=90%}
+
+![State fiscal exposure index (dot plot)](figures/fig19_state_exposure_dots.png){width=90%}
+
+![Income distribution by quintile (CPS ASEC)](figures/fig1_income_distribution.png){width=90%}
+
+![SPM poverty dose-response (food program scenarios)](figures/fig20_spm_dose_response.png){width=90%}
+
+![SCOTUS scenario: B50 per-person burden comparison (Appendix E)](figures/fig21_scotus_scenario_comparison.png){width=90%}
+
+![Central combined scenario: quintile burden decomposition (Appendix E)](figures/fig22_scotus_quintile_decomposition.png){width=90%}
+
+![Price stickiness and the incidence of tariff revocation (Appendix E)](figures/fig23_price_stickiness_flows.png){width=90%}
+
+![SCOTUS scenario: sensitivity range and welfare impact (Appendix E)](figures/fig24_scotus_welfare_sensitivity.png){width=90%}
+
+![Simulated distributional burden curve](figures/fig3_quantile_treatment_effects.png){width=90%}
+
+![SPM poverty simulation](figures/fig4_spm_poverty_simulation.png){width=90%}
+
+![State exposure classification map](figures/fig5_state_exposure.png){width=90%}
+
+![Welfare-weighted impact (CRRA)](figures/fig6_welfare_weighted_impact.png){width=90%}
+
+![B50 vs. T50 tariff cost by goods category](figures/fig9_b50_tariff_by_category.png){width=90%}
+
+![Budget function waterfall (real terms)](figures/real_budget_function_waterfall.png){width=90%}
+
+![Cumulative spending by tier (real terms)](figures/real_cumulative_by_tier.png){width=90%}
+
+![Defense vs. social spending (real terms)](figures/real_defense_vs_social.png){width=90%}
+
+![Interest payment timeline (real terms)](figures/real_interest_timeline.png){width=90%}
+
+![Propensity classification comparison](figures/real_propensity_comparison.png){width=90%}
+
+![Propensity stacked area chart](figures/real_propensity_stacked_area.png){width=90%}
+
+![Tariff windfall flow diagram. Assumes 4.5% 10-yr rate (FRED DGS10), 20$\times$ P/E (conservative); equity ownership 93% top-10 (Fed 2023 SCF), bond ownership ~67% top-10 (Fed DFA)](figures/real_tariff_windfall_flow.png){width=90%}
+
+![Top agencies by spending change](figures/real_top_agencies.png){width=90%}
+
